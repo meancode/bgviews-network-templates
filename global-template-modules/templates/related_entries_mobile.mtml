@@ -1,0 +1,54 @@
+  <mt:Ignore> If the entry isn't tagged, we display nothing </mt:Ignore>
+<mt:EntryIfTagged>
+   <mt:Ignore>
+       Store ID of the entry in context into the "current_entry" MT variable
+   </mt:Ignore>
+   <mt:EntryID setvar="current_entry">
+   
+   <mt:Ignore>
+       Compile the current entry's tags into a boolean "OR" statement
+       suitable for use in an mt:Entries "tag" attribute and store it in
+       the related_tags MT variable.
+       
+       Private tags are also being output here in order to ensure all
+       similarly tagged entries are retrieved but they are immediately
+       stored in the variable and not displayed on the blog.
+   </mt:Ignore>
+   <mt:SetVarBlock name="related_tags">
+       <mt:EntryTags include_private="1" glue=" OR ">
+           <mt:Ignore>
+               We use normalize here in case of tags with spaces
+               or other problematic characters
+           </mt:Ignore>
+           <mt:TagName normalize="1">
+       </mt:EntryTags>
+   </mt:SetVarBlock>
+   
+   <mt:Ignore>
+       Here we clean up the value of related_tags in order to get rid of
+       all of the whitespace and make the boolean statement syntactically
+       correct.
+   </mt:Ignore>
+   <mt:Var name="related_tags" strip_linefeeds="1" setvar="related_tags">
+   
+   <mt:SetVarBlock name="list_items">
+       <mt:Ignore>
+           Here we use our stored boolean statement containing
+           of related tags
+       </mt:Ignore>
+      <mt:Entries tags="$related_tags" unique="1" lastn="6">
+         <mt:Ignore> Skip listing the current entry </mt:Ignore>
+         <mt:Unless tag="EntryID" eq="$current_entry">
+            <li><a href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.php"><mt:EntryTitle /></a></li>
+            <$mt:Var name="items_found" value="1"$>
+         </mt:Unless>
+      </mt:Entries>
+   </mt:SetVarBlock>
+   
+   <mt:If name="items_found">
+      <h4 class="entry-related-header">Related Articles:</h4>
+      <ul class="entry-related-list">
+         <$mt:Var name="list_items"$>
+      </ul>
+   </mt:If>
+</mt:EntryIfTagged>

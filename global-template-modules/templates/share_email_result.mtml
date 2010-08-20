@@ -1,0 +1,16 @@
+<mt:SetVarBlock name="id"><mt:ShareSelectedID></mt:SetVarBlock>
+<mt:SetVarBlock name="returnSeconds">5</mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" append="1">
+<meta http-equiv="refresh" content="<$mt:GetVar name="returnSeconds"$>;url=<mt:Entries id="$id"><$mt:EntryPermalink$></mt:Entries>">
+</mt:SetVarBlock>
+<mt:SetVarBlock name="title">Email to a friend</mt:SetVarBlock>
+
+<$mt:Include module="Simple Header"$>
+<p>&nbsp;</p>
+    <div id="share-email-result">
+        <mt:ShareResult>
+        <p>You'll be returned to the entry in <$mt:GetVar name="returnSeconds"$> seconds, or you can <a href="<mt:Entries id="$id"><$mt:EntryPermalink$></mt:Entries>">click here</a>.</p>
+    </div>
+
+<$mt:Include module="Simple Footer"$>
+

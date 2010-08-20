@@ -1,0 +1,40 @@
+<mt:Unless tag="BlogID" like="22|49">
+<center>
+<form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
+            <input name="search" type="text" style="padding:3px; border-style:solid;" value="<$mt:SearchString$>" size="25" />
+<mt:If name="search_results">
+            
+            <input type="hidden" name="Template" value="mobile">
+            <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+            <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+            <mt:Ignore>
+            <!-- use these options only with MT::App::Search::Legacy -->
+            <ul class="search-options">
+                <li><input type="checkbox" name="CaseSearch" /> Case sensitive</li>
+                <li><input type="checkbox" name="RegexSearch" /> Regex search</li>
+            </ul>
+            </mt:Ignore>
+<mt:Else>
+            <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+            <input type="hidden" name="Template" value="mobile" />
+            <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+</mt:If>
+            <input type="submit" accesskey="4" id="searchButton" value="Search" />
+        </form>
+    </div>
+</div>
+<mt:If name="search_results">
+    <mt:IfTagSearch>
+<div class="widget-tags widget">
+    <h3 class="widget-header">Tags</h3>
+    <div class="widget-content">
+        <ul>
+        <mt:Tags>
+            <li><a href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;"><$mt:TagName$> (<$mt:TagCount$>)</a></li>
+        </mt:Tags>
+        </ul>
+    </mt:IfTagSearch>
+</mt:If>
+</center>
+</mt:Unless>
+

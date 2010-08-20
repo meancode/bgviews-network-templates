@@ -1,0 +1,10 @@
+<mt:If tag="BlogID" like="22">
+<mt:Ignore>
+<!-- // Google Analytics Tracking Image  -->
+</mt:Ignore>
+<?php
+  $googleAnalyticsImageUrl = googleAnalyticsGetImageUrl();
+?>
+<img src="<?= $googleAnalyticsImageUrl ?>" />
+</mt:If>
+

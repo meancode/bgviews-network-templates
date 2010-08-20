@@ -1,0 +1,252 @@
+template_sets:
+  global-template-modules:
+    label: global-template-modules
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+      individual:
+      page:
+      archive:
+      custom:
+        about_this_profile:
+          label: About This Profile
+        admob_publisher_code:
+          label: AdMob Publisher Code
+        apple_touch_icon:
+          label: Apple Touch Icon
+        ag_slideshow:
+          label: Asset Gallery Slideshow
+        before_body_close:
+          label: Before Body Close
+        bgv_author:
+          label: BGV Author
+        bgv_description:
+          label: BGV Description
+        bgv_email:
+          label: BGV Email
+        bgv_keywords:
+          label: BGV Keywords
+        categories:
+          label: Categories Blogs
+        comment_detail:
+          label: Comment Detail Blogs
+        comment_detail:
+          label: Comment Detail Forums
+        comment_form:
+          label: Comment Form Blogs
+        comment_form_directory:
+          label: Comment Form Directory
+        comment_form:
+          label: Comment Form Forums
+        comments:
+          label: Comments Blogs
+        comments:
+          label: Comments Forums
+        content_header:
+          label: Content Header Forums
+        content_navigation:
+          label: Content Navigation
+        content_nav:
+          label: Content Navigation Blogs
+        content_nav:
+          label: Content Navigation Forums
+        embedded_html_for_asset:
+          label: Embedded html for asset
+        entry_detail:
+          label: Entry Detail Blogs
+        entry_detail:
+          label: Entry Detail Forums
+        entry_form:
+          label: Entry Form Blogs
+        entry_form:
+          label: Entry Form Forums
+        entry_metadata:
+          label: Entry Metadata Blogs
+        entry_metadata:
+          label: Entry Metadata Forums
+        entry_summary:
+          label: Entry Summary Blogs
+        entry_summary:
+          label: Entry Summary Forums
+        entry_table:
+          label: Entry Table Forums
+        facebook_like:
+          label: Facebook Like
+        facebook_like_meta:
+          label: Facebook Like META
+        footer:
+          label: Footer
+        footer_bg_views:
+          label: Footer BG Views
+        footer_create_entry:
+          label: Footer Create Entry
+        footer:
+          label: Footer MTCS
+        footer_mtcs_2-col:
+          label: Footer MTCS 2-Col
+        footer_mtcs_profile:
+          label: Footer MTCS Profile
+        form_field:
+          label: Form Field
+        javascript:
+          label: GlobalJavaScript
+        globaljavascript_adobe:
+          label: GlobalJavaScript Adobe
+        google_ad_manager:
+          label: Google Ad Manager
+        google_analytics_blogs:
+          label: Google Analytics Blogs
+        google_validation:
+          label: Google Validation
+        header:
+          label: Header
+        header_bg_views:
+          label: Header BG Views
+        header_logo:
+          label: Header Logo
+        header_mtcs_1:
+          label: Header MTCS 1
+        header_mtcs_1_actions:
+          label: Header MTCS 1 Actions
+        header_mtcs_1_meta:
+          label: Header MTCS 1 META
+        header_mtcs_2:
+          label: Header MTCS 2
+        header_mtcs_2_beta:
+          label: Header MTCS 2 beta
+        header_mtcs_2_classifieds:
+          label: Header MTCS 2 Classifieds
+        header_mtcs_2_community:
+          label: Header MTCS 2 Community
+        header_mtcs_2_error:
+          label: Header MTCS 2 Error
+        header_mtcs_2_network_home:
+          label: Header MTCS 2 Network Home
+        header_mtcs_2_profile:
+          label: Header MTCS 2 Profile
+        header_mtcs_2_search:
+          label: Header MTCS 2 Search
+        header_mtcs_3:
+          label: Header MTCS 3
+        header_site:
+          label: Header Site
+        html_head:
+          label: HTML Head
+        iphone_analytics_1:
+          label: iPhone Analytics 1
+        iphone_analytics_2:
+          label: iPhone Analytics 2
+        iphone_bg_views_header:
+          label: iPhone BG Views Header
+        iphone_footer:
+          label: iPhone Footer
+        iphone_footer_ad_slot:
+          label: iPhone Footer Ad Slot
+        iphone_footer_nav:
+          label: iPhone Footer Nav
+        iphone_footer_nav_inside:
+          label: iPhone Footer Nav Inside
+        iphone_footer_nav2:
+          label: iPhone Footer Nav2
+        iphone_footer_nav3:
+          label: iPhone Footer Nav3
+        iphone_html_head:
+          label: iPhone HTML Head
+        iphone_javascript:
+          label: iPhone JavaScript
+        issuu_bg_news:
+          label: Issuu BG News
+        footer-email:
+          label: Mail Footer
+        mail_footer_backup:
+          label: Mail Footer Backup
+        mail_header:
+          label: Mail Header
+        meta_author:
+          label: META Author
+        meta_description:
+          label: META Description
+        meta_email:
+          label: META Email
+        meta_keywords:
+          label: META Keywords
+        mobile_search:
+          label: Mobile Search
+        navigation:
+          label: Navigation
+        navigation_bar:
+          label: Navigation Bar
+        navigation_bar_profile:
+          label: Navigation Bar Profile
+        page_detail:
+          label: Page Detail Blogs
+        poll_position_results:
+          label: Poll Position Results
+        entry_popular:
+          label: Popular Entry Forums
+        related_entries:
+          label: Related Entries
+        related_entries_mobile:
+          label: Related Entries Mobile
+        search:
+          label: Search
+        share_email_body:
+          label: Share Email Body
+        share_email_form:
+          label: Share Email Form
+        share_email_result:
+          label: Share Email Result
+        sidebar:
+          label: Sidebar
+        sidebar_2-col:
+          label: Sidebar 2-Col
+        sidebar_entry_only:
+          label: Sidebar Entry Only
+        sidebar_profile_only:
+          label: Sidebar Profile Only
+        signin:
+          label: Sign In
+        simple_footer:
+          label: Simple Footer
+        simple_header:
+          label: Simple Header
+        site_type_logo:
+          label: Site Type Logo
+        spread_the_word:
+          label: Spread The Word
+        status_message:
+          label: Status Message
+        tags:
+          label: Tags Blogs
+        target_blank_links:
+          label: Target Blank Links
+        trackbacks:
+          label: TrackBacks Blogs
+        tweet_this:
+          label: Tweet This
+        twitter_button_bg_views:
+          label: Twitter Button BG Views
+        userpic:
+          label: Userpic
+        yourls:
+          label: YOURLS
+        zone_bgnewscom_leaderboard_bottom_728x90:
+          label: Zone bgnews.com Leaderboard Bottom 728x90
+        zone_bgnewscom_leaderboard_top_728x90:
+          label: Zone bgnews.com Leaderboard Top 728x90
+        zone_bgnewscom_rectangle_1_300x250:
+          label: Zone bgnews.com Rectangle 1 300x250
+        zone_bgnewscom_rectangle_2_300x250:
+          label: Zone bgnews.com Rectangle 2 300x250
+        zone_leaderboard_bottom_728x90:
+          label: Zone Leaderboard Bottom 728x90
+        zone_leaderboard_top_728x90:
+          label: Zone Leaderboard Top 728x90
+        zone_rectangle_1_300x250:
+          label: Zone Rectangle 1 300x250
+        zone_rectangle_2_300x250:
+          label: Zone Rectangle 2 300x250
+      widget:
+      system:
+

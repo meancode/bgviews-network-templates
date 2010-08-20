@@ -1,0 +1,15 @@
+<mt:If tag="BlogID" like="40|41|65|82|83|87|66|91">
+<div class="MobileBanner"><a href="<$mt:BlogURL$>m/"><img src="<$mt:BlogURL$>images/logo_mobile.gif" height="46" border="0"></a></div>
+<mt:Else>
+<div class="MobileBanner"><a href="<$mt:BlogURL$>m/"><img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/bgviews_mobile.gif" height="46" border="0"></a></div>
+</mt:If>
+<mt:If tag="BlogID" like="66">
+<div class="BlogName"><a href="<$mt:BlogURL$>m/">BG Views Network > Our Views</a></div>
+<mt:ElseIf tag="BlogID" like="91">
+<div class="BlogName"><a href="<$mt:BlogURL$>m/">BG Views Network > Falcon Screech</a></div>
+<mt:Else>
+<div class="BlogName"><a href="<$mt:BlogURL$>m/"><$mt:BlogName encode_html="1"$></a></div>
+</mt:If>
+<$mt:Include module="Mobile Search"$>
+<$mt:Include module="AdMob Publisher Code"$>
+

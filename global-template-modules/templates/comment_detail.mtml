@@ -1,0 +1,34 @@
+<div class="comment"<mt:IfArchiveTypeEnabled archive_type="Individual"> id="comment-<$mt:CommentID$>"</mt:IfArchiveTypeEnabled>>
+    <div class="inner">
+        <div class="comment-header">
+            <$mt:Include module="Userpic" userpic_size="50" userpic_type="commenter"$>
+            <div class="asset-meta">
+                <span class="byline">
+                    <$mt:CommentAuthorIdentity$>
+<mt:setvarblock name="comment_author_link">
+                        <span class="vcard author">
+    <mt:IfCommenterIsAuthor>
+                                <a href="<$mt:Var name="profile_view_url" encode_html="1"$><$mt:CommenterID$>"><$mt:CommenterName$></a>
+        <mt:Else>
+                                <$mt:CommentAuthorLink$>
+    </mt:IfCommenterIsAuthor>
+                        </span>
+</mt:setvarblock>
+<mt:IfCommentParent>
+                    <$mt:var name="comment_author_link"$> replied to <a href="<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></a>
+<mt:Else>
+                    <$mt:var name="comment_author_link"$>
+</mt:IfCommentParent>
+                    <span class="separator">|</span> <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a>
+    <mt:IfCommentsAccepted>
+                    <span class="separator">|</span> <$mt:CommentReplyToLink$>
+    </mt:IfCommentsAccepted>
+                </span>
+            </div>
+        </div>
+        <div class="comment-content">
+            <$mt:CommentBody$>
+        </div>
+    </div>
+</div>
+

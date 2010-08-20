@@ -1,0 +1,24 @@
+<div id="entry-<$mt:EntryID$>" class="entry-asset asset hentry">
+    <$mt:Include module="Userpic" userpic_size="50"$>
+    <div class="asset-header entry-header">
+        <h1 class="asset-name entry-title"><$mt:EntryTitle$></h1>
+        <$mt:Include module="Entry Metadata Forums"$>
+    </div>
+    <div class="asset-content entry-content">
+<mt:If tag="EntryBody">
+        <div class="asset-body">
+            <$mt:EntryBody$>
+        </div>
+</mt:If>
+<mt:If tag="EntryMore" convert_breaks="0">
+        <div id="more" class="asset-more">
+            <$mt:EntryMore$>
+        </div>
+</mt:If>
+<mt:EntryCustomFields>
+    <$mt:CustomFieldValue$>
+</mt:EntryCustomFields>
+    </div>
+</div>
+
+

@@ -1,0 +1,72 @@
+<$mt:Var name="body_class" value="mt-profile-register"$>
+<mt:Var name="bgvn-confirm" value="bgvn-confirm">
+<$mt:Var name="page_layout" value="layout-wt"$>
+<mt:If name="resend">
+    <mt:SetVarBlock name="page_title">Authentication Email Sent</mt:SetVarBlock>
+<mt:Else>
+    <mt:SetVarBlock name="page_title">Profile Created</mt:SetVarBlock>
+</mt:If>
+<mt:SetVarBlock name="title"><mt:If name="blog_id"><$mt:BlogName encode_html="1"$> - </mt:If><$mt:Var name="page_title"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" prepend="1">
+<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/profile.css" type="text/css" />
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/js/common/Core.js?v=<$mt:Var name="mt_version" escape="url"$>"></script>
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/js/tc.js?v=<$mt:Var name="mt_version" escape="url"$>"></script>
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/mt.js?v=<$mt:Var name="mt_version" escape="url"$>"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function showByID(id) {
+    var el = getByID(id);
+    if (el) el.style.display = "block";
+}
+function hideByID(id) {
+    var el = getByID(id);
+    if (el) el.style.display = "none";
+}
+// -->
+</script>
+<$mt:Var name="js_include"$>
+</mt:SetVarBlock>
+
+<$mt:Include module="Header MTCS 1" body_class="mt-profile-register"$>
+<$mt:Include module="Header MTCS 2 Profile" body_class="mt-profile-register"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-profile-register"$>
+
+
+
+
+        <div id="nav">
+            <mt:If name="wizard_steps">
+            <mt:Unless name="complete">
+            <mt:If name="step" ne="pre_start">
+            <mt:Loop name="wizard_steps">
+            <mt:Unless name="__last__">
+            <div class="step<mt:If name="active">_active</mt:If>"></div>
+            </mt:Unless>
+            </mt:Loop>
+            </mt:If>
+            </mt:Unless>
+            </mt:If>
+        </div>
+
+
+<div id="new-user">
+<h1><$mt:Var name="page_title"$></h1>
+<p>To complete the registration process you must first confirm your account. An email has been sent to <$mt:Var name="email" escape="html"$>.</p>
+
+<p>To confirm and activate your account please check your inbox and click on the link found in the email we just sent you.</p>
+
+<p><a href="<$mt:Var name="return_to"$>">Return to the original page.</a></p>
+
+  </div>
+
+
+
+
+<mt:SetVarBlock name="profile_widgets">
+<$mt:Include module="Zone Rectangle 1 300x250"$>
+<br><br>
+<$mt:Include module="Zone Rectangle 2 300x250"$>
+</mt:SetVarBlock>
+
+<$mt:Include module="Footer MTCS Profile"$>
+

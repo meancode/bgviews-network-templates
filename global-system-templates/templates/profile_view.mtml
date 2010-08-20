@@ -1,0 +1,290 @@
+<mt:Var name="bgvn-profile" value="bgvn-profile">
+<$mt:Var name="page_layout" value="layout-wt"$>
+<mt:IfBlog>
+    <mt:SetVarBlock name="blog_name"><$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+    <mt:SetVarBlock name="page_title">BG Views User Profile</mt:SetVarBlock>
+    <mt:SetVarBlock name="title"><$mt:Var name="page_title"$> - <$mt:AuthorDisplayName encode_html="1"$></mt:SetVarBlock>
+<mt:Else>
+    <mt:SetVarBlock name="blog_name">Blog Name</mt:SetVarBlock>
+    <mt:SetVarBlock name="page_title">BG Views User Profile</mt:SetVarBlock>
+    <mt:SetVarBlock name="title"><$mt:Var name="page_title"$> - <$mt:AuthorDisplayName encode_html="1"$></mt:SetVarBlock>
+</mt:IfBlog>
+<$mt:Var name="hide_signout_link" value="1"$>
+<mt:SetVarBlock name="html_head">
+<link type="application/atom+xml" rel="alternate" title="Recent Actions from <$mt:AuthorDisplayName encode_html="1"$>" href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=actions&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>" />
+<link type="application/atom+xml" rel="alternate" title="Recent Entries from <$mt:AuthorDisplayName encode_html="1"$>" href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=posts&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>" />
+<link type="application/atom+xml" rel="alternate" title="Comments from <$mt:AuthorDisplayName encode_html="1"$>" href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>" />
+<link type="application/atom+xml" rel="alternate" title="Responses to Comments from <$mt:AuthorDisplayName encode_html="1"$>" href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=replies&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>" />
+<script type="text/javascript">
+<!--
+function relations(following, followed, u) {
+    mtSetUser(u);
+    if ( u && u.name )
+        conditional_block(<mt:If name="profile_self">true<mt:Else>false</mt:If>, 'edit_profile');
+<mt:If name="profile_self">
+    var a = document.getElementById('edit_profile_link');
+    a.href = '<$mt:CGIPath$><$mt:CommunityScript$>?__mode=edit&blog_id=<$mt:BlogID$>&return_to=' + encodeURIComponent(document.URL);
+</mt:If>
+    conditional_block(followed, 'followed_<$mt:AuthorID$>');
+    conditional_block(following, 'following_<$mt:AuthorID$>');
+}
+//-->
+</script>
+
+<!-- // Profile Tabs -->
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/profile_tabs.js"></script>
+<link href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/profile_tabs.css" rel="stylesheet" type="text/css" media="all" />
+<link href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/profile_view.css" rel="stylesheet" type="text/css" media="all" />
+</mt:SetVarBlock>
+
+<$mt:Include module="Header MTCS 1" body_class="mt-profile-view"$>
+<$mt:Include module="Header MTCS 2 Profile" body_class="mt-profile-view"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-profile-view"$>
+
+<div id="edit-actions" style="float:right; margin-right:10px;">
+<mt:IfLoggedIn element_id="edit_profile">
+<p><a id="edit_profile_link" href="#">Edit My Profile</a></p>
+<mt:Else>
+<p class="edit-relation">
+    <span id="following-status"></span>
+    <mt:AuthorIfFollowing script="0">
+    <$mt:AuthorUnfollowLink text="Unfollow"$>
+    <mt:Else>
+    <$mt:AuthorFollowLink text="Follow"$>
+    </mt:AuthorIfFollowing>
+</p>
+
+    <mt:SetVarBlock name="html_body_footer" append="1">
+    <script type="text/javascript" src="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=relations_js&author_id=<$mt:AuthorID$><mt:If name="blog_id">&blog_id=<$mt:Var name="blog_id"$></mt:If>"></script>
+    </mt:SetVarBlock>
+</mt:IfLoggedIn>
+</div>
+
+<$mt:Include module="Userpic" userpic_type="profile" userpic_size="90"$>
+
+<h1 id="page-title"><$mt:AuthorDisplayName encode_html="1"$></h1>
+
+<div id="byline-position">
+<mt:If tag="authordatabyline_position">
+<h2><mt:authordatabyline_position></h2>
+</mt:If>
+</div>
+
+<div id="other-profiles">
+<a href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=actions&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>" title="BG Views Activity from <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/feed-icon-16x16.gif" /></a>
+<mt:If tag="authordataspam_email"><a href="mailto:<mt:authordataspam_email>" title="Email <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/email_this.gif" /></a></mt:If>
+
+<mt:If tag="authordatabgsu_weblog"><a href="<mt:authordatabgsu_weblog>" target="_blank" title="BGSU Weblog of <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/bgsublogs.png" /></a></mt:If>
+
+
+
+<mt:If tag="authordatafacebook"><a href="http://www.facebook.com/<mt:authordatafacebook>" target="_blank" title="Facebook profile of <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/facebook.png" /></a></mt:If>
+<mt:If tag="authordatatwitter_account"><a href="http://twitter.com/<mt:authordatatwitter_account>" target="_blank" title="Twitter account of <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/twitter.png" /></a></mt:If>
+
+
+</div>
+
+<br clear="all" />
+
+<div id="p7EPM_1" class="p7EPM53">
+  <div id="p7EPMt_1" class="p7epm_trigs">
+    <ul>
+      <li class="t1"><a href="#p7EPMc1_1" id="p7EPMtrg1_1" style="text-decoration:none;">Posts</a></li>
+      <li class="t2"><a href="#p7EPMc1_2" id="p7EPMtrg1_2" style="text-decoration:none;">Comments</a></li>
+      <li class="t3"><a href="#p7EPMc1_3" id="p7EPMtrg1_3" style="text-decoration:none;">Conversations</a></li>
+      <li class="t4"><a href="#p7EPMc1_4" id="p7EPMtrg1_4" style="text-decoration:none;">Favorites</a></li>
+      <li class="t5"><a href="#p7EPMc1_5" id="p7EPMtrg1_5" style="text-decoration:none;">Friends</a></li>
+      <li class="t6"><a href="#p7EPMc1_6" id="p7EPMtrg1_6" style="text-decoration:none;">Followers</a></li>
+      <li class="t7"><a href="#p7EPMc1_7" id="p7EPMtrg1_7" style="text-decoration:none;">Profile</a></li>
+    </ul>
+    <div class="p7epm_ie5clear">&nbsp;</div>
+  </div>
+  <div id="p7EPMdw_1">
+    <div id="p7EPMw1_1" class="p7epm_cwrapper">
+      <div id="p7EPMc1_1" class="p7epm_content pan1">
+        <div id="profile-recent-posts" class="tab_content">
+          <mt:Actions namespace="community_pack_recommend" include_blogs="37,39,65,52,38,57,36,64,33,41,35,40,49,51,46,29,30,34,83,82,66,88,87,69,62,91" sort_order="descend" lastn="10">
+            <mt:ActionsHeader>
+            <ul class="recent-actions">
+              </mt:ActionsHeader>
+              <mt:ActionsEntry>
+                <li class="entry icon-entry"> Posted <a href="<$mt:EntryLink$>">
+                  <$mt:EntryTitle encode_html="1"$>
+                  </a> to <a href="<$mt:EntryBlogURL$>" class="icon-blog">
+                    <$mt:EntryBlogName$>
+                    </a>
+                  <div class="excerpt">
+                    <$mt:EntryExcerpt$>
+                  </div>
+                </li>
+              </mt:ActionsEntry>
+              <mt:ActionsFooter>
+            </ul>
+            </mt:ActionsFooter>
+            <mt:Else>
+            <p class="note">No recent posts.</p>
+          </mt:Actions>
+          <img src="<$mt:StaticWebPath$>images/status_icons/feed.gif" alt="Subscribe to feed" /> <a href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=posts&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>">Recent Posts from
+            <$mt:AuthorDisplayName encode_html="1"$>
+            </a>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_2" class="p7epm_cwrapper">
+      <div id="p7EPMc1_2" class="p7epm_content pan2">
+        <div id="profile-recent-comments" class="tab_content">
+          <mt:Actions namespace="community_pack_recommend" include_blogs="37,39,65,52,38,57,36,64,33,41,35,40,49,51,46,29,30,34,83,82,66,88,87,69,62,91" sort_order="descend" lastn="10">
+            <mt:ActionsHeader>
+            <ul class="recent-actions">
+              </mt:ActionsHeader>
+              <mt:ActionsComment>
+                <li class="comment icon-comment"> Commented on
+                  <mt:CommentEntry><a href="<$mt:CommentLink$>">
+                    <$mt:EntryTitle encode_html="1"$>
+                  </a></mt:CommentEntry>
+                  <div class="excerpt">
+                    <$mt:CommentBody words="40"$>
+                    ...</div>
+                </li>
+              </mt:ActionsComment>
+              <mt:ActionsFooter>
+            </ul>
+            </mt:ActionsFooter>
+            <mt:Else>
+            <p class="note">No recent comments.</p>
+          </mt:Actions>
+          <img src="<$mt:StaticWebPath$>images/status_icons/feed.gif" alt="Subscribe to feed" /> <a href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&amp;_type=comments&amp;blog_id=<$mt:BlogID$>&amp;id=<$mt:AuthorID$>">Recent Comments from
+            <$mt:AuthorDisplayName encode_html="1"$>
+            </a>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_3" class="p7epm_cwrapper">
+      <div id="p7EPMc1_3" class="p7epm_content pan3">
+        <div id="profile-comment-threads" class="tab_content">
+          <mt:AuthorCommentResponses lastn="5">
+            <mt:CommentsHeader>
+            <ul class="recent-actions">
+              </mt:CommentsHeader>
+              <li class="comment icon-comment"> <a href="<$mt:Var name="profile_view_url" encode_html="1"$>
+                <$mt:CommenterID$>
+                ">
+                <$mt:CommenterName$>
+                </a> commented on
+                <mt:CommentEntry><a href="<$mt:CommentLink$>">
+                  <$mt:EntryTitle encode_html="1"$>
+                </a></mt:CommentEntry>
+                <div class="excerpt">
+                  <$mt:CommentBody words="100"$>
+                  ...</div>
+                <mt:CommentsFooter>
+              </li>
+            </ul>
+            </mt:CommentsFooter>
+            <mt:Else>
+            <p class="note">No responses to comments.</p>
+          </mt:AuthorCommentResponses>
+          <img src="<$mt:StaticWebPath$>images/status_icons/feed.gif" alt="Subscribe to feed" /> <a href="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=feed&_type=replies&blog_id=<$mt:BlogID$>&id=<$mt:AuthorID$>">Responses to Comments from
+            <$mt:AuthorDisplayName encode_html="1"$>
+            </a>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_4" class="p7epm_cwrapper">
+      <div id="p7EPMc1_4" class="p7epm_content pan4">
+        <div id="profile-recent-favorites" class="tab_content">
+          <mt:Actions namespace="community_pack_recommend" include_blogs="37,39,65,52,38,57,36,64,33,41,35,40,49,51,46,29,30,34,83,82,66,88,87,69,62,91" sort_order="descend" lastn="10">
+            <mt:ActionsHeader>
+            <ul class="recent-actions">
+              </mt:ActionsHeader>
+              <mt:ActionsFavorite>
+                <li class="score icon-score"> Favorited <a href="<$mt:EntryLink$>">
+                  <$mt:EntryTitle encode_html="1"$>
+                  </a> on <a href="<$mt:EntryBlogURL$>" class="icon-blog">
+                    <$mt:EntryBlogName$>
+                  </a></li>
+              </mt:ActionsFavorite>
+              <mt:ActionsFooter>
+            </ul>
+            </mt:ActionsFooter>
+            <mt:Else>
+            <p class="note">No recent favorites.</p>
+          </mt:Actions>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_5" class="p7epm_cwrapper">
+      <div id="p7EPMc1_5" class="p7epm_content pan5">
+        <div id="profile-following" class="tab_content">
+          <mt:AuthorFollowing>
+            <mt:If name="__first__">
+            <ul class="user-listing">
+              </mt:If>
+              <li class="pkg">
+                <$mt:Include module="Userpic" userpic_size="36" userpic_type="profile"$>
+                <a href="<$mt:Var name="profile_view_url" encode_html="1"$>
+                  <$mt:AuthorID$>
+                  " class="user-name">
+                  <$mt:AuthorDisplayName$>
+                </a> </li>
+              <mt:If name="__last__">
+            </ul>
+            </mt:If>
+            <mt:Else>
+            <p class="note">Not following anyone.</p>
+          </mt:AuthorFollowing>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_6" class="p7epm_cwrapper">
+      <div id="p7EPMc1_6" class="p7epm_content pan6">
+        <div id="profile-followers" class="tab_content">
+          <mt:AuthorFollowers>
+            <mt:If name="__first__">
+            <ul class="user-listing">
+              </mt:If>
+              <li class="pkg">
+                <$mt:Include module="Userpic" userpic_size="36" userpic_type="profile"$>
+                <a href="<$mt:Var name="profile_view_url" encode_html="1"$>
+                  <$mt:AuthorID$>
+                  " class="user-name">
+                  <$mt:AuthorDisplayName$>
+                </a> </li>
+              <mt:If name="__last__">
+            </ul>
+            </mt:If>
+            <mt:Else>
+            <p class="note">Not being followed.</p>
+          </mt:AuthorFollowers>
+        </div>
+      </div>
+    </div>
+    <div id="p7EPMw1_7" class="p7epm_cwrapper">
+      <div id="p7EPMc1_7" class="p7epm_content pan7">
+        <p>&nbsp; </p>
+        <mt:If tag="authordataspam_email"><a href="mailto:<mt:authordataspam_email>" title="Email <$mt:AuthorDisplayName encode_html="1"$>"><img src="<$mt:StaticWebPath$>themes/bgviews/images/email_this.gif" style="padding-bottom:-3px;"/></a></mt:If>
+
+      </div>
+    </div>
+  </div>
+  <!--[if IE 5]><style>.p7epm_trigs {width: 100%;} .p7epm_ie5clear {clear: both;} .p7epm_content, .p7epm_content li a {height: 1%;}</style><![endif]-->
+  <!--[if IE 6]><style>.p7epm_trigs, .p7epm_content div {zoom: 1;} .p7epm_trigs a {height: auto !important;}</style><![endif]-->
+  <script type="text/javascript">
+<!--
+P7_opEPM('p7EPM_1',1,0,1,0,0,1000,1,0,250,1,0,1);
+//-->
+  </script>
+</div>
+
+
+<mt:SetVarBlock name="profile_widgets">
+<$mt:Include module="Zone Rectangle 1 300x250"$>
+<br><br>
+<$mt:Include module="Zone Rectangle 2 300x250"$>
+</mt:SetVarBlock>
+
+<$mt:Include module="Footer MTCS Profile"$>

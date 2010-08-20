@@ -1,0 +1,29 @@
+<mt:If tag="BlogID" like="36|52|22">
+<?php
+admob_setcookie();
+?>
+</mt:If>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<mt:If tag="BlogID" like="22">
+<link rel="stylesheet" href="http://m.bgviews.com/styles.css" />
+<mt:Else>
+<link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+</mt:If>
+<mt:If tag="BlogID" like="82|83|87">
+<!-- // Gavel Mobile -->
+<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/gavel-mobile.css" />
+</mt:If>
+<link rel="shortcut icon" href="/favicon.ico" TYPE="image/x-icon">
+<link rel="apple-touch-icon" href="<$mt:BlogURL$>images/apple-touch-icon.png"/>
+<$mt:Include module="iPhone JavaScript"$>
+<mt:IfArchiveType type="individual">
+<title><$mt:EntryTitle$></title>
+<mt:Else>
+<title><$mt:BlogName encode_html="1"$></title>
+</mt:IfArchiveType>
+</head>

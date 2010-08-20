@@ -1,0 +1,96 @@
+  <mt:SetVarBlock name="html_head" prepend="1">
+    <mt:IfBlog>
+        <mt:Ignore>
+    <!-- Community Solution Blog variables -->
+    <!-- The below variables are used when there a blog is in context.  -->
+        </mt:Ignore>
+        <mt:SetVarBlock name="blog_id"><$mt:BlogID$></mt:SetVarBlock>
+        <mt:SetVarBlock name="blog_name"><$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+        <mt:SetVarBlock name="blog_description"><$mt:BlogDescription$></mt:SetVarBlock>
+        <mt:SetVarBlock name="blog_url"><$mt:BlogURL$></mt:SetVarBlock>
+        <mt:SetVarBlock name="profile_view_url"><$mt:CGIPath$><$mt:CommunityScript$>?__mode=view&amp;blog_id=<$mt:BlogID$>&amp;id=</mt:SetVarBlock>
+        <link rel="stylesheet" href="<$mt:Link template="styles"$>" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgviews.css" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/jquery.lightbox-0.5.css" type="text/css" />
+        <link rel="alternate" type="application/atom+xml" title="<$mt:BlogName encode_html="1"$>" href="<$mt:Link template="feed_recent"$>" />
+        <link rel="start" href="<$mt:BlogURL$>" title="Home" />
+        <script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
+    <mt:Else>
+        <mt:Ignore>
+    <!-- Community Solution Static variables -->
+    <!-- The below variables are used when there is no blog in context. Set them to defaults in the case that they are used w/o a blog context -->
+        </mt:Ignore>
+        <mt:SetVarBlock name="blog_name">BG Views User Profile</mt:SetVarBlock>
+        <mt:SetVarBlock name="blog_description"></mt:SetVarBlock>
+        <mt:SetVarBlock name="blog_url">#</mt:SetVarBlock>
+        <mt:SetVarBlock name="profile_view_url"><$mt:CGIPath$><$mt:CommunityScript$>?__mode=view&amp;blog_id=<$mt:BlogID$>&amp;id=</mt:SetVarBlock>
+        <link rel="stylesheet" href="<$mt:Link template="styles"$>"" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgviews.css" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/jquery.lightbox-0.5.css" type="text/css" />
+        <link rel="alternate" type="application/atom+xml" title="<$mt:BlogName encode_html="1"$>" href="<$mt:Link template="feed_recent"$>" />
+        <script type="text/javascript" charset="utf-8"><$mt:Include module="GlobalJavaScript"$></script>
+        <!-- END Community Solution Styles -->
+    </mt:IfBlog>
+</mt:SetVarBlock>
+<mt:If tag="BlogTemplateSetID" eq="mt-community-forum">
+<$mt:Var name="page_layout" value="layout-wm"$>
+</mt:If>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<$mt:BlogLanguage$>" lang="<$mt:BlogLanguage$>" xmlns:fb="http://www.facebook.com/2008/fbml" id="sixapart-standard">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=<$mt:PublishCharset$>" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="imagetoolbar" content="no" />   
+    <link rel="icon" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/favicon.ico" TYPE="image/x-icon"> 
+    <link rel="shortcut icon" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/favicon.ico" TYPE="image/x-icon">
+    <$mt:Include module="Apple Touch Icon"$> 
+    <title><$mt:Var name="title"$></title>
+    <$mt:Include module="Header MTCS 1 META"$>
+    <$mt:Var name="html_head"$>
+
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/mootools-1.2-core-yc.js"></script>
+<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/mootools-1.2-more.js"></script>
+
+<mt:If tag="BlogID" like="37|39">
+<!-- // BG News Alumni CSS -->
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgnas.css" type="text/css" />
+</mt:If>
+<mt:If tag="BlogID" like="82|83|87">
+<!-- // Gavel CSS -->
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/gavel.css" type="text/css" />
+</mt:If>
+<mt:If tag="BlogID" like="62">
+<!-- // Obsidian CSS -->
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/obsidian.css" type="text/css" />
+</mt:If>
+<mt:If tag="BlogID" like="42|64|65|40|66|37|80|82|83|87|88">
+<mt:Ignore>
+<!-- // Thin-Wide-Thin CSS Variable -->
+</mt:Ignore>
+	<mt:Var name="page_layout" value="layout-twt">
+</mt:If>
+<!-- // Google Ads -->
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+  GS_googleAddAdSenseService("ca-pub-2295494511037815");
+  GS_googleEnableAllServices();
+</script>
+<script type="text/javascript">
+  GA_googleAddSlot("ca-pub-2295494511037815", "Bottom_Leaderboard");
+  GA_googleAddSlot("ca-pub-2295494511037815", "Right_Rectangle_01");
+  GA_googleAddSlot("ca-pub-2295494511037815", "Top_Leaderboard");
+</script>
+<script type="text/javascript">
+  GA_googleFetchAds();
+</script>
+<mt:If tag="BlogID" like="40">
+<!-- // Google Maps -->
+<MTGSHeader>
+</mt:If>
+<!-- // VisitorStats -->
+<MTVisitorStatsTracker>
+<!-- // END HTML HEAD -->
+</head>

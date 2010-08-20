@@ -1,0 +1,48 @@
+<mt:Entries sort_by="score" namespace="community_pack_recommend" limit="1">
+    <mt:EntriesHeader>
+<div id="popular-entry" class="entry">
+    <h2>Popular topics</h2>
+    </mt:EntriesHeader>
+    <div class="entry-asset">
+        <div class="entry-asset-inner">
+            <div class="entry-header">  
+                <h3 class="entry-title"><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a><mt:Unless name="category_archive"> <span class="category-name"><a href="<$mt:EntryLink archive_type="Category"$>"><$mt:EntryCategory$></a></span></mt:Unless></h3>
+            </div>
+            <$mt:Include module="Userpic" userpic_size="50"$>
+            <div class="asset-meta">
+                <span class="byline">By <span class="vcard author"><a href="<$mt:Var name="profile_view_url" encode_html="1"$><$mt:EntryAuthorID$>"><$mt:EntryAuthorDisplayName$></a></span> on <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%b %d, %Y %I:%M %p"$></abbr></span>
+                
+                <mt:Unless tag="BlogID" eq="39">
+
+                <a href="javascript:void(0)" title="Vote/Favorite this post" onclick="return mtScore(<$mt:EntryID$>)" id="scoring-id-<$mt:EntryID$>" class="scoring">
+                    <span id="scoring-vote-<$mt:EntryID$>" class="scoring-vote">Vote</span>
+                    <span id="scoring-score-<$mt:EntryID$>" class="scoring-score"><$mt:EntryScore namespace="community_pack_recommend" singular="1" plural="#" none="0"$></span>
+                    <span id="scoring-score-label-<$mt:EntryID$>" class="scoring-score-label"><$mt:EntryScore namespace="community_pack_recommend" singular="&nbsp;" plural="&nbsp;" none="&nbsp;"$></span>
+                </a>
+                </mt:Unless>
+
+            </div>
+            <div class="entry-body">
+                <$mt:EntryExcerpt$>
+            </div>
+            <div class="entry-comments">
+                <p class="comment-count icon-comment"><a href="<$mt:EntryPermalink$>#comments"><$mt:EntryCommentCount singular="1 Reply" plural="# Replies" none="Add a Reply"$></a></p>
+                <div class="last-comment">
+        <mt:If tag="EntryCommentCount">
+                    <h4>Last Reply</h4>
+            <mt:Comments lastn="1"> 
+                    <div class="asset-meta">
+                        <a href="<$mt:EntryPermalink$>#comment-<$mt:CommentID$>" title="Permalink to this Reply"><abbr title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate format="%b %e, %Y"$></abbr></a>
+                        <div class="byline">By <span class="vcard author"><mt:IfCommenterIsAuthor><a href="<$mt:Var name="profile_view_url" encode_html="1"$><$mt:CommenterID$>"><$mt:CommenterName$></a><mt:Else><$mt:CommentAuthorLink$></mt:IfCommenterIsAuthor></span></span></div>
+                    </div>
+            </mt:Comments>
+        </mt:If>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mt:EntriesFooter>
+</div>
+    </mt:EntriesFooter>
+</mt:Entries>
+

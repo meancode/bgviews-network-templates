@@ -1,0 +1,34 @@
+<mt:IfArchiveType type="individual">
+	<meta name="keywords" content="<$mt:EntryKeywords$>" />
+	<meta name="description" content="<$mt:EntryExcerpt$>" />
+	<meta http-equiv="author" content="<$mt:EntryAuthorDisplayName$>" />
+	<meta http-equiv="email" content="<$mt:EntryAuthorEmail$>" />
+<mt:ElseIf tag="BlogID" eq="38">
+	<meta name="keywords" content="<$mt:Include module="META Keywords"$>" />
+	<meta name="description" content="<$mt:Include module="META Description"$>" />
+	<meta http-equiv="author" content="<$mt:Include module="META Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="META Email"$>" />
+<mt:ElseIf tag="BlogID" eq="46">
+	<meta name="keywords" content="<$mt:Include module="META Keywords"$>" />
+	<meta name="description" content="<$mt:Include module="META Description"$>" />
+	<meta http-equiv="author" content="<$mt:Include module="META Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="META Email"$>" />
+<mt:ElseIf tag="BlogID" eq="51">
+	<meta name="keywords" content="<$mt:Include module="META Keywords"$>" />
+	<meta name="description" content="<$mt:Include module="META Description"$>" />
+	<meta http-equiv="author" content="<$mt:Include module="META Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="META Email"$>" />
+<mt:ElseIf tag="BlogID" eq="52">
+	<meta name="keywords" content="<$mt:Include module="META Keywords"$>" />
+	<meta name="description" content="<$mt:Include module="META Description"$>" />
+	<meta http-equiv="author" content="<$mt:Include module="META Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="META Email"$>" />
+<mt:ElseIf tag="BlogID" eq="42">
+	<meta http-equiv="author" content="<$mt:Include module="META Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="META Email"$>" />
+<mt:Else>
+	<meta name="keywords" content="<$mt:Include module="BGV Keywords"$>" />
+	<meta name="description" content="<$mt:Include module="BGV Description"$>" />
+	<meta http-equiv="author" content="<$mt:Include module="BGV Author"$>" />
+	<meta http-equiv="email" content="<$mt:Include module="BGV Email"$>" />
+</mt:IfArchiveType>

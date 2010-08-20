@@ -1,0 +1,85 @@
+<script type="text/javascript">
+<!--
+function entry_create_loggedin() {
+    var u = mtGetUser();
+    var loggedin = u && u.is_authenticated && u.is_author ? true : false;
+    var eid = 'logged_in';
+    conditional_block(loggedin, eid);
+    if (!loggedin) {
+        var p = document.getElementById('login_message');
+        if (!p) return;
+        if (u && !u.is_author) 
+            p.innerHTML = "You need a BG Views Network account to post to this forum.";
+        else
+            if (u && !u.can_post)
+                p.innerHTML = "You don't have permission to post.";
+            else
+                p.innerHTML = '<a href="javascript:void(0)" onclick="return mtSignInOnClick(\'login_message\')">Sign in to create an entry.</a>';
+    } else {
+        var mt = document.getElementById('magic_token');
+        if (mt) mt.value = u.sid;
+    }
+}
+// -->
+</script>
+<mt:IfLoggedIn script="entry_create_loggedin">
+<form method="post" action="<$mt:CGIPath$><$mt:CommunityScript$>" name="entry_form" id="create-entry-form" enctype="multipart/form-data">
+    <input type="hidden" name="__mode" value="post" />
+    <input type="hidden" name="blog_id" value="<$mt:BlogID$>" />
+    <input type="hidden" id="magic_token" name="magic_token" value="" />
+    <mt:SetVarBlock name="field-content"><input id="entry-title" class="ti" name="title" /></mt:SetVarBlock>
+    <$mt:Include module="Form Field" id="entry-title" class="" label="Topic"$>
+
+    <mt:SetVarBlock name="field-content"><textarea id="entry-body" class="ta" name="text" rows="15" cols="50"></textarea></mt:SetVarBlock>
+    <$mt:Include module="Form Field" id="entry-body" class="" label="Body"$>
+
+    <mt:If tag="BlogCategoryCount">
+        <mt:SetVarBlock name="field-content">
+            <select id="entry-category" name="category">
+                <option value="0">Select Forum...</option>
+            <mt:TopLevelCategories>
+                <optgroup label="<$mt:CategoryLabel$>">
+            <mt:SubCategories>
+                    <option value="<$mt:CategoryID$>"><$mt:CategoryLabel$></option>
+            </mt:SubCategories>
+                </optgroup>
+            </mt:TopLevelCategories>
+            </select>
+            <span id="entry-category_label" style="display:none"></span>
+            <input id="entry-category_id" type="hidden" name="category_id" value="" />
+            <script type="text/javascript">
+            <!--
+            if (cid && cname) {
+                var id = document.getElementById('entry-category_id');
+                if (id) id.value = cid;
+                var label = document.getElementById('entry-category_label');
+                if (label) {
+                    label.innerHTML = decodeURIComponent(cname);
+                    label.style.display = '';
+                }
+                var select = document.getElementById('entry-category');
+                if (select) select.style.display = 'none';
+            }
+            //-->
+            </script>
+        </mt:SetVarBlock>
+        <$mt:Include module="Form Field" id="entry-category" class="" label="Forum"$>
+    </mt:If>
+
+    <mt:EntryCustomFields>
+        <mt:SetVarBlock name="custom_field_name"><$mt:CustomFieldName$></mt:SetVarBlock>
+        <mt:SetVarBlock name="field-content"><$mt:CustomFieldHTML$></mt:SetVarBlock>
+        <mt:SetVarBlock name="custom_field_id">profile_<$mt:CustomFieldName dirify="1"$></mt:SetVarBlock>
+        <$mt:Include module="Form Field" id="$custom_field_id" class="" label="$custom_field_name"$>
+    </mt:EntryCustomFields>
+    <input type="submit" accesskey="s" name="post" id="entry-submit" value="Submit" />
+</form>
+<mt:Else>
+<p id="login_message"></p>
+</mt:IfLoggedIn>
+<script type="text/javascript">
+<!--
+mtAttachEvent('usersignin', entry_create_loggedin);
+//-->
+</script>
+

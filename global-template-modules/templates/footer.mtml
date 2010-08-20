@@ -1,0 +1,33 @@
+<mt:IfBlog>
+  </div>
+  </div>
+  <mt:Unless name="hide_sidebar">
+    <$mt:Include module="Sidebar"$>
+  </mt:Unless>
+  </div>
+  </div>
+<div id="footer">
+    <$mt:Include module="Footer BG Views"$>
+  </div>
+  </div>
+<!--  </div> -->
+  <$mt:Var name="html_body_footer"$>
+  <$mt:include module="Before Body Close"$>
+  </body>
+  </html>
+  <mt:Else>
+  </div>
+  </div>
+  <mt:Unless name="hide_sidebar">
+    <$mt:Include module="Sidebar Profile Only"$>
+  </mt:Unless>
+  </div>
+  </div>
+<div id="footer">
+    <$mt:Include module="Footer BG Views"$>
+  </div>
+  </div>
+<!--  </div> -->
+  <$mt:Var name="html_body_footer"$>
+  <$mt:include module="Before Body Close"$>
+  </body></html></mt:IfBlog>

@@ -1,0 +1,21 @@
+<$mt:EntryTrackbackData$>
+<div id="entry-<$mt:EntryID$>" class="entry-asset asset hentry">
+    <div class="asset-header">
+        <h2 class="asset-name entry-title"><a href="<$mt:EntryPermalink$>" rel="bookmark"><$mt:EntryTitle$></a></h2>
+        <$mt:Include module="Entry Metadata Forums"$>
+    </div>
+    <div class="asset-content entry-content">
+<mt:If tag="EntryBody">
+        <div class="asset-body">
+            <$mt:EntryBody$>
+        </div>
+</mt:If>
+<mt:If tag="EntryMore" convert_breaks="0">
+        <div class="asset-more-link">
+            Continue reading <a href="<$mt:EntryPermalink$>#more" rel="bookmark"><$mt:EntryTitle$></a>.
+        </div>
+</mt:If>
+    </div>
+    <div class="asset-footer"></div>
+</div>
+

@@ -1,0 +1,61 @@
+ <mt:IfBlog>
+  </div>
+  </div>
+  <mt:Unless name="hide_sidebar">
+
+<div id="beta">
+    <div id="beta-inner">
+        <$mt:Var name="profile_widgets"$>
+        <$MTWidgetSet name="BG Views Profile"$>
+    </div>
+</div>
+
+
+  </mt:Unless>
+  </div>
+  </div>
+<div id="footer">
+<$mt:BlogID setvar="reg_blog_id"$>
+    <$mt:Include file="/home/mt/mt-static/themes/bgviews/includes/footer-cgi.html" blog_id="$reg_blog_id"$>
+  </div>
+  </div>
+  </div>
+  <$mt:Var name="html_body_footer"$>
+  <$mt:include module="Before Body Close"$>
+
+<mt:If name="bgvn-reg" value="bgvn-reg">
+<$mt:Include module="Target Blank Links"$>
+</mt:If>
+
+<mt:If name="bgvn-editprofile" value="bgvn-editprofile">
+<$mt:Include module="Target Blank Links"$>
+</mt:If>
+
+  </body>
+  </html>
+  <mt:Else>
+  </div>
+  </div>
+  <mt:Unless name="hide_sidebar">
+    <$mt:Include module="Sidebar Profile Only"$>
+  </mt:Unless>
+  </div>
+  </div>
+<div id="footer">
+<$mt:BlogID setvar="reg_blog_id"$>
+    <$mt:Include file="/home/mt/mt-static/themes/bgviews/includes/footer-cgi.html" blog_id="$reg_blog_id"$>
+  </div>
+  </div>
+  </div>
+  <$mt:Var name="html_body_footer"$>
+  <$mt:include module="Before Body Close"$>
+
+<mt:If name="bgvn-reg" value="bgvn-reg">
+<$mt:Include module="Target Blank Links"$>
+</mt:If>
+
+<mt:If name="bgvn-editprofile" value="bgvn-editprofile">
+<$mt:Include module="Target Blank Links"$>
+</mt:If>
+
+  </body></html></mt:IfBlog>

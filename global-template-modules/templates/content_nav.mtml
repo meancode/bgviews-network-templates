@@ -1,0 +1,13 @@
+<div class="content-nav">
+    <div class="create-entry"><a href="<$mt:Link template="entry_create"$><mt:If tag="CategoryLabel" default="">?<$mt:CategoryID$>;<$mt:CategoryLabel escape="url"$></mt:If>">Start Topic</a></div>
+<mt:ArchivePrevious>
+    <a href="<$mt:ArchiveLink$>">&laquo; <$mt:ArchiveTitle$></a> |
+</mt:ArchivePrevious>
+<mt:Unless name="main_index">
+    <a href="<$mt:Link template="main_index"$>">Home</a><mt:Unless name="archive_index"> <span class="separator">|</span> </mt:Unless>
+</mt:Unless>
+<mt:ArchiveNext>
+    <span class="separator">|</span> <a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$> &raquo;</a>
+</mt:ArchiveNext>
+</div>
+

@@ -1,0 +1,26 @@
+<mt:IfCommentsActive>
+<div id="comments" class="comments">
+    <mt:If name="comment_preview">
+    <$mt:Include module="Comment Form Forums"$>
+    </mt:If>
+    <mt:Comments>
+        <mt:CommentsHeader>
+    <div class="comments-header">
+        <h2><$mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"$></h2>
+    <mt:IfCommentsAccepted>
+        <span class="separator">|</span>
+        <a href="#comments-open" style="color: #FFFFFF;">Add a reply</a>
+    </mt:IfCommentsAccepted>
+    </div>
+    <div class="comments-content">
+        </mt:CommentsHeader>
+        <$mt:Include module="Comment Detail Forums"$>
+        <mt:CommentsFooter>
+    </div>
+        </mt:CommentsFooter>
+    </mt:Comments>
+    <mt:Unless name="comment_preview">
+    <$mt:Include module="Comment Form Forums"$>
+    </mt:Unless>
+</div>
+</mt:IfCommentsActive>

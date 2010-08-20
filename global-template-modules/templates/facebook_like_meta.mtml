@@ -1,0 +1,9 @@
+<mt:IfArchiveType type="individual">
+<meta property="og:title" content="<$mt:EntryTitle encode_html="1"$>"/>
+<mt:Else>
+<meta property="og:title" content="<$mt:BlogName encode_html="1"$>"/>
+</mt:IfArchiveType>
+<meta property="og:site_name" content="<$mt:BlogName encode_html="1"$>"/>
+<mt:If tag="BlogID" like="66|36|88|37|39">
+<meta property="og:image" content="http://bgnews.com/images/fb.gif"/>
+</mt:If>

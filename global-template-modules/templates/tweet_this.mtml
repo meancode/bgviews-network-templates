@@ -1,0 +1,17 @@
+<script type="text/javascript" charset="utf-8" src="http://bit.ly/javascript-api.js?version=latest&login=bgviews&apiKey=R_ac7c920b97351c9b3bc920f9b861f983"></script>
+<script type="text/javascript">
+BitlyCB.shortenResponse = function(data) {
+var s = '';
+var first_result;
+// Results are keyed by longUrl, so we need to grab the first one.
+for (var r in data.results) {
+first_result = data.results[r]; break;
+}
+
+// Now get the shortURL
+shortURL = first_result["shortUrl"];
+document.location = "http://www.twitter.com/home/?status=" + document.title.replace(/ /g,"+") + "+" + shortURL + "+(via+@bgviews)";
+}
+</script>
+<img style="cursor: pointer;" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/tweet_this.gif" title="Tweet about <$MTEntryTitle encode_html="0">" onClick="BitlyClient.shorten(document.location, 'BitlyCB.shortenResponse');">
+

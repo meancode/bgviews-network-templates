@@ -1,0 +1,12 @@
+<mt:If tag="EntryCategory">
+    <mt:EntryCategories>
+        <mt:SetVarBlock name="query_string">?<$mt:CategoryID$>;<$mt:CategoryLabel escape="url"$></mt:SetVarBlock>
+    </mt:EntryCategories>
+<mt:Else tag="CategoryLabel">
+        <mt:SetVarBlock name="query_string">?<$mt:CategoryID$>;<$mt:CategoryLabel escape="url"$></mt:SetVarBlock>
+</mt:If>
+<div class="content-header">
+    <mt:If name="content_header_url"><a href="<$mt:Var name="content_header_url"$>"></mt:If><<$mt:Var name="content_header_title_tag" default="h1"$> id="page-title" class="<$mt:Var name="content_header_class"$>"><mt:If name="content_header_title"><$mt:Var name="content_header_title"$><mt:Else><$mt:Var name="page_title"$></mt:If></<$mt:Var name="content_header_title_tag" default="h1"$>><mt:If name="content_header_url"></a></mt:If>
+    <div class="create-entry"><a href="<$mt:Link template="entry_create"$><$mt:Var name="query_string"$>">Start Topic</a></div>
+</div>
+

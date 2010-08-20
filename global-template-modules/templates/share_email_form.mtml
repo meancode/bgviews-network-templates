@@ -1,0 +1,27 @@
+<a name="emailfriend"></a>
+<div id="slickbox">
+<div id="share-email">
+    <h2 class="trackbacks-header">Email to a friend</h2>
+    <div class="email-open-content">
+    <form name="share-email-form" id="share-by-email-form" action="<mt:CGIPath>plugins/Share/share.cgi" method="post">
+      <input type="hidden" name="__mode" value="share_email" />
+      <input type="hidden" name="entry_id" value="<mt:EntryID>" />
+      <input type="hidden" name="blog_id" value="<mt:BlogID>" />
+      <div id="share-email-to">
+        <label for="email_to">To</label>
+        <input type="text" name="email_to" id="email_to" />
+      </div>
+      <div id="share-email-from">
+        <label for="email_from">From</label>
+        <input type="text" name="email_from" id="email_from" />
+      </div>
+      <div id="share-email-message">
+        <label for="email_message">Message</label>
+        <textarea name="email_message" rows="5" id="email_message"></textarea>
+      </div>
+      <input type="submit" value="Send" id="share-email-submit" /><br><br>
+    </form>
+  </div>
+</div>
+</div>
+
