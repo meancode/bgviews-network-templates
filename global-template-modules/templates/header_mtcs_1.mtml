@@ -11,7 +11,7 @@
         <mt:SetVarBlock name="profile_view_url"><$mt:CGIPath$><$mt:CommunityScript$>?__mode=view&amp;blog_id=<$mt:BlogID$>&amp;id=</mt:SetVarBlock>
         <link rel="stylesheet" href="<$mt:Link template="styles"$>" type="text/css" />
         <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgviews.css" type="text/css" />
-        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/jquery.lightbox-0.5.css" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/colorbox.css" type="text/css" />
         <link rel="alternate" type="application/atom+xml" title="<$mt:BlogName encode_html="1"$>" href="<$mt:Link template="feed_recent"$>" />
         <link rel="start" href="<$mt:BlogURL$>" title="Home" />
         <script type="text/javascript" src="<$mt:Link template="javascript"$>"></script>
@@ -26,7 +26,7 @@
         <mt:SetVarBlock name="profile_view_url"><$mt:CGIPath$><$mt:CommunityScript$>?__mode=view&amp;blog_id=<$mt:BlogID$>&amp;id=</mt:SetVarBlock>
         <link rel="stylesheet" href="<$mt:Link template="styles"$>"" type="text/css" />
         <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgviews.css" type="text/css" />
-        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/jquery.lightbox-0.5.css" type="text/css" />
+        <link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/colorbox.css" type="text/css" />
         <link rel="alternate" type="application/atom+xml" title="<$mt:BlogName encode_html="1"$>" href="<$mt:Link template="feed_recent"$>" />
         <script type="text/javascript" charset="utf-8"><$mt:Include module="GlobalJavaScript"$></script>
         <!-- END Community Solution Styles -->
@@ -43,13 +43,15 @@
     <meta http-equiv="Content-Style-Type" content="text/css" />
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="imagetoolbar" content="no" />   
+    <mt:If tag="BlogID" eq="66">
+    <link rel="stylesheet" href="http://bgnews.com/anythingslider.css" type="text/css" media="screen"/>
+    </mt:If>
     <link rel="icon" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/favicon.ico" TYPE="image/x-icon"> 
     <link rel="shortcut icon" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/favicon.ico" TYPE="image/x-icon">
     <$mt:Include module="Apple Touch Icon"$> 
     <title><$mt:Var name="title"$></title>
     <$mt:Include module="Header MTCS 1 META"$>
     <$mt:Var name="html_head"$>
-
 <mt:Unless name="bgvn-reg" value="bgvn-reg">
 	<!-- // Scoring -->
 	<script type="text/javascript">
@@ -59,55 +61,50 @@
 	/* ]]> */
 	</script>
 	<!-- // jQuery Scripts -->
-	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery.easing.1.2.js"></script>
+	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery.anythingslider.js"></script>
+	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery.colorbox-min.js"></script>
 	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/pollposition.js"></script>
 	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery/jquery.form.js"></script>
 	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery/slicker.js"></script>
-	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/jquery/jquery.lightbox-0.5.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() { 
-	  $('a[@rel*=lightbox]').lightBox({
-	    imageLoading:'http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/lightbox-ico-loading.gif',
-	    imageBtnPrev:'http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/lightbox-btn-prev.gif',
-	    imageBtnNext:'http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/lightbox-btn-next.gif',
-	    imageBtnClose:'http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/lightbox-btn-close.gif',
-	    imageBlank:'http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/lightbox-blank.gif',
-	  });
-	});
+		$(function()
+		{
+			$("a[rel='lightbox']").colorbox();
+		});
 	</script>
+<mt:If tag="BlogID" eq="66">
+<$mt:Var name="jquery_head"$>
+</mt:If>
 </mt:Unless>
-<mt:Unless name="bgvn-profile" value="bgvn-profile">
-	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/carousel.js"></script>
-	<link rel="stylesheet" href="<$mt:BlogURL$>carousel.css" type="text/css" />
-</mt:Unless>
+<!--[if lt IE 7]>
+<script defer type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/pngfix.js"></script>
+<![endif]-->
 	<link href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/accordion.css" rel="stylesheet" type="text/css" media="all" />
 	<script type="text/javascript" src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/js/accordion.js"></script>
-
-<mt:Ignore>
-<!-- // Facebook Commenters -->
-</mt:Ignore>
 <mt:GreetFacebookCommenters>
 <$mt:Include module="Facebook Like META"$>
-<mt:If tag="BlogID" like="37|39">
+<mt:If tag="BlogID" like="/^(37|39)$/">
 	<!-- // BG News Alumni CSS -->
 	<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgnas.css" type="text/css" />
 </mt:If>
-<mt:If tag="BlogID" like="82|83|87">
+<mt:If tag="BlogID" like="/^(82|83|87)$/">
 	<!-- // Gavel CSS -->
 	<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/gavel.css" type="text/css" />
 </mt:If>
-<mt:If tag="BlogID" like="62">
+<mt:If tag="BlogID" eq="62">
 	<!-- // Obsidian CSS -->
 	<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/obsidian.css" type="text/css" />
 </mt:If>
-<mt:If tag="BlogID" like="42|64|65|40|66|37|80|82|83|87|88|91|93">
+<mt:If tag="BlogID" like="/^(42|64|65|40|66|37|80|82|83|87|88|91|93)$/">
 	<mt:Ignore>
 	<!-- // Thin-Wide-Thin CSS Variable -->
 	</mt:Ignore>
 	<mt:Var name="page_layout" value="layout-twt">
 </mt:If>
 
-<mt:If tag="BlogID" like="40">
+<mt:If tag="BlogID" eq="40">
 <!-- // Google Maps -->
 <MTGSHeader>
 </mt:If>
