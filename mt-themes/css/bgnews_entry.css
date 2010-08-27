@@ -1,0 +1,46 @@
+.layout-twt #alpha {
+    left: 0px;
+    width: 645px;
+}
+#mt-community-blog .asset-header h2 {
+	font: bold 30px Georgia, "Times New Roman", Times, serif !important;
+}
+#mt-community-blog .asset-header h3 {
+	font: normal 20px Georgia, "Times New Roman", Times, serif !important;
+	color: #243F8F;
+}
+
+#alpha-right {
+	float: right;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	width: 250px;
+}
+
+.asset-body {
+	clear: none;
+}
+.asset-more {
+	clear: none;
+}
+
+#bgvn-related-entries h3 {
+	font: bold 14px Georgia, "Times New Roman", Times, serif;
+	color: #243F8F;	
+}
+
+#bgvn-related-entries {
+	width: 250px;
+	padding: 0px 0px 5px;
+}
+#bgvn-related-entries ul li {
+	list-style: url(http://bgnews.com/images/bullet.gif) none;
+}
+#bgvn-related-entries ul {
+	padding-left: 15px;
+	border-bottom: 1px solid #243F8F;
+	padding-bottom: 10px;
+}
+.asset-body .widget-pages {
+	width: 627px;
+}

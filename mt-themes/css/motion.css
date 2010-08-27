@@ -1,0 +1,1775 @@
+
+/* Default Styles ---------------------------------------------------------------------------------- */
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    padding: 0;
+    border: none;
+    color: #000;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Arial, Verdana;
+    clear: none;
+}
+.ti,
+.ta,
+.pw {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-color-top: #aaa;
+    border-color-left: #aaa;
+    padding: 2px;
+    font-family: "Helvetica Neue", Arial, Verdana;
+}
+p {
+    margin: 0 0 10px;
+}
+.default-value,
+.tip,
+.hint { color: #aaa; }
+
+.right {
+    float: right;
+}
+
+#username,
+#password,
+#nickname,
+#email,
+#pass_verify,
+#hint,
+#url,
+#pass,
+#customfield_bio,
+#customfield_byline_position,
+#customfield_your_nickname,
+#customfield_bgsu_weblog,
+#customfield_years_graduated_from_bgsu {
+	padding: 3px;
+	border: 1px solid #24408f;
+}
+
+/* Userpics ---------------------------------------------------------------------------------- */
+
+.userpic {
+    position: relative;
+}
+.userpic .userpic-link img.photo {
+    margin-bottom: 0;
+}
+.userpic .user-info {
+    display: none;
+}
+.members ul li {
+    position: relative;
+}
+.members ul li,
+.members ul li div,
+.followers ul li,
+.followers ul li div,
+.following ul li,
+.following ul li div {
+    float: left;
+    margin: 0 2px 2px 0;
+}
+.user-info {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    top: 40px;
+    overflow: hidden;
+    padding: 15px 0 10px;
+    width: 160px;
+    height: 136px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/userinfo-bg.png) no-repeat 0 0;
+    font-size: 11px;
+    line-height: 1.4;
+}
+.members .user-info,
+.followers .user-info,
+.following .user-info {
+    top: 24px;
+    left: 0;
+}
+.user-info h4 {
+    font-size: 13px;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.user-info .name, 
+.user-info .stats { 
+    display: block;
+    margin: 0 10px;
+}
+
+/* Navigation ---------------------------------------------------------------------------------- */
+
+#nav {
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #111;
+}
+#nav-inner {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+#nav-inner ul {
+    padding: 0 20px;
+}
+#nav li {
+    float: left;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+}
+#nav li a {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15px;
+    font-weight: bold;
+    color: #777;
+}
+#nav li.current a {
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/nav-current.gif) no-repeat 50% bottom;
+}
+
+
+/* Search ---------------------------------------------------------------------------------- */
+
+#nav .widget-search {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 300px;
+    text-align: right;
+}
+#nav .widget-header {
+    display: none;
+}
+#nav .widget-content {
+    padding-top: 6px;
+}
+#nav .widget-search .search-query {
+    font-size: 12px;
+    color: #fff;
+    margin-right: 2px;
+    border: none;
+    border-top: 1px solid #111;
+    border-left: 1px solid #111;
+    padding: 3px;
+    width: 180px;
+    vertical-align: middle;
+}
+#nav .widget-search .search-submit {
+    vertical-align: middle;
+}
+
+
+/* Footer ---------------------------------------------------------------------------------- */
+
+#footer-inner {
+    width: 940px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#footer a {
+/*    color: #fff;*/
+}
+#footer .widget {
+    float: left;
+    width: 620px;
+    margin-right: 20px;
+    font-size: 12px;
+    color: #999;
+    line-height: 1.4;
+}
+#footer .widget h3 {
+    display: none;
+}
+#footer .widget-powered {
+    float: right;
+    width: 300px;
+    margin-right: 0;
+    text-align: right;
+}
+
+
+/* Main Index ---------------------------------------------------------------------------------- */
+
+#authenticate {
+    display: none;
+    background: #F1F7FB;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+}
+#authenticate a {
+    text-decoration: none;
+}
+#authenticate a:hover {
+    text-decoration: underline;
+}
+#authenticate .signin-link {
+    font-size: 12px;
+    color: #777;
+}
+
+#cannot-post {
+    display: none;
+}
+
+#compose {
+    display: none;
+    background: #F1F7FB url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/compose-content-bg.gif) no-repeat 0 bottom;
+    margin-bottom: 25px;
+    position: relative;
+}
+#compose h3 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 16px;
+    background: #D9E8F0 url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/compose-header-bg.gif) no-repeat 0 0;
+    padding: 10px 15px;
+    border: none;
+    margin: 0 0 10px;
+    color: #111;
+    border-bottom: 1px solid #C3DBE7;
+}
+#compose-content {
+    padding: 10px 15px;
+}
+#compose-userpic {
+    border: 1px solid #ccc;
+    padding: 2px;
+    width: 60px;
+    background: #fff;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+#compose-userpic span {
+    position: absolute;
+    display: block;
+    width: 50px;
+    left: 5px;
+    top: 20px;
+    text-align: center;
+}
+#homepage-compose {
+    float: left;
+    width: 405px;
+}
+#entry-fields div {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #aaa;
+}
+#entry-fields-optional {
+    display: none;
+}
+#homepage-compose .submit-wrapper {
+    margin-top: 10px;
+}
+#homepage-compose .submit-wrapper input {
+    font-size: 13px;
+}
+#homepage-compose .more-options {
+    float: right;
+    display: block;
+    font-size: 11px;
+    line-height: 22px;
+    text-decoration: none;
+}
+#homepage-compose .ti,
+#homepage-compose .ta {
+	width: 510px;
+	font-size: 13px;
+	border: none;
+	border-left: 1px solid #C3DBE7;
+	border-top: 1px solid #C3DBE7;
+	background-color: #FFF;
+}
+.submit-wrapper {
+	width: 510px;
+}
+#homepage-compose label {
+}
+#homepage-compose #field-title input {
+    font-size: 20px;
+}
+#entry-types {
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    float: right;
+}
+#entry-types li {
+	float: left;
+	width: 29px;
+	height: 29px;
+	list-style-type: none;
+}
+#entry-types li.active {
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/compose-on.gif) no-repeat 50% bottom;
+}
+#entry-types li a {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 16px;
+    height: 16px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/page_white_text.png) no-repeat 0 0;
+    margin: 6px auto 0;
+}
+#entry-types li#entry-photo a {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/picture.png);
+}
+#entry-types li#entry-link a {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/link.png);
+}
+#entry-types li#entry-embed a {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/film.png);
+}
+#entry-types li#entry-audio a {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/sound.png);
+}
+.content-nav {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 12px;
+}
+#response-handler {
+    display: none;
+}
+#spinner,
+#spinner-status {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/spinner.gif) no-repeat center center;
+}
+#spinner {
+    filter:alpha(opacity=5);
+    -moz-opacity:.5;
+    opacity:.5;
+    background: #fff;
+}
+
+
+/* Entry Listing ---------------------------------------------------------------------------------- */
+
+
+#alpha .userpic .userpic-link {
+    border: 1px solid #ccc;
+    padding: 2px;
+    display: block;
+    float: left;
+}
+
+
+/* Actions Listing ---------------------------------------------------------------------------------- */
+
+.service-icon { background-repeat: no-repeat; }
+.icon-entry { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/page_white_text.png); }
+.icon-link { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/link.png); }
+.icon-audio { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/sound.png); }
+.icon-video { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/film.png); }
+.icon-embed { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/film.png); }
+.icon-photo { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/picture.png); }
+.icon-comment { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/comment.png); }
+.icon-follow { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/group.png); }
+.icon-favorite { background-image: url(http://test.bgviewsnetwork.com/static//plugins/Motion/images/icons/heart.png); }
+
+.icon-service-twittersearch { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/twitter.png); }
+
+.icon-service-oneup { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/oneup.png); }
+.icon-service-backtype { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/backtype.png); }
+.icon-service-fortythreethings { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/fortythreethings.png); }
+.icon-service-aim { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/aim.png); }
+.icon-service-bebo { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/bebo.png); }
+.icon-service-catster { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/catster.png); }
+.icon-service-colourlovers { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/colourlovers.png); }
+.icon-service-corkd { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/corkd.png); }
+/*.icon-service-deadjournal { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/deadjournal.png); }*/
+.icon-service-delicious { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/delicious.png); }
+.icon-service-destructoid { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/destructoid.png); }
+.icon-service-digg { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/digg.png); }
+.icon-service-dodgeball { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/dodgeball.png); }
+.icon-service-dogster { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/dogster.png); }
+.icon-service-dopplr { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/dopplr.png); }
+.icon-service-facebook { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/facebook.png); }
+.icon-service-ffffound { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/ffffound.png); }
+.icon-service-flickr { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/flickr.png); }
+.icon-service-friendfeed { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/friendfeed.png); }
+.icon-service-gametap { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/gametap.png); }
+.icon-service-goodreads { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/goodreads.png); }
+.icon-service-gblogs { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/gblogs.png); }
+.icon-service-gnews { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/gnews.png); }
+.icon-service-googlereader { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/googlereader.png); }
+.icon-service-gtalk { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/gtalk.png); }
+.icon-service-hi5 { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/hi5.png); }
+.icon-service-iconbuffet { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/iconbuffet.png); }
+.icon-service-icq { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/icq.png); }
+.icon-service-identica { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/identica.png); }
+.icon-service-iminta { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/iminta.png); }
+.icon-service-istockphoto { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/istockphoto.png); }
+.icon-service-iusethis { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/iusethis.png); }
+.icon-service-iwatchthis { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/iwatchthis.png); }
+.icon-service-jabber { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/jabber.png); }
+.icon-service-jaiku { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/jaiku.png); }
+.icon-service-kongregate { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/kongregate.png); }
+.icon-service-lastfm { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/lastfm.png); }
+.icon-service-linkedin { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/linkedin.png); }
+/*.icon-service-livedoor { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/livedoor.png); }*/
+.icon-service-livejournal { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/livejournal.png); }
+.icon-service-magnolia { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/magnolia.png); }
+.icon-service-mog { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/mog.png); }
+.icon-service-msn { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/msn.png); }
+.icon-service-multiply { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/multiply.png); }
+.icon-service-myspace { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/myspace.png); }
+.icon-service-netflix { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/netflix.png); }
+.icon-service-netvibes { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/netvibes.png); }
+.icon-service-newsvine { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/newsvine.png); }
+.icon-service-ning { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/ning.png); }
+.icon-service-ohloh { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/ohloh.png); }
+.icon-service-orkut { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/orkut.png); }
+.icon-service-pandora { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/pandora.png); }
+.icon-service-picasaweb { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/picasaweb.png); }
+.icon-service-p0pulist { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/p0pulist.png); }
+.icon-service-pownce { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/pownce.png); }
+.icon-service-reddit { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/reddit.png); }
+.icon-service-skype { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/skype.png); }
+.icon-service-slideshare { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/slideshare.png); }
+.icon-service-smugmug { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/smugmug.png); }
+.icon-service-sonicliving { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/sonicliving.png); }
+.icon-service-steam { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/steam.png); }
+.icon-service-stumbleupon { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/stumbleupon.png); }
+.icon-service-tabblo { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/tabblo.png); }
+.icon-service-technorati { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/technorati.png); }
+.icon-service-technoratisearch { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/technorati.png); }
+.icon-service-tribe { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/tribe.png); }
+.icon-service-twitter { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/twitter.png); }
+.icon-service-twittersearch { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/twitter.png); }
+.icon-service-typepad { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/typepad.png); }
+.icon-service-tumblr { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/tumblr.gif); }
+.icon-service-uncrate { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/uncrate.png); }
+.icon-service-upcoming { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/upcoming.png); }
+.icon-service-viddler { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/viddler.png); }
+.icon-service-vimeo { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/vimeo.png); }
+.icon-service-virb { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/virb.png); }
+.icon-service-vox { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/vox.png); }
+.icon-service-website { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/website.png); }
+.icon-service-wists { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/wists.png); }
+.icon-service-xboxlive { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/xboxlive.png); }
+.icon-service-yahoo { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/yahoo.png); }
+.icon-service-yelp { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/yelp.png); }
+.icon-service-youtube { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/youtube.png); }
+.icon-service-zooomr { background-image: url(http://test.bgviewsnetwork.com/static//plugins/ActionStreams/images/services/zooomr.png); }
+
+
+    
+.icon-service-12seconds { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/12seconds/images/12seconds.png); }
+    
+
+    
+.icon-service-Amazon { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/ASAmazon/images/amazon.png); }
+    
+
+    
+.icon-service-bgsublogs { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/ASBGSUBlogs/images/bgsublogs.png); }
+    
+
+    
+.icon-service-blipfm { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/blipfm/images/blipfm.png); }
+    
+
+    
+.icon-service-Blogcritics { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/ASBlogcritics/images/bc.png); }
+    
+
+    
+.icon-service-brightkite { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/brightkite/images/brightkite.png); }
+    
+
+    
+.icon-service-cocomment { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/AScoComment/images/cocomment.png); }
+    
+
+    
+.icon-service-disqus { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/disqus/images/disqus.png); }
+    
+
+    
+.icon-service-getsatisfaction { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/GetSatisfactionActionStreams/getsatisfaction.png); }
+    
+
+    
+.icon-service-hackernews { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/ASHackerNews/images/ycomb.png); }
+    
+
+    
+.icon-service-hulu { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/HuluActionStreams/hulu.png); }
+    
+
+    
+.icon-service-iwtst { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Iwtst/images/iwtst.png); }
+    
+
+    
+.icon-service-joost { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/joost/images/joost.png); }
+    
+
+    
+.icon-service-meetup { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/meetup/images/meetup.png); }
+    
+
+    
+.icon-service-MobileMe { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/MobileMe/images/services/mobileme.png); }
+    
+
+    
+.icon-service-mtdotorg { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/MTOrgAS/mt_logo.png); }
+    
+
+    
+.icon-service-plurk { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/plurk/images/plurk.png); }
+    
+
+    
+.icon-service-qik { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/qik/images/qik.png); }
+    
+
+    
+.icon-service-rejaw { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/rejaw/images/rejaw.png); }
+    
+
+    
+.icon-service-seesmic { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/seesmic_as/images/seesmic.png); }
+    
+
+    
+.icon-service-slashdot { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/ASSlashdot/images/slashdot.png); }
+    
+
+    
+.icon-service-tripit { background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/tripit/images/tripit.png); }
+    
+
+
+.actions ul {
+    margin-bottom: 15px;
+}
+
+
+.asset,
+.action {
+    /* padding-bottom: 25px; */
+    border-bottom: 4px solid #f6f6f6;
+    background-repeat: no-repeat;
+    position: relative;
+    list-style-type: none;
+}
+.action {
+    background-repeat: no-repeat;
+    padding: 8px 10px 7px 35px;
+    margin: 0;
+    font-size: 11px;
+    color: #222;
+    border-top: 1px solid #bbb;
+    background-repeat: no-repeat;
+    background-position: 10px 5px;
+}
+.action a {
+    color: #069;
+}
+
+
+.date {
+    display: none;
+    margin-left: 0.5em;
+}
+.hover .date,
+.noscript .date {
+    display: inline;
+}
+
+.action .date {
+    padding-left: 10px;
+}
+.asset .asset-body, 
+.action .asset-body { 
+    margin-bottom: 15px;
+}
+
+.asset-more,
+.asset-more-link {
+    clear: both;
+}
+
+.asset-more-link {
+    font-weight: bold;
+}
+.asset-more-link {
+    font-size: 11px;
+}
+.asset-meta {
+    font-size: 11px;
+    color: #aaa;
+    padding: 0 0 0 25px;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px dotted #ddd;
+    margin-bottom: 15px;
+    background-repeat: no-repeat;
+    background-position: 10px 6px;
+}
+
+.hover,
+.noscript .asset-meta,
+.hover .asset-meta,
+.mt-entry-archive .asset-meta,
+.trackbacks .asset-meta,
+.user-profile .asset-meta {
+    color: #555;
+}
+.icon-comment .asset-meta {
+    padding: 8px 10px 7px 32px;
+}
+.icon-link .asset-meta {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/link.png);
+}
+.icon-embed .asset-meta {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/film.png);
+}
+.icon-video .asset-meta {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/film.png);
+}
+.link a.link-arrow {
+    text-decoration: none;
+    font-size: 20px;
+}
+.link a.link-arrow:hover {
+    text-decoration: underline;
+}
+.asset .asset-meta .separator {
+    display: none;
+}
+.asset .asset-meta .byline,
+.asset .asset-meta .favorite-action,
+.asset .asset-meta .trackback-count,
+.asset .asset-meta .comment-count {
+    padding: 8px 10px 7px;
+}
+
+.asset .asset-meta .byline {
+    margin-left: 10px;
+}
+
+
+.asset .asset-meta .byline {
+    display: block;
+    float: left;
+}
+.noscript .favorite-action,
+.noscript .unpublish-action {
+    display: none !important;
+}
+
+.asset .asset-meta .unpublish-action,
+.asset .asset-meta .comment-count,
+.asset .asset-meta .trackback-count,
+.asset .asset-meta .favorite-action {
+    display: block;
+    float: right;
+    padding-left: 32px;
+    border-left: 1px dotted #ddd;
+    background-repeat: no-repeat;
+    background-position: 10px 50%;
+    text-decoration: none;
+    font-weight: bold;
+}
+.asset .asset-meta .comment-count {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/comments.png);
+}
+.asset .asset-meta .trackback-count {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/trackbacks.png);
+}
+.asset-meta .unpublish-action span,
+.asset-meta .comment-count span,
+.asset-meta .trackback-count span {
+    display: none;
+}
+.asset .asset-meta .favorite-action {
+    overflow: hidden;
+    text-align: center;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/star-gray.png) no-repeat 50% 50%;
+    width: 16px;
+    padding: 8px 10px 7px 10px;
+    cursor: pointer;
+}
+.asset .asset-meta .favorite-action:hover,
+.asset .asset-meta .scored {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/star.png);
+}
+.asset .asset-meta .unpublish {
+    display: none;
+}
+.asset .asset-meta .unpublish-action {
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_close.png) no-repeat 50% 50%;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+}
+
+.asset .asset-meta .unpublish-action.entry-author {
+    display: block;
+}
+.asset-meta a {
+    color: #aaa;
+}
+.hover a,
+.noscript .asset-meta a,
+.hover .asset-meta a,
+.mt-entry-archive .asset-meta a,
+.user-profile .asset-meta a {
+    color: #069;
+}
+.asset .asset-meta a:hover {
+    color: #069;
+}
+.asset .userpic {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    margin-left: 35px;
+}
+.asset .asset-content {
+	font-size: 13px;
+	line-height: 1.5;
+	color: #222;
+	margin-top: 0px;
+	margin-right: 15px;
+	margin-bottom: 0;
+}
+.asset .asset-content ul, 
+.asset .asset-content ol { 
+    margin: 2em 0;
+    padding-left: 30px;
+}
+.asset .asset-content ul li, 
+.asset .asset-content ol li {
+    display: list-item;
+    margin-bottom: 10px;
+}
+.asset .asset-content ul { 
+    list-style-type: disc;
+}
+.asset .asset-content ol {
+    list-style-type: decimal;
+}
+.asset .asset-content .photo,
+.asset .asset-content .video,
+.asset .asset-content .embed,
+.asset .asset-content object {
+    margin-bottom: 10px;
+}
+.asset .asset-content p {
+    margin-bottom: 10px;
+}
+#alpha .asset h1,
+#alpha .asset h2 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    font-style: normal;
+    clear: none;
+    border: none;
+    padding: 0;
+    font-family: "Helvetica Neue", Arial, Verdana;
+    line-height: 1.2;
+    text-transform: none;
+    background: none;
+}
+.asset h2 a {
+    text-decoration: none;
+}
+.asset .asset-content {
+	margin-left: 96px;
+	margin-top: -45px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	float: left;
+}
+.asset .asset-footer {
+    clear: both;
+    font-size: 11px;
+    color: #222;
+    margin-bottom: .5em;
+    padding: 0 10px;
+}
+#alpha .asset h1 a,
+#alpha .asset h2 a {
+    color: #222;
+}
+#alpha .asset h1 a:hover,
+#alpha .asset h2 a:hover {
+    color: #069;
+}
+
+
+
+/* textpost */
+
+#alpha .asset h1,
+#alpha .asset h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+/* linkpost */
+
+#alpha .icon-link h2 {
+    margin-bottom: 2px;
+}
+#alpha .icon-link h1 a,
+#alpha .icon-link h2 a {
+    color: #069;
+    font-weight: bold;
+    padding-right: 15px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/external_link.gif) no-repeat right 40%;
+}
+
+
+.user-profile .asset .asset-content,
+.user-profile #alpha .asset h1,
+.user-profile #alpha .asset h2 {
+    margin-left: 35px;
+}
+.user-profile .asset .userpic {
+    display: none;
+}
+
+.comment .asset-content {
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/comment-bg.gif) no-repeat 0 6px;
+    margin-left: 89px;
+}
+.comment .asset-content .asset-body {
+   background: #f4f4f4;
+   border-bottom: 1px solid #ccc;
+   margin-left: 7px;
+   padding: 10px 15px;
+}
+.asset-content .link a {
+    text-decoration: none;
+    padding: 2px 6px 2px 24px;
+    background: #F1F7FB url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/external_link.gif) no-repeat 6px 50%;
+    border: 1px solid #D9E8F0;
+}
+.asset-content .link a:hover {
+    background: #ffd url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icons/external_link.gif) no-repeat 6px 50%;
+    border: 1px solid #fc3;
+}
+
+.entry-tags h4 { 
+    margin-bottom: 0;
+    margin-right: .25em;
+    display: inline;
+    font-weight: bold;
+}
+
+.entry-tags ul { 
+    display: inline;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.entry-tags ul li { 
+    display: inline;
+}
+
+.most-recent-comment {
+    background: #fff url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/recent-comment-bg.gif) no-repeat 0 0;
+    margin-top: 10px;
+    padding: 13px 5px 7px;
+    line-height: 24px;
+    font-size: 12px;
+    font-style: italic;
+    border-bottom: 1px solid #ddd;
+}
+.most-recent-comment a {
+    color: #777;
+    text-decoration: none;
+}
+.most-recent-comment a:hover {
+    color: #069;
+    text-decoration: underline;
+}
+.most-recent-comment .userpic,
+#alpha .most-recent-comment .userpic .userpic-link {
+    float: left;
+    border: none;
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+
+
+/* Pages ---------------------------------------------------------------------------------- */
+
+.page-asset .asset-content {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Sidebar ---------------------------------------------------------------------------------- */
+
+ul.entry-sidebar-listing li {
+    padding-left: 22px;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    background-position: 0 1px;
+    background-repeat: no-repeat;
+}
+ul.entry-sidebar-listing li a {
+    text-decoration: none;
+}
+ul.entry-sidebar-listing li span.meta {
+    font-size: 11px;
+    color: #777;
+}
+ul.entry-sidebar-listing li span.meta a {
+    color: #777;
+    text-decoration: underline;
+}
+ul.entry-sidebar-listing li span.meta a:hover {
+    color: #069;
+}
+
+
+.widget-gallery .widget-content h3 {
+    display: none;
+}
+
+
+.widget-recent-comments .widget-content {
+    line-height: 1.4;
+}
+.widget-recent-comments li {
+    margin-bottom: 15px;
+}
+.widget-recent-comments li .comment-attribution {
+    font-size: 11px;
+    margin: 4px 0 0 25px;
+    color: #777;
+}
+
+.widget-members ul.userlist-small li {
+    float: left;
+    position: relative;
+    margin: 0 3px 3px;
+    padding: 0;
+    height: 24px;
+}
+.widget-members ul.userlist-small li a {
+    margin: 0; padding: 0;
+}
+
+.widget-elsewhere .service-icon {
+    padding: 3px 0 7px 20px;
+}
+.widget-elsewhere a {
+    text-decoration: none;
+}
+
+#beta .archives ul,
+#beta .archives p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#beta .archives li {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0 0 2px;
+}
+
+.widget-gallery {
+    position: relative;
+}
+#gall-prev,
+#gall-next {
+    position: absolute;
+    top: 90px;
+    display: block;
+    overflow: hidden;
+    width: 16px;
+    height: 16px;
+    background: #069;
+    text-indent: -9999px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/gallery-nav.gif) no-repeat 0 0;
+}
+#gall-prev {
+    left: 5px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/gallery-nav.gif) no-repeat 0 -36px;
+}
+#gall-next {
+    right: 5px;
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/gallery-nav.gif) no-repeat -36px -36px;
+}
+#gall-prev:hover {
+    background-position: 0 -72px;
+}
+#gall-next:hover {
+    background-position: -36px -72px;
+}
+#gall-prev.disabled {
+    background-position: 0 0;
+    cursor: default;
+}
+#gall-next.disabled {
+    background-position: 0 0;
+    cursor: default;
+}
+#beta .widget-gallery .widget-content {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 30px;
+    width: 240px;
+}
+#photo-gallery {
+    width: 1100px;
+    position: absolute;
+    left: 0px;
+}
+#photo-gallery li {
+    float: left;
+    margin: 5px;
+    width: 110px;
+}
+.widget-tag-cloud .widget-content ul {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.widget-tag-cloud .widget-content li {
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    line-height: 1.2;
+    background: none;
+}
+
+.widget-tag-cloud .rank-1  { font-size: 1.75em; }
+.widget-tag-cloud .rank-2  { font-size: 1.75em; }
+.widget-tag-cloud .rank-3  { font-size: 1.625em; }
+.widget-tag-cloud .rank-4  { font-size: 1.5em; }
+.widget-tag-cloud .rank-5  { font-size: 1.375em; }
+.widget-tag-cloud .rank-6  { font-size: 1.25em; }
+.widget-tag-cloud .rank-7  { font-size: 1.125em; }
+.widget-tag-cloud .rank-8  { font-size: 1em; }
+.widget-tag-cloud .rank-9  { font-size: 0.95em; }
+.widget-tag-cloud .rank-10 { font-size: 0.9em; }
+
+/* Archives ---------------------------------------------------------------------------------- */
+
+.action-listing {
+    clear: both;
+    margin: 0 0 15px 0;
+}
+.action-listing li {
+    border-bottom: 1px dotted #ddd;
+    clear: left;
+    position: relative;
+    padding: 8px 0 6px 10px;
+    line-height: 18px;
+    background-repeat: no-repeat;
+    background-position: 100px 8px;
+}
+#alpha .action-listing li .userpic {
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+#alpha .action-listing li .userpic .userpic-link {
+    border: none;
+    margin-top: 3px;
+    padding: 0;
+}
+.action-listing li a {
+    text-decoration: none;
+}
+.action-listing li span {
+    display: block;
+    float: left;
+    color: #222;
+}
+.action-listing li span.action-listing-date {
+    width: 90px;
+}
+.action-listing li span.action-listing-title {
+    display: inline; /* IE6 */
+    width: 455px;
+    margin-left: 25px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+.action-listing li span.action-listing-comments {
+    display: block;
+    width: 30px;
+    background-repeat: no-repeat;
+    font-size: 13px;
+    text-align: right;
+}
+
+.archive .archive-header { 
+    margin-bottom: 15px;
+}
+.archive .archive-content { 
+    margin: 0 10px 15px;
+}
+
+/* Comments ---------------------------------------------------------------------------------- */
+
+.trackbacks,
+.comments, 
+#comments-list {
+    clear: left;
+    margin-bottom: 25px;
+}
+.comment {
+    clear: both;
+    margin: 0 35px 25px;
+}
+.comment-last {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.comment-content {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 0px;
+    padding: 0;
+}
+.comment-footer,
+.comment-content {
+    margin-left: 54px;
+}
+.comment-content {
+    background: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/comment-bg.gif) no-repeat 0 6px;
+}
+.comment-content-inner {
+    padding: 10px 15px;
+    margin-left: 7px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+.comment-footer {
+    padding: 5px 0 0 22px;
+    line-height: 1.5;
+}
+.comment-by-author .comment-content {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/comment-bg-author.gif);
+}
+.comment-by-author .comment-content-inner {
+    background: #F1F7FB;
+    border-bottom: 1px solid #D9E8F0;
+}
+.comment-highlight .comment-content {
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/comment-bg-new.gif);
+}
+.comment-highlight .comment-content-inner {
+    background: #ffd;
+    border-bottom: 1px solid #D9D9BC;
+}
+
+.comments-open-header,
+.comments-header,
+.trackbacks-header {
+    margin-bottom: 15px;
+}
+.comment .userpic {
+    float: left;
+    position: relative;
+}
+.comment .userpic .auth-icon {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+}
+.comment .asset-meta {
+    color: #777;
+    font-size: 11px;
+    border: none;
+    padding: 0;
+}
+.comment .asset-meta img {
+    display: none; /* hide the sign-in icon */
+}
+
+
+/* Comment Form ---------------------------------------------------------------------------------- */
+
+.comments-open-content {
+/*    margin: 0 35px;*/
+}
+#comment-greeting,
+#comments-form {
+    margin-bottom: 10px;
+    margin-left: 97px;
+}
+#comment-preview-comment {
+    display: none;
+    margin-top: 30px;
+}
+#comments-form div {
+    margin-bottom: 5px;
+}
+#comments-form input.ti,
+#comments-form textarea {
+    width: 250px;
+    font-size: 13px;
+    color: #000;
+    background: #fff;
+}
+#comments-form input.default-value  ,
+#comments-form textarea.default-value {
+    background: #f6f6f6;
+    color: #aaa;
+}
+#comments-form textarea {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 5px;
+}
+#comment-form-remember-me,
+#comment-form-reply,
+#comments-open-footer {
+    
+}
+#comment-form-remember-me label,
+#comment-form-reply label {
+    float: none;
+    width: auto;
+    text-align: left;
+    display: inline;
+}
+
+/* TrackBacks -------------------------------------------------------------------------------- */
+
+.trackbacks .trackbacks-info, 
+.trackbacks .trackback-content { 
+    margin: 0 10px 15px;
+}
+
+.trackbacks .asset-meta { 
+    padding: 8px 10px 7px;
+}
+
+/* Members ---------------------------------------------------------------------------------- */
+
+.member-list .even {
+    margin-left: 20px;
+}
+.member-listitem {
+    float: left;
+    width: 278px;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+    margin: 0 0 15px;
+    padding: 10px;
+    overflow: hidden;
+}
+.member-listitem .member-info {
+    margin-left: 55px;
+    overflow: hidden;
+}
+.member-listitem .member-info h4 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.member-listitem .member-info p a {
+    white-space: nowrap;
+}
+
+/* Profile ---------------------------------------------------------------------------------- */
+
+.user-profile .profile-header .userpic {
+    float: left;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+.user-profile .profile-header,
+.user-profile .recent-entry,
+.user-profile .actions,
+.user-profile .comment-threads {
+    position: relative;
+    margin-bottom: 25px;
+}
+.profile-header-content {
+    margin-left: 125px;
+    overflow: hidden;
+}
+.profile-header-content #page-title {
+    white-space: nowrap;
+}
+.user-profile .recent-entry .asset {
+    margin-bottom: 10px;
+}
+.comment-threads li {
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    padding:8px 0 6px 24px;
+    margin: 0 10px 10px;
+    border-bottom: 1px dotted #ddd;
+}
+.comment-threads .excerpt {
+    padding: 6px 0 0;
+}
+
+.edit-relation a { 
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1px 2px;
+    color: #777;
+    text-decoration: none;
+}
+
+.edit-relation a:hover { 
+    color: #069;
+}
+
+#add-profile-dialog fieldset { 
+    margin-bottom: 0.8em;
+}
+
+#add-profile-dialog fieldset #service-username { 
+    width: 12em;
+}
+
+.user-profile .actions .feed,
+.user-profile .comment-threads .feed {
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Sign in ---------------------------------------------------------------------------------- */
+
+.signin #alpha {
+    width: 940px;
+    float: none;
+    margin: 0;
+}
+#auth-options {
+    float: left;
+    width: 200px;
+    border-right: 3px solid #D9E8F0;
+}
+#auth-options li {
+    padding-bottom: 1px;
+}
+#auth-options a {
+    text-decoration: none;
+    display: block;
+}
+#auth-options img {
+    vertical-align: middle;
+}
+#auth-forms {
+    float: left;
+    position: relative;
+    left: -3px;
+    border-left: 3px solid #D9E8F0;
+    width: 500px;
+    padding: 10px;
+}
+#auth-options .selected {
+    background: #D9E8F0;
+}
+#signin_with_OpenID img.right {
+    float: none;
+    position: absolute;
+    left: 255px;
+}
+.actions-bar {
+    margin-bottom: 20px;
+}
+
+
+/* Utility ---------------------------------------------------------------------------------- */
+
+.default-value { color: #aaa; }
+
+.pkg:after,
+#footer-inner:after,
+#content-inner:after,
+#compose-inner:after,
+.widget:after,
+#nav ul:after,
+.comment:after,
+.member-listitem:after,
+.asset .asset-meta:after,
+.actions ul li:after,
+.actions ul li .asset-meta:after,
+.action-listing li:after,
+.profile-header:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0.1px;
+    font-size: 0.1em;
+    line-height: 0;
+}
+.pkg,
+#footer-inner,
+#content-inner,
+#compose-inner,
+.widget,
+#nav ul,
+.comment,
+.member-listitem,
+.asset .asset-meta,
+.actions ul li,
+.actions ul li .asset-meta,
+.action-listing li,
+.profile-header {
+    display: inline-block;
+}
+/* no ie mac \*/
+* html .pkg,
+* html #footer-inner,
+* html #content-inner,
+* html #compose-inner,
+* html .widget,
+* html #nav ul,
+* html .comment,
+* html .member-listitem,
+* html .entry-asset .asset-meta,
+* html .actions ul li
+* html .actions ul li .asset-meta
+* html .action-listing li,
+* html .profile-header {
+    height: 1%;
+}
+.pkg,
+#footer-inner,
+#content-inner,
+#compose-inner,
+.widget,
+#nav ul,
+.comment,
+.member-listitem,
+.asset .asset-meta,
+.actions ul li,
+.actions ul li .asset-meta,
+.action-listing li,
+.profile-header {
+    display: block;
+}
+/* */
+
+
+
+/* Forms ---------------------------------------------------------------------------------- */
+
+
+.user-profile-edit form {
+    margin-bottom: .75em;
+}
+.field {
+    border: 0;
+    margin-bottom: 1em;
+}
+
+.field-header,
+.field-content {
+    line-height: 30px;
+}
+.field-header label {
+/*    font-weight: bold;*/
+    color: #777;
+}
+
+.field-content {
+    font-size: 15px;
+}
+.field-content select,
+.field-content input.ti,
+.field-content textarea.ta,
+.field-content input.pw {
+    margin: 0;
+    width: 318px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa;
+    background: #fcfcfc;
+}
+.field-content input.ti,
+.field-content textarea.ta,
+.field-content input.pw {
+    padding: 4px;
+}
+
+.field-content input.pw {
+    letter-spacing: 5px;
+}
+
+.register-captcha { 
+    margin-bottom: 2em;
+}
+.register-captcha .label, 
+.register-captcha .field { 
+    margin-left: 140px;
+}
+.register-captcha .label { 
+    margin-bottom: .5em;
+    color: #777;
+}
+.register-captcha .field img { 
+    margin-bottom: .5em;
+}
+.register-captcha .field input { 
+    width: 140px;
+    margin-bottom: 1em;
+    padding: 4px;
+}
+.register-captcha .field p { 
+    color: #aaa;
+}
+
+ul#profile-data li {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+
+#profile_userpic-field .field-content label {
+    display: block;
+    margin-top: 5px;
+}
+
+.mt-profile-edit form {
+    margin-bottom: .75em;
+}
+
+.custom-field-radio-list {
+    margin-bottom: .25em;
+}
+.custom-field-radio-list li {
+    list-style: none;
+    margin-left: 0;
+}
+
+.user-profile-edit .field .field-header,
+.register .field .field-header {
+    float: left;
+    width: 130px;
+    margin-right: 10px;
+    text-align: right;
+}
+.user-profile-edit .field .field-content,
+.register .field .field-content,
+.register .actions-bar,
+.user-profile-edit .actions-bar {
+    margin-left: 140px;
+}
+
+.register .hint { font-size: 12px; }
+
+#userpic-field .field-content img {
+    vertical-align: top;
+}
+
+.primary-button { 
+    display: block;
+    background: #333 url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/button-primary.gif) no-repeat left center;
+    border: 0;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    color: #eee;
+    cursor: pointer;
+    padding: 4px 10px;
+    margin: 0;
+}
+
+.primary-button:hover { 
+    background-position: right center;
+}
+
+/* Status Messages -------------------------------------------------------------------------------- */
+
+#comment-exclamation,
+#comment-error {
+    margin: 35px 37px 35px 97px;
+}
+
+.msg {
+    margin: 0 0 10px 0;
+    padding: 16px 10px 16px 46px;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+}
+.msg-success {
+    background-color: #CFC;
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_success.png);
+}
+.msg-error {
+    background-color: #FF9;
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_error.png);
+}
+.msg-info {
+    background-color: #fff;
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_info.gif);
+}
+.msg-alert {
+    background-color: #FF9;
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_alert.png);
+}
+.msg-publishing {
+    background-color: #fff;
+    background-image: url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/ani-rebuild.gif);
+}
+
+.msg a.close-me {
+    background: transparent url(http://bgviewsnetwork.com/static/mtpro/plugins/Motion/images/icon_close.png) no-repeat scroll 3px 4px;
+    display: block;
+    float: right;
+    height: 18px;
+    min-width: 0;
+    padding: 2px;
+    width: 22px;
+    margin: 0;
+}
+.msg a.close-me span {
+    display: none;
+}
+
+.note {
+    margin: 10px 0;
+}
+
+#system-allow-pings a.close-me,
+#system-allow-comments a.close-me,
+.msg-error a.close-me,
+.rebuilding-screen .msg a.close-me,
+.restore-publishing-config .msg a.close-me,
+.insert-asset-dialog .msg a.close-me,
+.edit-template .msg-info a.close-me,
+.rebuilding-screen .msg-info a.close-me,
+.pinging-screen .msg-info a.close-me,
+.list-notification .msg-info a.close-me,
+.zero-state a.close-me {
+    display: none;
+}
+
+
+/* colors */
+
+body {
+    background: #fff;
+}
+#container {
+    border-color: #111; /* the line at the top of the page */
+}
+#header {
+    background: #222;
+    border-color: #111;
+}
+#nav {
+    background: #222;
+    border-color: #333;
+}
+#nav .widget-search .search-query {
+    background: #777;
+    border-color: #111;
+}
+#footer-inner {
+    color: #777;
+    border-top: 1px solid #ccc;
+}
+
+/* ken */
+
+.asset-meta {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+.action-asset {
+}
+.entry-content {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+.hentry {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.most-recent-comment .userpic .userpic-link .auth-icon {
+	padding-left: 27px;
+}
+.asset-body .most-recent-comment a {
+	padding-left: 15px;
+	font-size: 11px;
+}
+
+.layout-wtt #alpha {
+    width: 450px;
+}
+
+.layout-wtt #beta {
+    left: 203px;
+    width: 300px;
+}
+
+#beta-inner {
+	width: 100%;
+	margin-right: 0px;
+}
+#beta-inner, #gamma-inner {
+    position: static;
+}
+#beta-inner, #gamma-inner {
+    overflow: hidden;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+#motion #beta-inner {
+	padding-top: 20px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-left: 5px;
+}
+
+#motion #gamma-inner {
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-left: 5px;
+}
+.layout-wtt #gamma {
+    right: 293px;
+    width: 190px;
+}
+

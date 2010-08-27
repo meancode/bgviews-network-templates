@@ -1,0 +1,34 @@
+#header { 
+    background: #973028 url(http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/header_bg.png) top repeat-x;
+}
+.BlogName {
+	color:#973028;
+}
+
+.BlogName a {
+	color:#973028;
+}
+.MobileBanner {
+	border-bottom-color: #973028;
+}
+
+#nav {
+	color: #000;
+	background-color: #f7941e;
+}
+#nav a {
+	color: #000;
+	text-decoration: none;
+}
+#content li:hover { 
+    background-color: #f7941e;
+}
+a {
+	color: #973028;
+}
+.photoCaption {
+	font-size: 90%;
+	color: #666666;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}

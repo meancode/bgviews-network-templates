@@ -1,0 +1,44 @@
+#alpha-inner {
+    padding-right: 20px;
+}
+.widget-content .asset-header h2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.asset {
+	margin-bottom:0em;
+}
+.include-blogs ul {
+	list-style-type: none; 
+	list-style-image: url(http://bgnews.com/images/bullet.gif);	
+}
+#top-bgnews-video ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: url(none) none;
+}
+
+#top-bgnews-video ul li{
+	list-style: url(none) none;
+	float: left;
+	padding-left: 10px;
+}
+
+#top-bgnews-video table {
+	margin-bottom: 15px;
+}
+
+
+.trackbacks-header {
+	text-transform: capitalize;
+	background: #fff url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/green_arrow.gif') no-repeat left center;
+	color: #A9C940;
+	padding: 0px 0px 0px 25px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 21px;
+	border-top: 0 solid #A9C940;
+	border-right: 0 solid #A9C940;
+	border-bottom: 1 solid #A9C940;
+	border-left: 0 solid #A9C940;
+	border-color:#A9C940;
+}

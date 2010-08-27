@@ -1,0 +1,206 @@
+#content a:link {
+	color: #F36821;
+	text-decoration: none;
+}
+#content a:visited {
+	color: #F36821;
+}
+#content a:hover {
+	color: #F36821;
+	text-decoration: underline;
+}
+#mt-community-blog .entry-asset .asset-meta {
+    border-top: 1px solid #F36821;
+    border-bottom: 1px solid #F9B592;
+}
+
+.green {
+	background-color: #243f8f;
+}
+
+input.green {
+	background-color: #ededed;
+	border: 1px solid #243f8f;
+}
+
+#content .widget.green, .poll-container.green  {
+	border: 1px solid #243f8f;
+	background-color: #fff;
+}
+
+.widget.green .widget-header, .poll-heading.green {
+	background: #243f8f url('http://bgviewsnetwork.com/_images/b_arrow.gif') no-repeat 0 0;
+}
+.widget input {
+	border: 1px solid #243f8f;
+	background-color: #dedede;
+	margin: 3px;
+	padding: 3px;
+}
+
+.poll-submit {
+	border: 1px solid #F36821;
+	background-color: #ededed;
+	margin: 3px;
+	padding: 3px;
+}
+.poll-heading {
+	margin: 0;
+	background: #F36821 url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+}
+
+.poll-container input {
+	border-color: #F36821;
+}
+.orange {
+	background-color: #F36821;
+}
+input.orange {
+	background-color: #ededed;
+	border: 1px solid #F36821;
+}
+#content .widget.orange, .poll-container.orange {
+	background-color: #fff;
+	border: 1px solid #F36821;
+}
+.widget.orange .widget-header, .poll-heading.orange {
+	background: #F36821 url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+}
+#content .widget-header a {
+	color: #FFFFFF;
+}
+
+
+.widget .widget-header, .poll-heading, .widget-category-groups .primary-category h3 {
+	background: #F36821 url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+}
+#content .widget {
+	border: 1px solid #F36821;
+}
+
+.blue {
+	background-color: #F36821;
+}
+input.blue {
+	border: 1px solid #F36821;
+}
+#content .widget.blue, .poll-container.blue {
+	border: 1px solid #F36821;
+}
+.widget.blue .widget-header, .poll-heading.blue {
+	background: #F36821 url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+}
+
+
+.asset-footer a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.asset-footer li a:hover {
+	color: #FFFFFF;
+	background: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #F36821;
+}
+.asset-footer a:link {
+	text-decoration: none;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+input.ti,
+textarea.ta,
+select {
+    border: 1px solid #243f8f;
+    border-top-color: #243f8f;
+    border-left-color: #243f8f;
+    background-color: #dedede;
+    padding: 3px;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+}
+#comments-open-text #comment-text {
+    width: 479px;
+    height: 150px;
+    border: 1px solid #243f8f;
+}
+.trackbacks-header, .mt-comment-preview .comments-header, .mt-comment-preview .comments-open-header, .mt-entry-archive .comments-header, .mt-entry-archive .comments-open-header {
+	text-transform: capitalize;
+	background: #243f8f url('http://bgviewsnetwork.com/_images/b_arrow.gif') no-repeat 0 0;
+	color: #fff;
+	padding: 0px 0px 0px 25px;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 21px;
+	border: 0;
+}
+#comment-author,
+#comment-email,
+#comment-url,
+#comment-text,
+#comment-submit,
+#comment-preview {
+    padding: 3px;
+    border:1px solid #243f8f;
+    background-color: #dedede;
+}
+
+.entry-meta-comments {
+	background: url('http://bgviewsnetwork.com/_images/alumni/comment-icon_green.gif') no-repeat 0px 50%;
+}
+
+#mt-community-forum #popular-entry .category-name {
+    background: url(http://bgviewsnetwork.com/_images/alumni/forum-icon.gif) no-repeat 0 0;
+}
+#mt-community-forum #entry-table .category-name a {
+    background: url(http://bgviewsnetwork.com/_images/alumni/forum-icon.gif) no-repeat 0 0;
+} 
+.icon-comment {
+    background: url(http://bgviewsnetwork.com/_images/alumni/reply-icon.gif) no-repeat 0 30%;
+}
+.icon-entry {
+    background: url(http://bgviewsnetwork.com/_images/alumni/topic-icon.gif) no-repeat 2px 50%;
+}
+#mt-community-forum.mt-entry-archive #page-title,
+#mt-community-forum.mt-comment-preview #page-title {
+    border-bottom: 1px solid #1d5db4;
+}
+#mt-community-forum #entry-table th,
+#mt-community-forum #entry-table td {
+    border-color: #f3bb9f;
+}
+.comment {
+    border-bottom: 1px solid #1d5db4;
+}
+.archive .archive-header {
+    border-bottom: 1px solid #1d5db4;
+}
+
+.widget-category-groups .secondary-category {
+    border-bottom: 1px solid #f3bb9f;
+}
+
+.asset-more-link a {
+	display: block;
+	padding: 0.4em;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #f3d9cc;
+	margin-top: 0.5em;
+	margin-right: 0;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	width: 75px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	border: 1px solid #F36821;
+}
+
+.asset-more-link a:hover {
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #F36821;
+}
+

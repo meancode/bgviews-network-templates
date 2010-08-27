@@ -1,0 +1,9 @@
+#alpha-inner {
+    padding-right: 20px;
+}
+#alpha-inner h4 {
+	font: bold 13px Georgia, "Times New Roman", Times, serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}

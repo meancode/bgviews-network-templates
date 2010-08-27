@@ -1,0 +1,80 @@
+#alpha-inner {
+    padding-right: 20px;
+}
+.recent-screech h3 {
+	font: bold 20px Georgia, "Times New Roman", Times, serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	color: #F36821;
+}
+
+#top-bgnews-video ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: url(none) none;
+}
+
+#top-bgnews-video ul li{
+	list-style: url(none) none;
+	float: left;
+	padding-left: 10px;
+}
+
+#top-bgnews-video table {
+	margin-bottom: 15px;
+}
+
+
+.trackbacks-header {
+	text-transform: capitalize;
+	background: #fff url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/blue_arrow.gif') no-repeat left center;
+	color: #1b3f8f;
+	padding: 0px 0px 0px 25px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 21px;
+	border-top: 0 solid #1b3f8f;
+	border-right: 0 solid #1b3f8f;
+	border-bottom: 1 solid #1b3f8f;
+	border-left: 0 solid #1b3f8f;
+	border-color:#1b3f8f;
+}
+
+#home-spotlight {
+	margin-bottom: 10px;
+	border: 1px solid #ac1700;
+}
+
+#home-spotlight a {
+	color: #ac1700;
+}
+
+.asset-meta {
+color:#777777;
+font-size: 11px;
+}
+.layout-twt #alpha {
+    left: 0px;
+    width: 645px;
+}
+#bgnews-social-bar {
+	text-align: right;
+	margin-bottom: 10px;
+}
+#alpha-inner {
+	padding-right: 0px;
+}
+#bgnews-home-left {
+	float: left;
+	width: 200px;
+}
+#bgnews-home-right {
+	float: left;
+	width: 420px;
+	padding-left: 10px;
+}
+#slider1 .entry-title {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: bold;
+}

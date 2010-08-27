@@ -1,0 +1,57 @@
+/* The Obsidian Local Styles */
+
+#masthead-obsidian a {
+	display: block;
+	height: 110px;
+	text-indent: -10000px;
+	background: #fff url('http://bgviewsnetwork.com/obsidian/_images/logo_obsidian.gif') no-repeat 0 40px;
+}
+
+#content a:link {
+	color: #000066;
+	text-decoration: none;
+}
+#content a:visited {
+	color: #000066;
+}
+#content a:hover {
+	color: #000066;
+	text-decoration: underline;
+}
+#mt-community-blog .entry-asset .asset-meta {
+    border-top: 1px solid #000066;
+    border-bottom: 1px solid #DADAF7;
+}
+.asset-more-link a {
+	background-color: #CCCCFF;
+	border: 1px solid #000066;
+}
+
+.asset-more-link a:hover {
+	border: 1px solid #000066;
+}
+
+#primeNav {
+	border-top: 2px solid #333366;
+}
+#primeNav ul li a:hover {
+	background: url('http://bgviewsnetwork.com/obsidian/_images/tab-blk.gif') no-repeat 100% 6px;
+	color: #CCCCFF;
+	border-right-color: #CCCCFF;
+	border-left-color: #CCCCFF;
+}
+#primeNav li ul a:hover {
+	color: #000000;
+	background-color: #CCCCFF;
+}
+#primeNav li ul li a:hover {
+	color: #000;
+	background-color: #CCCCFF;
+}
+a.scoring {
+    background: url(http://bgviewsnetwork.com/obsidian/_images/scoring-stars.gif) no-repeat 0 -120px;
+}
+.entry-meta-comments {
+	background: url('http://bgviewsnetwork.com/obsidian/_images/comment-icon_green.gif') no-repeat 0px 50%;
+}
+

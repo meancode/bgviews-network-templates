@@ -1,0 +1,71 @@
+#profile-following .user-listing .pkg {
+	display: inline;
+	float: left;
+	position: relative;
+	width: 190px;
+}
+
+#edit_profile a {
+	display: inline;
+	background: #333 url('http://bgviewsnetwork.com/mt/mt-static/images/buttons/button-primary.gif') no-repeat left center;
+	border: 0;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 0;
+}
+#edit_profile a:hover {
+	text-decoration: none;
+	color: #eee;
+}
+.following a {
+	display: inline;
+	background: #333 url('http://bgviewsnetwork.com/mt/mt-static/images/buttons/button-primary.gif') no-repeat left center;
+	border: 0;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 0;
+}
+.following a:hover {
+	text-decoration: none;
+	color: #eee;
+}
+#unfollow-link a:hover {
+	text-decoration: none;
+}
+#follow-link a:hover {
+	text-decoration: none;
+}
+.following_else a {
+	display: inline;
+	background: #333 url('http://bgviewsnetwork.com/mt/mt-static/images/buttons/button-primary.gif') no-repeat left center;
+	border: 0;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 0;
+}
+.following_else a:hover {
+	text-decoration: none;
+	color: #eee;
+}
+
+.mt-profile-view h2 {
+	font-size: 14px;
+	margin-bottom: 25px;
+}
+
+#other-profiles img {
+	margin-right: 2px;
+	margin-left: 2px;
+}

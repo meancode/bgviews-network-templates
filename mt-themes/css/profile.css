@@ -1,0 +1,342 @@
+/* Edit Profiles ----------------------------------------------------------- */
+
+#register .field.checkbox { clear: both; }
+#register-button.disabled { background-color: #ccc; }
+#register #url-field { display: none; }
+#edit-profile .greeting, #register .greeting { display: none; }
+#edit-profile #alpha p { font-family: "Arial"; margin-top: 20px; }
+.field { margin-bottom: 10px; }
+.field.required { font-weight: bold; }
+.field-inner label { float: left; width: 200px; text-align: right; padding-right: 10px; font-family: "Arial"; font-size: 12px;}
+.field-inner .custom-field-radio-list label { float: left; width: 30px; text-align: right; padding-right: 10px; font-family: "Arial"; font-size: 12px;}
+
+
+input.full-width { width: 410px; }
+.actions-bar {
+	border-top: 1px solid #CCC;
+	padding-top: 15px;
+	margin-right: 10px;
+}
+#register .actions-bar button, #profile .actions-bar button {
+  float: right;
+} 
+#register #intro { margin-bottom: 20px; font-size: 16px; font-weight: normal; }
+#new-user label.error { 
+  text-align: left; 
+  font-weight: normal; 
+  padding-left: 160px; 
+  width: 400px;
+  color: red;
+  font-size: 12px;
+  white-space: normal;
+}
+
+.field.checkbox .field-content { padding-left: 160px; }
+.field.checkbox .field-content input { float: left; }
+.field.checkbox .field-content label.hint { float: left; width: 350px; text-align: left; top: -3px; position: relative; padding-left: 5px; line-height: 1.5em; margin-top: 5px; }
+
+#customfield_tos-field label.hint { font-weight: bold; }
+
+a#change-password { font-family: Arial; text-decoration: none; padding-left: 160px; margin-bottom: 10px; display: block; margin-bottom: 10px; }
+#password-fields { display: none; }
+#register p.hint { font-weight: normal; font-size: 10px; font-family: "Arial"; color: #666; margin-top: -5px; margin-bottom: 0; margin-left: 160px; }
+
+#userpic-field img { float: left; }
+#userpic-field .userpic-buttons {
+  float: left; 
+  margin-left: 10px;
+  padding: 0;
+}
+#userpic-field {
+  width: 100%;
+  clear: right;
+}
+#userpic-field .userpic-buttons a { 
+  font-family: "Arial"; 
+  text-decoration: none; 
+  font-size: 14px; 
+  clear: left;
+  display: block;
+}
+
+#file-field input {
+	margin-left: 210px;
+	margin-top: 10px;
+}
+
+#file-field .field-content label {
+	display: none;
+	visibility: hidden;
+}
+
+.user-profile-edit form {
+    margin-bottom: .75em;
+}
+.field {
+    border: 0;
+    margin-bottom: 1em;
+}
+
+.field-header,
+.field-content {
+    line-height: 30px;
+}
+.field-header label {
+	/*    font-weight: bold;*/
+    color: #243f8f;
+}
+
+.field-content {
+    font-size: 15px;
+}
+.field-content select,
+.field-content input.ti,
+.field-content textarea.ta,
+.field-content input.pw {
+	margin: 0;
+	width: 300px;
+	font-size: 15px;
+	background: #fcfcfc;
+	border: 1px solid #243f8f;
+}
+.field-content input.ti,
+.field-content textarea.ta,
+.field-content input.pw {
+	padding: 3px;
+}
+
+.field-content input.pw {
+    letter-spacing: 5px;
+}
+
+.register-captcha { 
+    margin-bottom: 2em;
+}
+.register-captcha .label, 
+.register-captcha .field { 
+    margin-left: 140px;
+}
+.register-captcha .label { 
+    margin-bottom: .5em;
+    color: #777;
+}
+.register-captcha .field img { 
+    margin-bottom: .5em;
+}
+.register-captcha .field input { 
+    width: 140px;
+    margin-bottom: 1em;
+    padding: 4px;
+}
+.register-captcha .field p { 
+    color: #aaa;
+}
+
+ul#profile-data li {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+
+#profile_userpic-field .field-content label {
+    display: block;
+    margin-top: 5px;
+}
+
+.mt-profile-edit form {
+    margin-bottom: .75em;
+}
+
+.custom-field-radio-list {
+    margin-bottom: .25em;
+}
+.custom-field-radio-list li {
+	list-style: none;
+	margin-left: 0;
+	display: inline-block;
+}
+
+.user-profile-edit .field .field-header,
+.register .field .field-header {
+    float: left;
+    width: 130px;
+    margin-right: 10px;
+    text-align: right;
+}
+.user-profile-edit .field .field-content,
+.register .field .field-content,
+.register .actions-bar,
+.user-profile-edit .actions-bar {
+    margin-left: 140px;
+}
+
+.register .hint { font-size: 12px; }
+
+#userpic-field .field-content img {
+    vertical-align: top;
+}
+
+.primary-button {
+	display: inline;
+	background: #333 url('http://bgviewsnetwork.com/mt/mt-static/images/buttons/button-primary.gif') no-repeat left center;
+	border: 0;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 0;
+}
+
+.secondary-button {
+	display: inline;
+	background: #333 url('http://bgviewsnetwork.com/mt/mt-static/images/buttons/button.gif') no-repeat left center;
+	border: 0;
+	font-weight: bold;
+	font-size: 14px;
+	text-decoration: none;
+	color: #eee;
+	cursor: pointer;
+	padding: 4px 10px;
+	margin: 0;
+}
+
+
+.primary-button:hover { 
+    background-position: right center;
+}
+
+
+#customfield_special_offers-label { 
+  display: none; 
+}
+#customfield_special_offers-field .field-content {
+  padding-left: 160px;
+}
+#customfield_special_offers-field input {
+  float: left;
+}
+#customfield_special_offers-field label {
+	float: left;
+	width: 350px;
+	text-align: left;
+	position: relative;
+	top: -3px;
+	padding-left: 10px;
+}
+
+#customfield_new_features-label { 
+  display: none; 
+}
+#customfield_new_features-field .field-content {
+  padding-left: 160px;
+}
+#customfield_new_features-field input {
+  float: left;
+}
+#customfield_new_features-field label {
+	float: left;
+	width: 350px;
+	text-align: left;
+	position: relative;
+	top: -3px;
+	padding-left: 10px;
+}
+
+#customfield_tos-label { 
+  display: none; 
+}
+#customfield_tos-field .field-content {
+  padding-left: 160px;
+}
+#customfield_tos-field input {
+  float: left;
+}
+#customfield_tos-field label {
+	float: left;
+	width: 350px;
+	text-align: left;
+	position: relative;
+	top: -3px;
+	padding-left: 10px;
+}
+
+#customfield_your_nickname-field .hint,
+#customfield_bio-field .hint {
+	margin-left: 210px;	
+	font-size: 80%;
+	color: #666;		
+}
+
+#customfield_genderglobal-field .hint,
+#customfield_birth_year-field .hint,
+#customfield_years_graduated_from_bgsu-field .hint,
+#customfield_postal_code-field .hint {
+	font-size: 80%;
+	color: #666;		
+}
+
+.edit-user #customfield_genderglobal-field .hint,
+.edit-user #customfield_birth_year-field .hint,
+.edit-user #customfield_postal_code-field .hint {
+	font-size: 80%;
+	color: #666;
+	display: none;
+	visibility: hidden;
+}
+
+
+
+#new-user h1 {
+	font: bold 30px Georgia, "Times New Roman", Times, serif;
+}
+
+#new-user h2 {
+	font: bold 20px Georgia, "Times New Roman", Times, serif;
+	color: #F36821;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCC;
+}
+
+
+#new-user p {
+	font-size: 14px;
+	line-height: 20px;
+	padding-bottom: 15px;
+}
+
+.msg-error {
+	background-color:#FF9;
+	background-image:url('http://bgviewsnetwork.com/mt/mt-static/images/icon_error.png');
+}
+
+.msg {
+	margin:0 10 10px 0;
+	padding:16px 10px 16px 46px;
+	background-repeat:no-repeat;
+	background-position:12px center;
+}
+.msg-success {
+	background-color:#CFC;
+	background-image:url('http://bgviewsnetwork.com/mt/mt-static/images/icon_success.png');
+}
+
+.msg a.close-me {
+	background:transparent url('http://bgviewsnetwork.com/mt/mt-static/images/icon_close.png') no-repeat scroll 3px 4px;
+	display:block;
+	float:right;
+	height:18px;
+	min-width:0;
+	padding:2px;
+	width:22px;
+	margin:0;
+}
+.msg a.close-me span {
+	display:none;
+}
+#system-allow-pings a.close-me, #system-allow-comments a.close-me, .msg-error a.close-me, .rebuilding-screen .msg a.close-me, .restore-publishing-config .msg a.close-me, .insert-asset-dialog .msg a.close-me, .edit-template .msg-info a.close-me, .rebuilding-screen .msg-info a.close-me, .pinging-screen .msg-info a.close-me, .list-notification .msg-info a.close-me, .zero-state a.close-me {
+	display:none;
+}

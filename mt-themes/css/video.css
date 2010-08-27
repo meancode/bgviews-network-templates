@@ -1,0 +1,69 @@
+.pkg:after  {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0.1px;
+    font-size: 0.1em;
+    line-height: 0;
+}
+.pkg, #content-inner  {
+    display: block;
+}
+/* no ie mac \*/
+* html .pkg  {
+    height: 1%;
+}
+.pkg, #content-inner {
+    display: block;
+}
+.photo-listing ul {
+  margin-left: 0px;
+  padding: 2.7px 0 2.7px 0;
+  list-style: none;
+}
+.photo-listing ul li {
+  float: left;
+  padding: 2.7px;
+}
+
+.mt-main-index .photo-listing ul {
+  margin-left: 0;
+}
+.mt-main-index .photo-listing ul li {
+  margin-right: 7px;
+}
+
+.mt-main-index .photo-listing li {
+  position: relative;
+  margin-bottom: 7px;
+}
+
+.mt-main-index .photo-listing li .thumbnail {
+  position: relative;
+}
+
+.mt-main-index .photo-listing li .label {
+  position: absolute;
+  bottom: 2px;
+  background: black;
+  text-align: left;
+  font-size: 10px;
+  width: 125px;
+  opacity: .8;
+  overflow: hidden;
+}
+
+.mt-main-index .photo-listing li .label span {
+  color: white;
+  text-transform: uppercase;
+}
+
+.mt-main-index h2 { 
+  font-size: 16px;
+}
+.mt-main-index .photo-listing h2,
+.mt-main-index #featured-photo h2 { margin-bottom: 10px; }
+.mt-main-index #featured-photo .entry-title {
+  font-size: 24px;
+} 

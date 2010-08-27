@@ -1,0 +1,85 @@
+/* 
+  -----------------------------------
+  Accordion Panel Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 05 - Yin-Yang
+  -----------------------------------
+*/
+
+.p7AB {
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#p7ABW1 #p7ABw1_3 #p7ABc1_3 {
+	padding: 5px;
+}
+.p7ABtrig {
+	margin: 0;
+	padding: 0;
+}
+.p7ABtrig h3, .p7ABtrig h4 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+}
+#p7ABW1 .p7ABtrig a, #p7ABW2 .p7ABtrig a,
+#p7ABW3 .p7ABtrig a, #p7ABW4 .p7ABtrig a,
+#p7ABW5 .p7ABtrig a, #p7ABW6 .p7ABtrig a,
+#p7ABW7 .p7ABtrig a, #p7ABW8 .p7ABtrig a,
+#p7ABW9 .p7ABtrig a, #p7ABW10 .p7ABtrig a {
+	display: block;
+	text-decoration: none;
+	padding: 4px 8px 4px 25px;
+	color: #FFF;
+	border-top: 1px solid #FFFFFF;
+	font: bold 15px Arial, Helvetica, sans-serif;
+	background: #2F7EC9 url(http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/blue_arrow.gif) no-repeat left center;
+}
+#p7ABW1 .p7ABtrig a:hover, #p7ABW2 .p7ABtrig a:hover,
+#p7ABW3 .p7ABtrig a:hover, #p7ABW4 .p7ABtrig a:hover,
+#p7ABW5 .p7ABtrig a:hover, #p7ABW6 .p7ABtrig a:hover,
+#p7ABW7 .p7ABtrig a:hover, #p7ABW8 .p7ABtrig a:hover,
+#p7ABW9 .p7ABtrig a:hover, #p7ABW10 .p7ABtrig a:hover {
+	color: #FFFFFF;
+}
+/*.p7ABtrig a:active, .p7ABtrig a:focus {
+	outline: 1px dotted #ccc;
+}*/
+#p7ABW1 .p7ABtrig .p7ABtrig_down, #p7ABW2 .p7ABtrig .p7ABtrig_down,
+#p7ABW3 .p7ABtrig .p7ABtrig_down, #p7ABW4 .p7ABtrig .p7ABtrig_down,
+#p7ABW5 .p7ABtrig .p7ABtrig_down, #p7ABW6 .p7ABtrig .p7ABtrig_down,
+#p7ABW7 .p7ABtrig .p7ABtrig_down, #p7ABW8 .p7ABtrig .p7ABtrig_down,
+#p7ABW9 .p7ABtrig .p7ABtrig_down, #p7ABW10 .p7ABtrig .p7ABtrig_down {
+	color: #FFFFFF;
+	background: #EC8F0C url(http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/orange_arrow.gif) no-repeat left center;
+}
+.p7ABcontent {
+	padding: 10px;
+	color: #000;
+	background-color: #FFFFFF;
+	margin: 0;
+	border-right: 1px solid #EC8F0C;
+	border-left: 1px solid #EC8F0C;
+	border-bottom: 1px solid #EC8F0C;
+}
+.p7ABcontent h2, .p7ABcontent h3, 
+.p7ABcontent h4 {
+	margin: 0px;
+}
+.p7ABcontent p {
+	margin: 6px 0 0px;
+}
+.p7ABcontent ul {
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+	list-style: url(http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/bullet.gif) none;
+	color: #999;
+	font-size: 12px;
+	line-height: 15px;
+}
+
+.p7ABcontent li {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}

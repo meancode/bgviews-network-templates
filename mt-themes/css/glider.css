@@ -1,0 +1,277 @@
+/* 
+  -----------------------------------
+  Horizontal Glider Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 04 - Basic
+  -----------------------------------
+*/
+.p7HGM04 {
+	padding: 0px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGM_viewport_wrapper {
+	position: relative;
+	border-right: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7HGM04 .p7HGM_panel_content {
+	padding: 0px 10px;
+	font: 11px/1.5em Verdana, Geneva, sans-serif;
+}
+.p7HGM04 .p7HGMtrig {
+	overflow: hidden;
+	font-size: 14px;
+	zoom: 1;
+	margin-bottom: 0px;
+}
+.p7HGM04 .p7HGMtrig.trigbottom {
+	margin-bottom: 0px;
+	margin-top: 6px;
+}
+.p7HGM04 .p7HGMtrig ul {
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMtrig li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMtrig a {
+	display: block;
+	padding: 3px 15px 3px 3px;
+	color: #FFF;
+	text-decoration: none;
+	font: 9px Verdana, Geneva, sans-serif;
+	text-transform: uppercase;
+	background: url(img/orange-dot.gif) no-repeat right center;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7HGM04 .p7HGMtrig a:hover {
+	color: #f36821;
+	background: #FFF url(img/orange-dot.gif) no-repeat right center;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7HGM04 .p7HGMtrig .panel_open {
+	color: #f36821;
+	background: #FFF url(img/orange-dot.gif) no-repeat right center;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7HGM04 .p7HGM_controls div {
+	position: absolute;
+	top: 50%;
+	z-index: 9999;
+	margin-top: -20px;
+	height: 35px;
+	width: 18px;
+	display: none;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_prev {
+	left: -24px;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_next {
+	right: -24px;
+}
+.p7HGM04 .p7HGM_controls div img {
+	border: 0;
+	width: 18px;
+	height: 35px;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_prev a {
+	background-image: url(img/p7hgmBasic_CTRLPrev.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM04 .p7HGM_controls div.p7HGM_next a {
+	background-image: url(img/p7hgmBasic_CTRLNext.gif);
+	background-repeat: no-repeat;
+	display: block;
+}
+.p7HGM04 .p7HGM_controls a:hover {
+	background-position: 0px -35px;
+}
+.p7HGM04 .p7HGM_controls a.off, .p7HGM04 .p7HGM_controls a.off:hover {
+	cursor: default;
+	background-position: 0px -70px;
+}
+.p7HGM04 .p7HGMpaginator {
+	overflow: hidden;
+	font-size: 12px;
+	margin-bottom: 6px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGMpaginator ul {
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMpaginator.pagbottom {
+	margin-top: 6px;
+}
+.p7HGM04 .p7HGMpaginator li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMpaginator a {
+	display: block;
+	padding: 2px 6px;
+	color: #243f8f;
+	text-decoration: none;
+	border: 1px solid #243f8f;
+}
+.p7HGM04 .p7HGMpaginator a:hover {
+	color: #CCC;
+	background: #243f8f;
+}
+.p7HGM04 .p7HGMpaginator .panel_open {
+	color: #CCC;
+	background: #243f8f;
+}
+.p7HGM04 .p7HGMvcr {
+	overflow: hidden;
+	margin-top: 12px;
+}
+.p7HGM04 .p7HGMvcr ul {
+	margin: 0;
+	width: 148px;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMvcr li {
+	list-style-type: none;
+	float: left;
+}
+.p7HGM04 .p7HGMvcr.vcrtop {
+	margin-bottom: 12px;
+}
+.p7HGM04 .p7HGMvcr.vcrtop li {
+	margin: 0;
+}
+.p7HGM04 .p7HGMvcr img {
+	border: 0;
+}
+.p7HGM04 .p7HGMvcr a {
+	display: block;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_first a {
+	background-image: url(img/p7hgmBasic_First.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_first img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_prev a {
+	background-image: url(img/p7hgmBasic_Prev.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_prev img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play a {
+	background-image: url(img/p7hgmBasic_Play.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play img, .p7HGM04 .p7HGMvcr .p7HGM_play .pause img {
+	width: 32px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play .pause {
+	background-image: url(img/p7hgmBasic_Play.gif);
+	background-repeat: no-repeat;
+	background-position: 0px -60px !important;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_next a {
+	background-image: url(img/p7hgmBasic_Next.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_next img {
+	width: 26px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_last a {
+	background-image: url(img/p7hgmBasic_Last.gif);
+	background-repeat: no-repeat;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_last img {
+	width: 28px;
+	height: 30px;
+}
+.p7HGM04 .p7HGMvcr a:hover {
+	background-position: 0px -30px;
+}
+.p7HGM04 .p7HGMvcr .p7HGM_play .pause:hover {
+	background-position: 0px -90px !important;
+}
+.p7HGM04 .p7HGMvcr a.off {
+	background-position: 0px -60px;
+	cursor: default;
+}
+.p7HGM04 .p7HGMvcrtext {
+	font-size: 12px;
+	margin-top: 6px;
+	zoom: 1;
+}
+.p7HGM04 .p7HGMvcrtext.vcrtext_top {
+	margin-bottom: 6px;
+}
+.p7HGM04 .p7HGMvcrtext ul {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.p7HGM04 .p7HGMvcrtext li {
+	list-style-type: none;
+	float: left;
+	margin-right: 6px;
+}
+.p7HGM04 .p7HGMvcrtext a {
+	padding: 2px;
+	display: block;
+	color: #243f8f;
+	text-decoration: none;
+	border: 1px solid #243f8f;
+}
+.p7HGM04 .p7HGMvcrtext a:hover {
+	color: #CCC;
+	background: #243f8f;
+}
+.p7HGM04 .p7HGMvcrtext a.off, .p7HGM04 .p7HGMvcrtext a.off:hover {
+	color: #7D7D7D;
+	cursor: default;
+	background-color: #CCC;
+	border-color: #CCC;
+}
+.p7HGM04 .p7HGMtrig .current_mark {
+	font-weight:bold;
+}
+.p7HGM04 .p7HGM_panel_content .current_mark {
+	color:#243f8f;
+	font-weight:bold;
+}
+.trigtop {
+	background: #000;	
+}
+#p7HGM_2 #p7HGMvpw_2 #p7HGMvp_2 #p7HGMwp_2 #p7HGMpn_2_1 #p7HGMpc_2_1 ul li {
+	list-style: url(img/bullet.gif) none;
+}
+#p7HGM_2 #p7HGMvpw_2 #p7HGMvp_2 #p7HGMwp_2 #p7HGMpn_2_1 #p7HGMpc_2_1 ul {
+	padding-left: 15px;
+	line-height: 1.5em;
+}
+#p7HGMt1_6 {
+	background: #a9c940 url(img/orange-dot.gif) no-repeat right center;
+	color: #000;	
+}
+.p7HGMt1_6green {
+	background: #a9c940;	
+}

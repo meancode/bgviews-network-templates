@@ -1,0 +1,14 @@
+#alpha-inner {
+    padding-right: 20px;
+}
+.archive-content-author ul li {
+	float: left;
+}
+.archive-content-author ul li a {
+	display: block;
+	width: 200px;
+}
+.widget-content table tr td {
+	margin: 5px;
+	padding: 5px;
+}

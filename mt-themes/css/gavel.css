@@ -1,0 +1,306 @@
+#content a:link {
+	color: #973028;
+	text-decoration: none;
+}
+#content a:visited {
+	color: #973028;
+}
+#content a:hover {
+	color: #973028;
+	text-decoration: underline;
+}
+#mt-community-blog .entry-asset .asset-meta {
+    border-top: 1px solid #973028;
+    border-bottom: 1px solid #e0c0be;
+}
+
+.green {
+	background-color: #f7941e;
+}
+
+input.green {
+	background-color: #ededed;
+	border: 1px solid #f7941e;
+}
+
+#content .widget.green, .poll-container.green  {
+	border: 1px solid #f7941e;
+	background-color: #fff;
+}
+
+.widget.green .widget-header, .poll-heading.green {
+	background: #f7941e url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+}
+.widget input {
+	border: 1px solid #f7941e;
+	background-color: #dedede;
+	margin: 3px;
+	padding: 3px;
+}
+
+.poll-submit {
+	border: 1px solid #973028;
+	background-color: #ededed;
+	margin: 3px;
+	padding: 3px;
+}
+.poll-heading {
+	margin: 0;
+	background: #973028 url('http://bgsugavel.com/images/r_arrow.gif') no-repeat 0 0;
+}
+
+.poll-container input {
+	border-color: #973028;
+}
+.orange {
+	background-color: #973028;
+}
+input.orange {
+	background-color: #ededed;
+	border: 1px solid #973028;
+}
+#content .widget.orange, .poll-container.orange {
+	background-color: #fff;
+	border: 1px solid #973028;
+}
+.widget.orange .widget-header, .poll-heading.orange {
+	background: #973028 url('http://bgsugavel.com/images/r_arrow.gif') no-repeat 0 0;
+}
+#content .widget-header a {
+	color: #FFFFFF;
+}
+
+
+.widget .widget-header, .poll-heading, .widget-category-groups .primary-category h3 {
+	background: #973028 url('http://bgsugavel.com/images/r_arrow.gif') no-repeat 0 0;
+}
+#content .widget {
+	border: 1px solid #973028;
+}
+
+.blue {
+	background-color: #973028;
+}
+input.blue {
+	border: 1px solid #973028;
+}
+#content .widget.blue, .poll-container.blue {
+	border: 1px solid #973028;
+}
+.widget.blue .widget-header, .poll-heading.blue {
+	background: #973028 url('http://bgsugavel.com/images/r_arrow.gif') no-repeat 0 0;
+}
+
+
+.asset-footer a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.asset-footer li a:hover {
+	color: #FFFFFF;
+	background: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #973028;
+}
+.asset-footer a:link {
+	text-decoration: none;
+	background-color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+}
+input.ti,
+textarea.ta,
+select {
+    border: 1px solid #f7941e;
+    border-top-color: #f7941e;
+    border-left-color: #f7941e;
+    background-color: #dedede;
+    padding: 3px;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+}
+#comments-open-text #comment-text {
+    width: 479px;
+    height: 150px;
+    border: 1px solid #f7941e;
+}
+.trackbacks-header, .mt-comment-preview .comments-header, .mt-comment-preview .comments-open-header, .mt-entry-archive .comments-header, .mt-entry-archive .comments-open-header {
+	text-transform: capitalize;
+	background: #f7941e url('http://bgviewsnetwork.com/_images/o_arrow.gif') no-repeat 0 0;
+	color: #fff;
+	padding: 0px 0px 0px 25px;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 21px;
+	border: 0;
+}
+#comment-author,
+#comment-email,
+#comment-url,
+#comment-text,
+#comment-submit,
+#comment-preview {
+    padding: 3px;
+    border:1px solid #f7941e;
+    background-color: #dedede;
+}
+
+.entry-meta-comments {
+	background: url('http://bgsugavel.com/images/comment-icon.gif') no-repeat 0px 50%;
+}
+
+#mt-community-forum #popular-entry .category-name {
+    background: url(http://bgviewsnetwork.com/_images/alumni/forum-icon.gif) no-repeat 0 0;
+}
+#mt-community-forum #entry-table .category-name a {
+    background: url(http://bgviewsnetwork.com/_images/alumni/forum-icon.gif) no-repeat 0 0;
+} 
+.icon-comment {
+    background: url(http://bgviewsnetwork.com/_images/alumni/reply-icon.gif) no-repeat 0 30%;
+}
+.icon-entry {
+    background: url(http://bgviewsnetwork.com/_images/alumni/topic-icon.gif) no-repeat 2px 50%;
+}
+#mt-community-forum.mt-entry-archive #page-title,
+#mt-community-forum.mt-comment-preview #page-title {
+    border-bottom: 1px solid #1d5db4;
+}
+#mt-community-forum #entry-table th,
+#mt-community-forum #entry-table td {
+    border-color: #f3bb9f;
+}
+.comment {
+    border-bottom: 1px solid #1d5db4;
+}
+.archive .archive-header {
+    border-bottom: 1px solid #1d5db4;
+}
+
+.widget-category-groups .secondary-category {
+    border-bottom: 1px solid #f3bb9f;
+}
+
+.asset-more-link a {
+	display: block;
+	padding: 0.4em;
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #e0c0be;
+	margin-top: 0.5em;
+	margin-right: 0;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	width: 75px;
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	float: right;
+	border: 1px solid #973028;
+}
+
+.asset-more-link a:hover {
+	background-color: #FFFFFF;
+	text-decoration: none;
+	border: 1px solid #973028;
+}
+
+#primeNav {
+	border-top: 2px solid #973028;
+}
+#primeNav ul {
+	list-style-type: none;
+}
+#primeNav ul li {
+	position: relative;
+	float: left;
+}
+#primeNav ul a {
+	border-right:1px solid #000;
+	border-left: 1px solid #000;
+	margin: 0px 6px;
+	padding: 8px 8px 8px 8px;
+	display: block;
+	color: #fff;
+	background-color: #000;
+}
+#primeNav li ul {
+	opacity: .90;
+	-moz-opacity: .90;
+	filter:alpha(opacity=90);
+}
+#primeNav ul li a:hover {
+	background: url('http://bgsugavel.com/images/tab-blk.gif') no-repeat 100% 6px;
+	text-decoration: none;
+	color: #f7941e;
+	border-right: 1px solid #ec8f0c;
+	border-left: 1px solid #ec8f0c;
+}
+
+#primeNav li ul li {
+	position: relative;
+	float: left;
+	font-size: 0.9em;
+	width: 200px;
+	clear: left;
+	background: #000;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#primeNav ul li a:hover, #primeNav li ul li:hover {
+	text-decoration: none;
+	color: #f7941e;
+	background-color: #000;
+}
+#primeNav li ul a {
+	display: block;
+	margin: 0px;
+	background: none;
+}
+#primeNav li ul a:hover {
+	background: #f7941e;
+	color: #fff;
+}
+#primeNav li ul li a:hover {
+	background: #f86011;
+	color: #000;
+}
+#primeNav li ul {
+	z-index: 100;
+	left: 0px;
+	top: 32px;
+	position: absolute;
+	visibility: hidden;
+}
+#primeNav li:hover ul, #primeNav li.thisisforie ul {
+	z-index: 5000;
+	visibility: visible;
+}
+#primeNav li ul a:hover {
+	color: #000000;
+	background-color: #f7941e;
+}
+#primeNav li ul li a:hover {
+	color: #000;
+	background-color: #f7941e;
+}
+
+.lower-content-container {
+	background-color: #973028;
+}
+div.ad {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.archive-category .archive-content li,
+.widget-content li {
+    background: url(http://bgsugavel.com/images/bullet.gif) 0 .25em no-repeat;
+}
+.widget-recent-comments .recent-comments-list li {
+    background: url(http://bgsugavel.com/images/bullet.gif) 0 .25em no-repeat;
+}
+
+a.scoring {
+	background: url('http://bgsugavel.com/images/scoring-stars.gif') no-repeat 0px -120px;
+}

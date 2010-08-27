@@ -1,0 +1,11 @@
+@import url(http://bgviewsnetwork.com/_css/blog.css);
+@import url(http://bgviewsnetwork.com/_css/tristanblue.css);
+
+#header-ch {
+    background-image: url('http://bgviewsnetwork.com/_images/circles.gif');
+	background-repeat: no-repeat;
+	margin:0px;
+	height: 70px;
+	padding-left:10px;
+	background-color:#FFFFFF;
+}
