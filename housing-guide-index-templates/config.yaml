@@ -1,0 +1,98 @@
+template_sets:
+  housing-guide-index-templates:
+    label: housing-guide-index-templates
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+        advanced_search_index:
+          label: Advanced Search Index
+          outfile: search/index.php
+          rebuild_me: 1
+        styles:
+          label: CSS - Blog
+          outfile: styles.css
+          rebuild_me: 1
+        css_-_mobile:
+          label: CSS - Mobile
+          outfile: m/styles.css
+          rebuild_me: 1
+        include_-_poll_position:
+          label: Include - Poll Position
+          outfile: poll.php
+          rebuild_me: 1
+        archive_index:
+          label: Index - Archive
+          outfile: archives/index.php
+          rebuild_me: 1
+        index_-_browse_categories:
+          label: Index - Browse Categories
+          outfile: browse/index.php
+          rebuild_me: 1
+        index_-_create_entry:
+          label: Index - Create Entry
+          outfile: create-entry.php
+          rebuild_me: 1
+        index_-_google_map:
+          label: Index - Google Map
+          outfile: map/index.php
+          rebuild_me: 1
+        index_-_iphone:
+          label: Index - iPhone
+          outfile: m/index.html
+          rebuild_me: 1
+        index_-_iphone_2:
+          label: Index - iPhone 2
+          outfile: m/index2.html
+          rebuild_me: 1
+        index_-_iphone_3:
+          label: Index - iPhone 3
+          outfile: m/index3.html
+          rebuild_me: 1
+        index_-_iphone_browse:
+          label: Index - iPhone Browse
+          outfile: m/browse.html
+          rebuild_me: 1
+        main_index:
+          label: Index - Main
+          outfile: index.php
+          rebuild_me: 1
+        javascript:
+          label: JS - Movable Type
+          outfile: mt.js
+          rebuild_me: 1
+        motion_-_javascript:
+          label: Motion - JavaScript
+          outfile: motion.js
+          rebuild_me: 1
+        motion_-_mt_javascript:
+          label: Motion - MT JavaScript
+          outfile: motion_mt.js
+          rebuild_me: 1
+        visitor_stats:
+          label: Visitor Stats
+          outfile: stats.php
+          rebuild_me: 0
+        feed_recent:
+          label: XML - Atom Feed
+          outfile: atom.xml
+          rebuild_me: 1
+        xml_-_kml:
+          label: XML - KML
+          outfile: google.kml
+          rebuild_me: 1
+        rsd:
+          label: XML - RSD
+          outfile: rsd.xml
+          rebuild_me: 1
+        xml_-_sitemap:
+          label: XML - Sitemap
+          outfile: sitemap.xml
+          rebuild_me: 1
+      individual:
+      page:
+      archive:
+      custom:
+      widget:
+      system:
+

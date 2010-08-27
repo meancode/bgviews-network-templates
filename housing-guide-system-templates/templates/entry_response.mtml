@@ -1,0 +1,33 @@
+<$mt:Var name="heading" value="Thank you for posting an entry."$>
+
+<mt:If name="entry_status" eq="1">
+<mt:SetVarBlock name="page_title">Entry Pending</mt:SetVarBlock>
+<mt:SetVarBlock name="message">
+<p>Your entry has been received and held for approval by the blog owner.</p>
+</mt:SetVarBlock>
+<mt:Else><mt:If name="entry_status" eq="2">
+<mt:SetVarBlock name="message">
+<mt:SetVarBlock name="page_title">Entry Posted</mt:SetVarBlock>
+<p>Your entry has been posted.</p>
+</mt:SetVarBlock>
+<mt:Else>
+<mt:SetVarBlock name="message">
+<mt:SetVarBlock name="page_title">Entry Pending</mt:SetVarBlock>
+<p>Your entry has been received.</p>
+</mt:SetVarBlock>
+</mt:If></mt:If>
+
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></mt:SetVarBlock>
+
+
+<$mt:Include module="Simple Header"$>
+
+
+<h1 id="page-title"><$mt:Var name="heading"$></h1>
+
+<$mt:Var name="message"$>
+
+<p>Return to the <a href="<$mt:BlogURL$>">blog's main index</a>.</p>
+
+<$mt:Include module="Footer MTCS"$>
+

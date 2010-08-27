@@ -1,0 +1,24 @@
+template_sets:
+  housing-guide-system-templates:
+    label: housing-guide-system-templates
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+      individual:
+      page:
+      archive:
+      custom:
+      widget:
+      system:
+        comment_preview:
+          label: Comment Preview
+        comment_response:
+          label: Comment Response
+        dynamic_error:
+          label: Dynamic Error
+        popup_image:
+          label: Popup Image
+        search_results:
+          label: Search Results
+

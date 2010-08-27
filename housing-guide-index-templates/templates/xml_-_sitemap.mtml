@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+<loc><$MTBlogURL encode_xml="1"$></loc>
+<changefreq>daily</changefreq>
+<MTEntries lastn="1">
+<lastmod><$MTEntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$MTBlogTimezone$></lastmod>
+</MTEntries>
+<priority>1.0</priority>
+</url>
+
+<MTIfArchiveTypeEnabled archive_type="Individual">
+<MTArchiveList archive_type="Individual" lastn="99999">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<lastmod><$MTArchiveDate format="%Y-%m-%dT%H:%M:%S"$><$MTBlogTimezone$></lastmod>
+<priority>0.8</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+<MTIfArchiveTypeEnabled archive_type="Monthly" lastn="99999">
+<MTArchiveList archive_type="Monthly">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+<MTIfArchiveTypeEnabled archive_type="Category" lastn="99999">
+<MTArchiveList archive_type="Category">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+<MTIfArchiveTypeEnabled archive_type="Author" lastn="99999">
+<MTArchiveList archive_type="Author">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+<MTIfArchiveTypeEnabled archive_type="Category-Monthly" lastn="99999">
+<MTArchiveList archive_type="Category-Monthly">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+<MTIfArchiveTypeEnabled archive_type="Author-Monthly" lastn="99999">
+<MTArchiveList archive_type="Author-Monthly">
+<url>
+<loc><$MTArchiveLink encode_xml="1"$></loc>
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+
+</urlset>

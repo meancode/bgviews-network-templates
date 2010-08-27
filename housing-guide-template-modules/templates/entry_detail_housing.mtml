@@ -1,0 +1,355 @@
+<div id="entry-<$mt:EntryID$>" class="entry-asset asset hentry">
+  <div class="asset-header">
+    <MTIfNonEmpty tag="EntryDataTop_photo">
+      <mt:EntryDataTop_photoAsset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+      		<a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="<mt:AssetThumbnailURL width="200">" alt="" width="200" border="0" style="float:right; padding-left:10px; padding-bottom:10px;" /></a>
+      	<mt:Else>
+      		<a href="<mt:AssetURL>" rel="lightbox"><img src="<mt:AssetThumbnailURL width="200">" alt="" width="200" border="0" style="float:right; padding-left:10px; padding-bottom:10px;" /></a>
+      	</mt:If>
+      </mt:EntryDataTop_photoAsset>
+    </MTIfNonEmpty>
+    <h2 class="asset-name entry-title">
+      <$mt:EntryTitle$>
+    </h2>
+    <p>
+      <MTIfNonEmpty tag="entrydataaddress">
+        <MTentrydataaddress>
+      </MTIfNonEmpty>
+      <br>
+      <MTIfNonEmpty tag="datacity">
+        <MTdatacity>, 
+        </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatastate">
+        <MTentrydatastate>
+      </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatazip">
+        <MTentrydatazip>
+      </MTIfNonEmpty>
+      <br>
+      <br>
+      <MTIfNonEmpty tag="entrydatafloor_plan">
+        <mt:entrydatafloor_planAsset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+        <a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/floorplan.gif" alt="" width="15" border="0" /> Floor Plan</a>
+      	<mt:Else>
+        <a href="<mt:AssetURL>" rel="lightbox"><img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/floorplan.gif" alt="" width="15" border="0" /> Floor Plan</a>
+      	</mt:If>
+        </mt:entrydatafloor_planAsset>
+      </MTIfNonEmpty>
+      <br>
+      <MTIfNonEmpty tag="entrydatafloor_plan_sq_ft">
+        <MTentrydatafloor_plan_sq_ft>
+        sq. ft. </MTIfNonEmpty><br><br>
+        
+        <MTIfNonEmpty tag="entrydatarental_agreement">
+      <mt:entrydatarental_agreementAsset> <a href="<mt:AssetURL>"><img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/pdfsm.gif" alt="" width="15" border="0" />Download Application</a> </mt:entrydatarental_agreementAsset>
+    </MTIfNonEmpty>
+    
+    </p>
+  </div>
+  <div class="asset-content entry-content">
+    <div class="widget-syndication widget" style="border: 0px;">
+      <h3 class="widget-header" style="background: #2f7ec9 url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/b_arrow.gif') no-repeat 0 0;">Contact Info</h3>
+      <div class="widget-content" style="margin: 0px; padding: 0px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="3" style="font-size: 90%;">
+          <tr>
+            <td width="50%"><strong>Name</strong></td>
+            <td width="50%"><MTIfNonEmpty tag="entrydatacontact_name">
+                <MTentrydatacontact_name>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td width="50%"><strong>Property Mgmt. Company</strong> </td>
+            <td width="50%"><MTIfNonEmpty tag="entrydataproperty_management_company">
+                <MTentrydataproperty_management_company>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td width="50%"><strong>Phone Number</strong> </td>
+            <td width="50%"><MTIfNonEmpty tag="datacontact_phone">
+                <MTdatacontact_phone>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td width="50%"><strong>Email</strong> </td>
+            <td width="50%"><MTIfNonEmpty tag="entrydatacontact_email"><a href="mailto:<MTentrydatacontact_email>">
+                <MTentrydatacontact_email>
+                </a></MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td><strong>Best Time to be Reached</strong></td>
+            <td><MTIfNonEmpty tag="entrydatacontact_best_time">
+                <MTentrydatacontact_best_time>
+              </MTIfNonEmpty></td>
+          </tr>
+          <MTIfNonEmpty tag="entrydatawebsite_url"><tr bgcolor="#ededed">
+            <td><strong>Website</strong></td>
+            <td><a href="<MTentrydatawebsite_url>" target="_blank">Visit Website</a></td>
+          </tr></MTIfNonEmpty>
+        </table>
+      </div>
+    </div>
+    <div class="widget-pages widget orange" style="border: 0px;">
+      <h3 class="widget-header" style="background: #ec8f0c url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/o_arrow.gif') no-repeat 0 0;">
+        <MTIf tag="entrydatarental_type" like="Apartment">Apartment</MTIf>
+        <MTIf tag="entrydatarental_type" like="Condo">Condo</MTIf>
+        <MTIf tag="entrydatarental_type" like="Duplex">Duplex</MTIf>
+        <MTIf tag="entrydatarental_type" like="Efficiency">Efficiency</MTIf>
+        <MTIf tag="entrydatarental_type" like="House">House</MTIf>
+        <MTIf tag="entrydatarental_type" like="Loft">Loft</MTIf>
+        <MTIf tag="entrydatarental_type" like="Room">Room</MTIf>
+        <MTIf tag="entrydatarental_type" like="Suite">Suite</MTIf>
+        <MTIf tag="entrydatarental_type" like="Townhouse">Townhouse</MTIf>
+        Description</h3>
+      <div class="widget-content" style="margin-top: 10px; padding: 0px;">
+        <mt:If tag="EntryBody">
+          <div class="asset-body">
+            <$mt:EntryBody blogshow="html"$>
+          </div>
+        </mt:If>
+        <mt:If tag="EntryMore" convert_breaks="0">
+          <div id="more" class="asset-more">
+            <$mt:EntryMore$>
+          </div>
+        </mt:If>
+      </div>
+    </div>
+    
+<MTIfNonEmpty tag="entrydataimage_1">
+  <table width="420" border="0" cellspacing="0" cellpadding="0" style="padding-bottom:10px;">
+    <tr>
+      <td valign="top"><MTIfNonEmpty tag="entrydataimage_1">
+          <mt:entrydataimage_1Asset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+          <a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	<mt:Else>
+          <a href="<mt:AssetURL>" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	</mt:If>
+          </mt:entrydataimage_1Asset>
+        </MTIfNonEmpty>
+      </td>
+      <td valign="top"><MTIfNonEmpty tag="entrydataimage_2">
+          <mt:entrydataimage_2Asset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+          <a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	<mt:Else>
+          <a href="<mt:AssetURL>" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	</mt:If>
+          </mt:entrydataimage_2Asset>
+        </MTIfNonEmpty></td>
+      <td valign="top"><MTIfNonEmpty tag="entrydataimage_3">
+          <mt:entrydataimage_3Asset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+          <a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	<mt:Else>
+          <a href="<mt:AssetURL>" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	</mt:If>
+          </mt:entrydataimage_3Asset>
+        </MTIfNonEmpty></td>
+      <td valign="top"><MTIfNonEmpty tag="entrydataimage_4">
+          <mt:entrydataimage_4Asset>
+      	<mt:If tag="AssetProperty" property="image_width" ge="901">
+          <a href="<mt:AssetThumbnailURL width="900">" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	<mt:Else>
+          <a href="<mt:AssetURL>" rel="lightbox"><img src="<mt:AssetThumbnailURL width="105">" alt="" width="105" border="0" style="max-height:105px;" /></a>
+      	</mt:If>
+          </mt:entrydataimage_4Asset>
+        </MTIfNonEmpty></td>
+    </tr>
+  </table>
+</MTIfNonEmpty>
+
+
+
+    <div class="widget-archive widget-archive-category widget green" style="margin-top:0px; border: 0px;">
+      <h3 class="widget-header" style="background: #a9c940 url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/g_arrow.gif') no-repeat 0 0;">Overview</h3>
+      <div class="widget-content" style="margin: 0px; padding: 0px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="3" style="font-size:90%;">
+          <tr>
+            <td width="50%" valign="top"><strong>Rental Type</strong></td>
+            <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatarental_type">
+                <MTentrydatarental_type>
+              </MTIfNonEmpty>
+              <mt:If tag="EntryCategory">
+                <mt:EntryCategories glue='<span class="delimiter">,</span> '>(<a href="<$mt:CategoryArchiveLink$>" rel="tag" title="<$mt:CategoryDescription escape="html"$>">view more</a>)</mt:EntryCategories>
+                </li>
+              </mt:If></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td valign="top"><strong>Lease Type</strong></td>
+            <td valign="top"><MTIfNonEmpty tag="entrydatalease_type">
+                <MTentrydatalease_type>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top"><strong>Sublet?</strong></td>
+            <td width="50%" valign="top"><MTIfNonEmpty tag="datasublet">
+                <MTdatasublet>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td valign="top"><strong>Occupants</strong></td>
+            <td valign="top"><mt:If tag="entrydatahgoccupants"><mt:entrydatahgoccupants><mt:Else><span class="not-available">n/a</span></mt:If></td>
+          </tr>
+          <tr>
+            <td width="50%" valign="top"><strong>Monthly Rent </strong> </td>
+            <td width="50%" valign="top"><MTIfNonEmpty tag="datamonthly_rent">$<MTdatamonthly_rent>
+            </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td width="50%" valign="top"><strong>Security Deposit </strong> </td>
+            <td width="50%" valign="top"><MTIfNonEmpty tag="datasecurity_deposit">$<MTdatasecurity_deposit>
+            </MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Location</strong></td>
+            <td valign="top"><MTIfNonEmpty tag="entrydatacity_location">
+                <MTentrydatacity_location>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td valign="top"><strong>Miles From Campus </strong></td>
+            <td valign="top"><MTIfNonEmpty tag="datamiles_from_campus">
+                <MTdatamiles_from_campus>
+                mi. </MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Move In Date</strong></td>
+            <td valign="top"><MTIfNonEmpty tag="datamove_in">
+                <MTdatamove_in>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td width="50%" valign="top"><strong>Number Of Bedrooms</strong> </td>
+            <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatabedrooms">
+                <MTentrydatabedrooms>
+                </a></MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Number Of Bathrooms </strong></td>
+            <td valign="top"><MTIfNonEmpty tag="databathrooms">
+                <MTdatabathrooms>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td valign="top"><strong>Convenient For </strong></td>
+            <td valign="top"><MTIfNonEmpty tag="dataconvenient_for">
+                <MTdataconvenient_for>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr>
+            <td valign="top"><strong>Parking</strong></td>
+            <td valign="top"><MTIfNonEmpty tag="entrydataparking">
+                <MTentrydataparking>
+              </MTIfNonEmpty></td>
+          </tr>
+          <tr bgcolor="#ededed">
+            <td valign="top"><strong>Pet Policies</strong></td>
+            <td valign="top"><MTIfNonEmpty tag="datapet_policies">
+                <MTdatapet_policies>
+              </MTIfNonEmpty></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="widget-syndication widget" style="border: 0px;">
+      <h3 class="widget-header" style="background: #2f7ec9 url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/b_arrow.gif') no-repeat 0 0;">Amenities</h3>
+      <div class="widget-content" style="margin: 0px; padding: 0px;">
+        <table width="100%"  border="0" style="font-size: 90%;">
+          <tr valign="top">
+            <td><MTIf tag="dataunit_features"> <strong>Unit Features</strong><br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Air Conditioning">Air Conditioning<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Dishwasher">Dishwasher<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Carpet">Carpet<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Furnished">Furnished<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Microwave">Microwave<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Patio">Patio<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Balcony">Balcony<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Porch">Porch<br />
+              </MTIf>
+              <MTIf tag="dataunit_features" like="Deck">Deck<br />
+              </MTIf>
+            </td>
+            <td><div align="top">
+                <MTIf tag="datacommunity_features"><strong>Community Features</strong><br />
+                </MTIf>
+                <MTIf tag="datacommunity_features" like="Near Bus Stop">Near Bus Stop<br />
+                </MTIf>
+                <MTIf tag="datacommunity_features" like="Pool">Pool<br />
+                </MTIf>
+                <MTIf tag="datacommunity_features" like="Transportation to Campus">Transportation to Campus<br />
+                </MTIf>
+              </div></td>
+          </tr>
+          <tr valign="top">
+            <td><MTIf tag="datautilities_included_in_rent"> <strong>Utilities Included in Rent</strong><br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Cable">Cable<br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Electricity">Electricity<br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Gas">Gas<br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Heat High-Speed Internet">Heat High-Speed Internet<br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Trash Removal">Trash Removal<br />
+              </MTIf>
+              <MTIf tag="datautilities_included_in_rent" like="Water/Sewer">Water/Sewer<br />
+              </MTIf>
+            </td>
+            <td><MTIf tag="datawasherdryer"> <strong>Washer/Dryer</strong><br />
+              </MTIf>
+              <MTIf tag="datawasherdryer" like="Washer">Washer<br />
+              </MTIf>
+              <MTIf tag="datawasherdryer" like="Dryer">Dryer<br />
+              </MTIf>
+              <MTIf tag="datawasherdryer" like="Hookups In Unit">Hookups In Unit<br />
+              </MTIf>
+              <MTIf tag="datawasherdryer" like="Washer/Dryer on Premises">Washer/Dryer on Premises<br />
+              </MTIf>
+            </td>
+          </tr>
+        </table>
+         </div>
+
+<div class="widget-pages widget orange" style="border: 0px;">
+      <h3 class="widget-header" style="background: #ec8f0c url('http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/o_arrow.gif') no-repeat 0 0;">
+        Map &amp; Directions</h3>
+      <div class="widget-content" style="margin-top: 10px; padding: 0px;">
+
+        <MTEntryGSMap width="420px" height="420px" /><br>
+        <a href="http://maps.google.com/maps?q=<MTIfNonEmpty tag="entrydataaddress"><MTentrydataaddress> </MTIfNonEmpty><MTIfNonEmpty tag="datacity"><MTdatacity> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatastate"><MTentrydatastate> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatazip"><MTentrydatazip></MTIfNonEmpty>" target="_blank">Get directions to <MTentrydataaddress></a>.
+
+      </div>
+    </div>
+    <hr>
+        <span class="byline" style="color: #999999;">
+        <mt:If tag="EntryAuthorDisplayName"> Posted by <span class="vcard author"><a href="<$mt:Var name="profile_view_url" encode_html="1"$>
+          <$mt:EntryAuthorID$>
+          ">
+          <$mt:EntryAuthorDisplayName$>
+          </a></span> on <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>">
+          <$mt:EntryDate format="%b %d, %Y"$>
+          </abbr>
+          <mt:Else>
+          <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>">
+          <$mt:EntryDate format="%b %d, %Y"$>
+          </abbr> </mt:If>
+        </span>
+        
+    </div>
+  </div>
+  <div class="asset-footer">
+    <$mt:Include module="Spread The Word"$>
+  </div>
+</div>
+

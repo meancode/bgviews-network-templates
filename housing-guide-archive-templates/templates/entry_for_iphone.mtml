@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="<mt:PublishCharset>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <title><$mt:EntryTitle$></title>
+        <link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+<$mt:Include module="iPhone JavaScript"$>
+    </head>
+<body>
+
+        <div id="header">
+        <mt:SetVarBlock name="prev_entry"><mt:EntryPrevious>1</mt:EntryPrevious></mt:SetVarBlock>
+        <mt:SetVarBlock name="next_entry"><mt:EntryNext>1</mt:EntryNext></mt:SetVarBlock>
+            <a rel="home" href="<$mt:BlogURL$>m/" class="navigation">Home</a>
+        <mt:If name="prev_entry">
+            <mt:EntryPrevious><a rel="prev" href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.html" class="navigation">Prev</a></mt:EntryPrevious>
+        <mt:Else>
+            <span rel="prev" class="navigation prev disable">Prev</span>
+        </mt:If>
+        <mt:If name="next_entry">
+            <mt:EntryNext><a rel="next" href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.html" class="navigation">Next</a></mt:EntryNext>
+        <mt:Else>
+            <span rel="next" class="navigation next disable">Next</span>
+        </mt:If>
+        </div>
+    
+          <$mt:Include module="iPhone BG Views Header"$>
+
+
+<div id="content" class="entry">
+            <h1><$mt:EntryTitle$></h1>
+			
+    <p>
+      <MTIfNonEmpty tag="entrydataaddress">
+        <MTentrydataaddress><br />
+      </MTIfNonEmpty>
+      <MTIfNonEmpty tag="datacity">
+        <MTdatacity>
+      </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatastate">
+        <MTentrydatastate>
+      </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatazip">
+        <MTentrydatazip>
+      </MTIfNonEmpty><br>
+      <a href="http://maps.google.com/maps?q=<MTIfNonEmpty tag="entrydataaddress"><MTentrydataaddress> </MTIfNonEmpty><MTIfNonEmpty tag="datacity"><MTdatacity> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatastate"><MTentrydatastate> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatazip"><MTentrydatazip></MTIfNonEmpty>" target="_self">View Google Map</a>
+    </p>
+
+<MTIfNonEmpty tag="EntryDataTop_photo">
+      <mt:EntryDataTop_photoAsset><a href="#photos"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:EntryDataTop_photoAsset>
+</MTIfNonEmpty>
+
+<div id="inside-content">
+
+<p class="headingLabel">Contact Info</p>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size: 90%;">
+      <tr>
+        <td width="50%" bgcolor="#ededed"><strong>Name</strong></td>
+        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="entrydatacontact_name"><MTentrydatacontact_name></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%"><strong>Company</strong> </td>
+        <td width="50%"><MTIfNonEmpty tag="entrydataproperty_management_company"><MTentrydataproperty_management_company></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%" bgcolor="#ededed"><strong>Phone</strong> </td>
+        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="datacontact_phone"><MTdatacontact_phone></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%"><strong>Email</strong> </td>
+        <td width="50%"><MTIfNonEmpty tag="entrydatacontact_email"><a href="mailto:<MTentrydatacontact_email>"><MTentrydatacontact_email></a></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%" bgcolor="#ededed"><strong>Best Time</strong></td>
+        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="entrydatacontact_best_time"><MTentrydatacontact_best_time></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%"><strong>Website</strong></td>
+        <td width="50%"><a href="<MTentrydatawebsite_url>" target="_blank">Visit Website</a></td>
+      </tr>
+  </table>
+
+<p class="headingLabel"><MTIf tag="entrydatarental_type" like="Apartment">Apartment</MTIf>
+        <MTIf tag="entrydatarental_type" like="Condo">Condo</MTIf>
+        <MTIf tag="entrydatarental_type" like="Duplex">Duplex</MTIf>
+        <MTIf tag="entrydatarental_type" like="Efficiency">Efficiency</MTIf>
+        <MTIf tag="entrydatarental_type" like="House">House</MTIf>
+        <MTIf tag="entrydatarental_type" like="Loft">Loft</MTIf>
+        <MTIf tag="entrydatarental_type" like="Room">Room</MTIf>
+        <MTIf tag="entrydatarental_type" like="Suite">Suite</MTIf>
+        <MTIf tag="entrydatarental_type" like="Townhouse">Townhouse</MTIf>
+        Description</p>
+		
+<$mt:EntryBody$>
+<$mt:EntryMore$>
+
+<p class="headingLabel">Overview</p>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size:90%;">
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Rental Type</strong></td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatarental_type">
+              <MTentrydatarental_type>
+          </MTIfNonEmpty></td>
+    </tr>
+        <tr>
+          <td valign="top"><strong>Lease Type</strong></td>
+          <td valign="top"><MTIfNonEmpty tag="entrydatalease_type">
+            <MTentrydatalease_type>
+          </MTIfNonEmpty></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Sublet?</strong></td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="datasublet">
+              <MTdatasublet>
+          </MTIfNonEmpty></td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>Occupants</strong></td>
+          <td valign="top"><mt:If tag="entrydatahgoccupants"><mt:entrydatahgoccupants><mt:Else><span class="not-available">n/a</span></mt:If></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Rent Per Person </strong> </td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="datamonthly_rent">
+              $<MTdatamonthly_rent></MTIfNonEmpty></td>
+    </tr>
+        <tr>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Security Deposit </strong> </td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="datasecurity_deposit">
+              $<MTdatasecurity_deposit>
+          </a></MTIfNonEmpty></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Location</strong></td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatacity_location">
+              <MTentrydatacity_location>
+          </MTIfNonEmpty></td>
+    </tr>
+        <tr>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Miles From Campus </strong></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="datamiles_from_campus">
+              <MTdatamiles_from_campus> mi.
+          </MTIfNonEmpty></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Move In Date</strong></td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="datamove_in">
+              <MTdatamove_in>
+          </MTIfNonEmpty></td>
+    </tr>
+        <tr>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Bedrooms</strong> </td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="entrydatabedrooms">
+              <MTentrydatabedrooms>
+          </a></MTIfNonEmpty></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td width="50%" valign="top"><strong>Bathrooms </strong></td>
+          <td width="50%" valign="top"><MTIfNonEmpty tag="databathrooms">
+              <MTdatabathrooms>
+          </MTIfNonEmpty></td>
+    </tr>
+        <tr>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Convenient For </strong></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="dataconvenient_for">
+              <MTdataconvenient_for>
+          </MTIfNonEmpty></td>
+        </tr>
+        <tr bgcolor="#ededed">
+          <td valign="top"><strong>Parking</strong></td>
+          <td valign="top"><MTIfNonEmpty tag="entrydataparking">
+            <MTentrydataparking>
+          </MTIfNonEmpty></td>
+        </tr>
+        <tr>
+          <td valign="top"><strong>Pet Policies</strong></td>
+          <td valign="top"><MTIfNonEmpty tag="datapet_policies">
+            <MTdatapet_policies>
+          </MTIfNonEmpty></td>
+        </tr>
+  </table>
+
+<p class="headingLabel">Amenities</p>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size: 90%;">
+      <tr bgcolor="#ededed">
+        <td width="50%" valign="top"><strong>Community Features</strong></td>
+        <td width="50%" valign="top"><MTIfNonEmpty tag="datacommunity_features"><MTdatacommunity_features></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="top"><strong>Washer/Dryer</strong> </td>
+        <td width="50%" valign="top"><MTIfNonEmpty tag="datawasherdryer"><MTdatawasherdryer></MTIfNonEmpty></td>
+      </tr>
+      <tr bgcolor="#ededed">
+        <td width="50%" valign="top"><strong>Unit Features</strong> </td>
+        <td width="50%" valign="top"><MTIfNonEmpty tag="dataunit_features"><MTdataunit_features></MTIfNonEmpty></td>
+      </tr>
+      <tr>
+        <td width="50%" valign="top"><strong>Utilities Included</strong> </td>
+        <td width="50%" valign="top"><MTIfNonEmpty tag="datautilities_included_in_rent"><MTdatautilities_included_in_rent></MTIfNonEmpty></td>
+      </tr>
+  </table>
+  <br />
+  <a name="photos" id="photos"></a>
+<MTIfNonEmpty tag="entrydatafloor_plan">
+    <mt:entrydatafloor_planAsset><a href="#photos2"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydatafloor_planAsset>
+  </MTIfNonEmpty>
+
+<br />
+  <a name="photos" id="photos2"></a>
+<MTIfNonEmpty tag="entrydataimage_1">
+      <mt:entrydataimage_1Asset><a href="#photos3"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_1Asset>
+  </MTIfNonEmpty>
+
+<br />
+  <a name="photos" id="photos3"></a>
+<MTIfNonEmpty tag="entrydataimage_2">
+      <mt:entrydataimage_2Asset><a href="#photos4"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_2Asset>
+  </MTIfNonEmpty>
+
+<br />
+  <a name="photos" id="photos4"></a>
+<MTIfNonEmpty tag="entrydataimage_3">
+      <mt:entrydataimage_3Asset><a href="#photos5"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_3Asset>
+  </MTIfNonEmpty>
+
+<br />
+  <a name="photos" id="photos5"></a>
+<MTIfNonEmpty tag="entrydataimage_4">
+      <mt:entrydataimage_4Asset><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></mt:entrydataimage_4Asset>
+  </MTIfNonEmpty>
+<br />
+ <hr class="hrule" /> 
+  <div class="asset-meta"> <span class="byline">
+                  <mt:If tag="EntryAuthorDisplayName">  Posted by <span class="vcard author">
+                    <$mt:EntryAuthorLink show_hcard="1"$>
+                    </span> on <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>">
+                    <$mt:EntryDate format="%b %d, %Y"$>
+                    </abbr>
+                    <mt:Else>
+                    <abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>">
+                    <$mt:EntryDate format="%x %X"$>
+    </abbr> </mt:If>
+                  </span>
+                  <mt:IfCommentsActive><br><a href="#comments">
+                    <$mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"$>
+                    </a> </mt:IfCommentsActive>
+</div>
+
+<mt:Ignore>
+<!-- Display comments for the entry/page or commenting form if entry/page is accepting comments -->
+</mt:Ignore>
+<mt:IfCommentsActive>
+<div id="comments" class="comments">
+
+
+    <mt:Ignore>
+    <!-- Display comments -->
+    </mt:Ignore>
+    <mt:Comments>
+        <mt:CommentsHeader>
+    <h2 class="comments-header"><$mt:EntryCommentCount singular="1 Comment" plural="# Comments" none="No Comments"$></h2>
+    <div class="comments-content">
+        </mt:CommentsHeader>
+        <div id="comment-<$mt:CommentID$>" class="comment<mt:IfCommentParent> comment-reply</mt:IfCommentParent>">
+            <div class="inner">
+                <div class="comment-header">
+                    <div class="asset-meta commenter-byline">
+                        <span class="byline">
+                            <$mt:CommentAuthorIdentity$>
+        <mt:IfCommentParent>
+                            <span class="vcard author"><$mt:CommentAuthorLink$></span> replied to <mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>
+        <mt:Else>
+                            <span class="vcard author"><$mt:CommentAuthorLink$></span>
+        </mt:IfCommentParent>
+                            | <abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate format="%b %d, %Y"$></abbr>
+        
+                        </span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <$mt:CommentBody$>
+                </div>
+            </div>
+        </div>
+        <mt:CommentsFooter>
+    </div>
+        </mt:CommentsFooter>
+    </mt:Comments>
+</mt:IfCommentsActive>
+
+
+</div>
+
+</div>
+    
+    <div id="nav">
+          <$mt:Include module="iPhone Footer Nav Inside"$>
+ </div>
+
+<div id="footer" style="background-color:#243f8f;">
+          <$mt:Include module="iPhone Footer"$>
+</div>
+</body>
+</html>
+

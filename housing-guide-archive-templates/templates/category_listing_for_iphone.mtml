@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="<mt:PublishCharset>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title>
+<$mt:ArchiveTitle$>
+Listings</title>
+<link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+<$mt:Include module="iPhone JavaScript"$>
+</head>
+<body>
+<div id="header"> <a rel="home" href="<$mt:BlogURL$>m/" class="navigation">Home</a> </div>
+<$mt:Include module="iPhone BG Views Header"$>
+<mt:Unless name="datebased_archive">
+  <mt:IfArchiveType archive_type="Category">
+    <br>
+    <div style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #243f8f;"><MTIfNonEmpty tag="datacategory_logo_mobile"><mt:datacategory_logo_mobileAsset><img src="<mt:AssetURL>" alt="" border="0"/></mt:datacategory_logo_mobileAsset></MTIfNonEmpty></div>
+    
+  </mt:IfArchiveType>
+  <mt:IfArchiveType archive_type="Author"> Listings by
+    <$mt:ArchiveTitle$>
+  </mt:IfArchiveType>
+  <mt:Else>
+  <$mt:Var name="page_title"$>
+</mt:Unless>
+<div id="content">
+
+<mt:Entries>
+<mt:EntriesHeader>
+            <ul class="index">
+        </mt:EntriesHeader>
+                <li><a href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.html"><$mt:EntryTitle$></a><abbr class="published">
+                <MTIf tag="entrydatabedrooms" like="One">
+  <MTentrydatabedrooms> Bed, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Two">
+  <MTentrydatabedrooms> Beds, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Three">
+  <MTentrydatabedrooms> Beds, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Four or more">
+  <MTentrydatabedrooms> Beds, 
+  </MTIf>
+  <MTIfNonEmpty tag="datamonthly_rent">
+  $<MTdatamonthly_rent>
+  </MTIfNonEmpty>
+  </abbr></li>
+        <mt:EntriesFooter>
+            </ul>
+        </mt:EntriesFooter>
+        
+<mt:SetVarBlock name="entry_ids" append="1"><mt:Unless name="__first__">,</mt:Unless><$mt:EntryID$></mt:SetVarBlock>
+</mt:Entries>
+
+<mt:If name="entry_ids">
+<mt:SetVarBlock name="html_body_footer" append="1">
+<script type="text/javascript" src="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=score&amp;blog_id=<$mt:BlogID$>&amp;f=scored,count&amp;jsonp=mtScore_cb&amp;id=<$mt:Var name="entry_ids"$>"></script>
+</mt:SetVarBlock>
+</mt:If>
+</div>
+<div id="nav"> <span style="color:#FFFFFF;"><a href="<$mt:BlogURL$>m/" style="color:#FFFFFF;">&laquo; Index</a></span>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/">Home</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/about.html">About</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/blogs.html">Blogs</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/events.html">Events</a> </div>
+<div id="footer" style="background-color:#243f8f;">
+  <p>&copy; 2009 BG Views, All Rights Reserved<br>
+    <a href ='http://maps.google.com/maps?q=The+BG+News'" target="_self">204 West Hall, Bowling Green, OH 43403</a><br>
+    Newsroom: <a href="tel:419-372-6966" target="_self">419-372-6966</a> | Ad Dept: <a href="tel:419-372-2605" target="_self">419-372-2605</a> <br>
+    <a href="http://m.bgviews.com/tos/">Terms of Service</a> | <a href="http://m.bgviews.com/privacy/">Privacy Policy</a><br>
+    <br>
+    <a href="../../">View Full Site</a></p>
+</div>
+</body>
+</html>
+

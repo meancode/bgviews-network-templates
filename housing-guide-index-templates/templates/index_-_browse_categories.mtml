@@ -1,0 +1,38 @@
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="title">Search Apartment, House Rentals in Bowling Green, Ohio - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" append="1">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="rsd"$>" />
+</mt:SetVarBlock>
+<$mt:Include module="Header MTCS 1" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 2" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-main-index"$>
+
+<div id="page-10049" class="page-asset asset">
+  <div class="asset-header">
+    <h1 id="page-title" class="asset-name">Browse By Category</h1>
+  </div>
+  <div class="asset-content">
+    <div class="asset-body">
+      <p>Welcome to the BG Views Housing Guide. Here you can browse and view all listings by category.</p>
+<table width="420" border="0" cellpadding="0" cellspacing="0" style="font-size:120%; font-weight:bold; line-height:150%">
+  <tr>
+    <td colspan="2"><img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/category_housing.gif" /></td>
+  </tr>
+<mt:TopLevelCategories>
+<mt:If tag="CategoryCount">
+  <tr>
+    <td width="235"><a href="<$mt:CategoryArchiveLink$>"<mt:If tag="CategoryDescription"> title="<$mt:CategoryDescription remove_html="1" encode_html="1"$>"</mt:If>><$mt:CategoryLabel$></a></td>
+    <td width="155"><$mt:CategoryCount$></td>
+  </tr>
+<mt:Else>
+  <tr>
+    <td width="235" style="font-weight:normal;"><$mt:CategoryLabel$></td>
+    <td width="155" style="font-weight:normal;">n/a</td>
+  </tr>
+</mt:If>
+</mt:TopLevelCategories>
+</table>
+    </div>
+  </div>
+</div>
+<$mt:Include module="Footer MTCS"$> 

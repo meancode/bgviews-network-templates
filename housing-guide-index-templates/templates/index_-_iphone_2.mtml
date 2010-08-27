@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="<mt:PublishCharset>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title><$mt:BlogName encode_html="1"$></title>
+<link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+<$mt:Include module="iPhone JavaScript"$>
+</head>
+<body>
+
+<div id="header">        
+<a class="button" href="mailto:<$mt:Include module="Mobile Contact"$>" title="Contact by email" target="_self">Contact</a>        
+</div>
+
+          <$mt:Include module="iPhone BG Views Header"$>
+<div id="content">
+
+  <ul>
+    <li><img src="<$mt:BlogURL$>images/about_small.gif" alt="" width="16" height="16" style="float:left;"/> <a href="<$mt:BlogURL$>m/about/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About Housing Guide</a></li>
+    <li><img src="<$mt:BlogURL$>images/resources_small.gif" alt="" width="16" height="16" style="float:left;"/> <a href="<$mt:BlogURL$>m/resources-mobile/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Helpful Resources</a></li>
+    <li><img src="<$mt:BlogURL$>images/categories_small.gif" alt="" width="16" height="16" style="float:left;"/> <a href="<$mt:BlogURL$>m/browse.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Browse by Category</a></li>
+    <li><img src="<$mt:BlogURL$>images/forum_small.gif" alt="" width="16" height="16" style="float:left;"/> <a href="http://bgviewsnetwork.com/housing/forum/m/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Housing Forum</a></li>
+    <li><img src="<$mt:BlogURL$>images/community_small.gif" alt="" width="16" height="16" style="float:left;"/> <a href="http://bgviewsnetwork.com/housing/m/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Housing Community</a></li>
+  </ul>
+</div>
+  
+<div style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #243f8f;"><img src="<$mt:BlogURL$>images/listings_mobile.gif" /></div>
+   
+<div id="content">
+        <mt:Entries lastn="10" offset="10">
+        <mt:EntriesHeader>
+            <ul class="index">
+        </mt:EntriesHeader>
+                <li><a href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.html"><$mt:EntryTitle$></a><abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></abbr></li>
+        <mt:EntriesFooter>
+            </ul>
+        </mt:EntriesFooter>
+        </mt:Entries>
+</div>
+        
+        
+
+    <div id="nav">
+          <$mt:Include module="iPhone Footer Nav2"$>
+ </div>
+
+<div id="footer" style="background-color:#243f8f;">
+          <$mt:Include module="iPhone Footer"$>
+</div>
+    </body>
+</html>
+

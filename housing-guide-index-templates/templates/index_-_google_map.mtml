@@ -1,0 +1,66 @@
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="title">Area Rental Map - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" append="1">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="rsd"$>" />
+</mt:SetVarBlock>
+<$mt:Include module="Header MTCS 1" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 2" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-main-index"$>
+
+<div id="page-10049" class="page-asset asset">
+    <div class="asset-header">
+
+        <h1 id="page-title" class="asset-name">Area Rental Map</h1>
+    </div>
+    <div class="asset-content">
+
+        <div class="asset-body">
+            <p>Here you will find a map of all listings in the BG Views Housing Guide. Click on a marker to display each unit. Clicking on each title will take you directly to the listing for that unit.</p>
+
+<div id="top_map_canvas" style="width:420px;height:500px;margin:0px 0px 0px 0px;"></div>
+            <script type="text/javascript">
+    
+    function showtopmap() {
+      if (GBrowserIsCompatible()) {
+        var map = new GMap2(document.getElementById("top_map_canvas"));
+		map.addControl(new GLargeMapControl());
+        map.setCenter(new GLatLng(0, 0), 1);
+	var boundsdec = false;
+	var bounds;
+ 	<MTGSInitDrawPik/>
+	<MTEntries>
+	  <MTIfGSMapped>
+	    <MTEntryGSDrawPik/>
+	    if(!boundsdec)
+            {
+                var point = new GLatLng(<MTEntryGSLatitude/>,<MTEntryGSLongitude/>);
+                bounds = new GLatLngBounds(point,point);
+		boundsdec = true;
+            }
+            else
+            {
+		bounds.extend(new GLatLng(<MTEntryGSLatitude/>,<MTEntryGSLongitude/>));
+            }
+          </MTIfGSMapped>
+	</MTEntries>
+	    if(boundsdec)
+	    {
+            	var zoomlevel = map.getBoundsZoomLevel(bounds);
+	    	map.setCenter(bounds.getCenter(),zoomlevel);
+            }
+        }
+      }
+
+	showtopmap();
+
+</script>
+
+        </div>
+
+
+    </div>
+    <div class="asset-footer"></div>
+</div>
+
+<$mt:Include module="Content Navigation"$>
+<$mt:Include module="Footer MTCS"$>

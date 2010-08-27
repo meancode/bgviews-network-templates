@@ -1,0 +1,54 @@
+ <?xml version="1.0" encoding="<mt:PublishCharset>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+        <meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+        <title><$mt:EntryTitle$></title>
+        <link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+<$mt:Include module="iPhone JavaScript"$>
+    </head>
+    <body>
+
+        <div id="header">
+            <a rel="home" href="<$mt:BlogURL$>m/" class="navigation">Home</a>
+        
+        </div>
+    
+          <$mt:Include module="iPhone BG Views Header"$>
+<div id="content" class="entry">
+        <div id="page-<$mt:PageID$>" class="page-asset asset">
+    <div class="asset-header">
+        <h1 id="page-title" class="asset-name"><$mt:PageTitle$></h1>
+    </div>
+    <div class="asset-content">
+<mt:If tag="PageBody">
+        <div class="asset-body">
+            <$mt:PageBody$>
+        </div>
+</mt:If>
+<mt:If tag="PageMore" convert_breaks="0">
+        <div id="more" class="asset-more">
+            <$mt:PageMore$>
+        </div>
+</mt:If>
+    </div>
+    <div class="asset-footer"></div>
+</div>
+</div>
+    
+<div id="nav">
+ <span style="color:#FFFFFF;"><a href="http://m.bgviews.com/" style="color:#FFFFFF;">&laquo; Index</a></span>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/">Home</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/about.html">About</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/blogs.html">Blogs</a>&nbsp;&nbsp;&nbsp;<a href="http://m.bgviews.com/events.html">Events</a>
+ </div>
+
+<div id="footer" style="background-color:#243f8f;">
+<p>&copy; 2009 BG Views, All Rights Reserved<br>
+<a href ='http://maps.google.com/maps?q=The+BG+News'" target="_self">204 West Hall, Bowling Green, OH 43403</a><br>
+Newsroom: <a href="tel:419-372-6966" target="_self">419-372-6966</a> | Ad Dept: <a href="tel:419-372-2605" target="_self">419-372-2605</a> <br>
+<a href="http://m.bgviews.com/tos/">Terms of Service</a> | <a href="http://m.bgviews.com/privacy/">Privacy Policy</a><br>
+<br>
+<a href="../../">View Full Site</a></p>
+</div>
+    </body>
+</html>
+

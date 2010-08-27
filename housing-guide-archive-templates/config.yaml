@@ -1,0 +1,59 @@
+template_sets:
+  housing-guide-archive-templates:
+    label: housing-guide-archive-templates
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+      individual:
+        entry:
+          label: Entry
+          mappings:
+            individual:
+              archive_type: Individual
+              file_template: %y/%m/%-b/%i
+        entry_for_iphone:
+          label: Entry (for iPhone)
+          mappings:
+            individual:
+              archive_type: Individual
+              file_template: m/%F.html
+      page:
+        page:
+          label: Page
+          mappings:
+            page:
+              archive_type: Page
+              file_template: %-c/%-b/%i
+        page_for_iphone:
+          label: Page (for iPhone)
+          mappings:
+            page:
+              archive_type: Page
+              file_template: m/%-c/%-b/index.html
+      archive:
+        category_listing:
+          label: Category Listing
+          mappings:
+            category:
+              archive_type: Category
+              file_template: %-c/%i
+        category_listing_for_iphone:
+          label: Category Listing (for iPhone)
+          mappings:
+            category:
+              archive_type: Category
+              file_template: m/%-c/index.html
+        entry_listing:
+          label: Entry Listing
+          mappings:
+            author:
+              archive_type: Author
+              file_template: author/%-a/%f
+            monthly:
+              archive_type: Monthly
+              file_template: %y/%m/%i
+      custom:
+      widget:
+      system:
+

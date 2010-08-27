@@ -1,0 +1,77 @@
+ <$mt:EntryTrackbackData$>
+<div id="entry-<$mt:EntryID$>" class="entry-asset asset hentry">
+<div class="asset-header" style="font-size:120%;">
+        <strong><a href="<$mt:EntryPermalink$>" rel="bookmark"><$mt:EntryTitle$></a></strong>
+    </div>
+    <div class="asset-content entry-content">
+
+<table width="420" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="85" rowspan="2" valign="top">
+    
+    <MTIfNonEmpty tag="EntryDataTop_photo">
+      <mt:EntryDataTop_photoAsset> <a href="<$mt:EntryPermalink$>"><img src="<$mt:AssetThumbnailURL width="75" square="0"$>" alt="" width="75" border="0" style="padding-right:10px; max-height:56px;" /></a> </mt:EntryDataTop_photoAsset>
+      <mt:Else>
+      <img src="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/image_na.gif" alt="" width="75" border="0" style="padding-right:10px;" />
+    </MTIfNonEmpty>    </td>
+    <td colspan="2" valign="top">
+    
+    <MTIf tag="entrydataproperty_management_company" like="Not Applicable">
+    &nbsp;
+    <mt:Else>
+<MTentrydataproperty_management_company>
+    </MTIf>
+
+</td>
+    </tr>
+  <tr>
+    <td width="167" valign="top">
+      
+  <MTIf tag="entrydatabedrooms" like="One">
+  <strong><MTentrydatabedrooms> Bed</strong>, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Two">
+  <strong><MTentrydatabedrooms> Beds</strong>, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Three">
+  <strong><MTentrydatabedrooms> Beds</strong>, 
+  </MTIf>
+  <MTIf tag="entrydatabedrooms" like="Four or more">
+  <strong><MTentrydatabedrooms> Beds</strong>, 
+  </MTIf>
+  <MTIfNonEmpty tag="datamonthly_rent">
+    <strong>$<MTdatamonthly_rent></strong>
+  </MTIfNonEmpty>
+  <br>
+  <MTIfNonEmpty tag="datacontact_phone">
+  <MTdatacontact_phone>
+  </MTIfNonEmpty>
+      
+      
+</td>
+    <td width="168" valign="top">
+    
+    <MTIfNonEmpty tag="entrydataaddress">
+        <MTentrydataaddress>
+      </MTIfNonEmpty>
+      <br>
+      <MTIfNonEmpty tag="datacity">
+        <MTdatacity>, 
+        </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatastate">
+        <MTentrydatastate>
+      </MTIfNonEmpty>
+      <MTIfNonEmpty tag="entrydatazip">
+        <MTentrydatazip>
+      </MTIfNonEmpty>
+      <br><br>
+      <a href="<$mt:EntryPermalink$>" rel="bookmark">Full Details &raquo;</a>
+      
+      </td>
+  </tr>
+</table>
+
+  </div>
+    <div class="asset-footer"></div>
+</div>
+

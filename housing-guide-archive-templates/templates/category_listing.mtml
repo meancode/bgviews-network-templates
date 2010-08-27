@@ -1,0 +1,40 @@
+ <mt:SetVarBlock name="page_title"><$mt:ArchiveTitle$> Listings, Bowling Green, OH</mt:SetVarBlock>
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></mt:SetVarBlock>
+<mt:If name="datebased_archive">
+    <mt:SetVarBlock name="html_head">
+        <mt:ArchivePrevious><link rel="prev bookmark" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>" /></mt:ArchivePrevious>
+        <mt:ArchiveNext><link rel="next bookmark" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>" /></mt:ArchiveNext>
+    </mt:SetVarBlock>
+</mt:If>
+
+<mt:SetVarBlock name="body_class">mt-archive-listing mt-<$mt:Var name="archive_class"$></mt:SetVarBlock>
+
+<$mt:Include module="Header MTCS 1" body_class="$body_class"$>
+<$mt:Include module="Header MTCS 2" body_class="$body_class"$>
+<$mt:Include module="Header MTCS 3" body_class="$body_class"$>
+<h1 id="page-title" class="archive-title">
+<mt:Unless name="datebased_archive">
+    <mt:IfArchiveType archive_type="Category">
+<MTIfNonEmpty tag="categorydatacategory_logo">
+      <mt:categorydatacategory_logoAsset><img src="<mt:AssetURL>" alt="" border="0"/></mt:categorydatacategory_logoAsset>
+</MTIfNonEmpty>    </mt:IfArchiveType>
+    <mt:IfArchiveType archive_type="Author">
+Listings by <$mt:ArchiveTitle$>
+    </mt:IfArchiveType>
+<mt:Else>
+<$mt:Var name="page_title"$>
+</mt:Unless>
+</h1>
+
+<mt:Entries>
+<$mt:Include module="Entry Summary Housing"$>
+<mt:SetVarBlock name="entry_ids" append="1"><mt:Unless name="__first__">,</mt:Unless><$mt:EntryID$></mt:SetVarBlock>
+</mt:Entries>
+
+<mt:If name="entry_ids">
+<mt:SetVarBlock name="html_body_footer" append="1">
+<script type="text/javascript" src="<$mt:CGIPath$><$mt:CommunityScript$>?__mode=score&amp;blog_id=<$mt:BlogID$>&amp;f=scored,count&amp;jsonp=mtScore_cb&amp;id=<$mt:Var name="entry_ids"$>"></script>
+</mt:SetVarBlock>
+</mt:If>
+
+<$mt:Include module="Footer MTCS"$>

@@ -1,0 +1,101 @@
+<form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
+  <input type="hidden" name="CustomFieldsSearch" value="1" />
+  <input type="hidden" name="CustomFieldsSearchClassType" value="entry" />
+  <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryTitle" />
+  <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryBody" />
+  <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryMore" />
+  <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryKeywords" />
+  <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+
+  <fieldset id="freeword_set">
+    <legend>General Search</legend>
+    <input type="text" id="search_free" class="ti" name="search" value="<$mt:SearchString$>" /><br />
+    <input type="checkbox" id="CustomFieldsSearchField_title" name="CustomFieldsSearchField" value="EntryTitle" /><label for="CustomFieldsSearchField_title"> Listing Title</label>
+    <input type="checkbox" id="CustomFieldsSearchField_text" name="CustomFieldsSearchField" value="EntryBody" /><label for="CustomFieldsSearchField_text"> Description</label>
+  </fieldset>
+
+  <fieldset id="company_set">
+    <legend>Property Management Company</legend>
+    <select name="CustomFieldsSearchFieldEquals">
+      <option value="">--</option>
+      <option value="entrydataproperty_management_company:Not Applicable">None Selected</option>
+      <option value="entrydataproperty_management_company:Ashdon &amp; Indian Rivers Apartments">Ashdon &amp; Indian Rivers Apartments</option>
+      <option value="entrydataproperty_management_company:Bowling Green Village Apts.">Bowling Green Village Apts.</option>
+      <option value="entrydataproperty_management_company:Carty Rentals">Carty Rentals</option>
+      <option value="entrydataproperty_management_company:Cheetwood Rentals">Cheetwood Rentals</option>
+      <option value="entrydataproperty_management_company:Copper Beech">Copper Beech</option>
+      <option value="entrydataproperty_management_company:Diamond Enterprises LTD">Diamond Enterprises LTD</option>
+      <option value="entrydataproperty_management_company:Double D Rentals II LLC">Double D Rentals II LLC</option>
+      <option value="entrydataproperty_management_company:Eidi Properties">Eidi Properties</option>
+      <option value="entrydataproperty_management_company:Fite Rental Management">Fite Rental Management</option>
+      <option value="entrydataproperty_management_company:Frobose Rentals">Frobose Rentals</option>
+      <option value="entrydataproperty_management_company:G &amp; L Rentals">G &amp; L Rentals</option>
+      <option value="entrydataproperty_management_company:Green Meadow Apartments">Green Meadow Apartments</option>
+      <option value="entrydataproperty_management_company:Greenbriar Inc.">Greenbriar Inc.</option>
+      <option value="entrydataproperty_management_company:Highland Management">Highland Management</option>
+      <option value="entrydataproperty_management_company:Ivywood Apts.">Ivywood Apts.</option>
+      <option value="entrydataproperty_management_company:John Newlove Real Estate Inc.">John Newlove Real Estate Inc.</option>
+      <option value="entrydataproperty_management_company:K &amp; K Properties">K &amp; K Properties</option>
+      <option value="entrydataproperty_management_company:Maynard Rentals">Maynard Rentals</option>
+      <option value="entrydataproperty_management_company:Mckee Properties">Mckee Properties</option>
+      <option value="entrydataproperty_management_company:Mecca Management">Mecca Management</option>
+      <option value="entrydataproperty_management_company:Mid Am Management">Mid Am Management</option>
+      <option value="entrydataproperty_management_company:Newlove Management Services">Newlove Management Services</option>
+      <option value="entrydataproperty_management_company:Newman Housing">Newman Housing</option>
+      <option value="entrydataproperty_management_company:Perry Lake Village">Perry Lake Village</option>
+      <option value="entrydataproperty_management_company:Preferred Properties Co.">Preferred Properties Co.</option>
+      <option value="entrydataproperty_management_company:Rutter and Dudley">Rutter and Dudley</option>
+      <option value="entrydataproperty_management_company:Shamrock Village Condominiums">Shamrock Village Condominiums</option>
+      <option value="entrydataproperty_management_company:Smith Apartment Rentals">Smith Apartment Rentals</option>
+      <option value="entrydataproperty_management_company:Steve Instone">Steve Instone</option>
+      <option value="entrydataproperty_management_company:Summit Terrace Apts.">Summit Terrace Apts.</option>
+      <option value="entrydataproperty_management_company:Sycamore Square Graduate Apartments">Sycamore Square Graduate Apartments</option>
+      <option value="entrydataproperty_management_company:The Buckeye Inn &amp; Studios">The Buckeye Inn &amp; Studios</option>
+      <option value="entrydataproperty_management_company:The Enclave">The Enclave</option>
+      <option value="entrydataproperty_management_company:Trout Rentals">Trout Rentals</option>
+      <option value="entrydataproperty_management_company:University Village Apartments LLC">University Village Apartments LLC</option>
+      <option value="entrydataproperty_management_company:University Courts Appartments LLC">University Courts Appartments LLC</option>
+      <option value="entrydataproperty_management_company:Violet Rentals">Violet Rentals</option>
+      <option value="entrydataproperty_management_company:Winthrop Terrace">Winthrop Terrace</option>
+      <option value="entrydataproperty_management_company:Wulff Rentals">Wulff Rentals</option>
+    </select>
+  </fieldset>
+
+  <fieldset id="rental_type_set">
+    <legend>Rental Type</legend>
+    <select name="CustomFieldsSearchFieldEquals">
+      <option value="">--</option>
+      <option value="entrydatarental_type:Apartment">Apartment</option>
+      <option value="entrydatarental_type:Condo">Condo</option>
+      <option value="entrydatarental_type:Duplex">Duplex</option>
+      <option value="entrydatarental_type:Efficiency">Efficiency</option>
+      <option value="entrydatarental_type:House">House</option>
+      <option value="entrydatarental_type:Loft">Loft</option>
+      <option value="entrydatarental_type:Room">Room</option>
+      <option value="entrydatarental_type:Suite">Suite</option>
+      <option value="entrydatarental_type:Townhouse">Townhouse</option>
+    </select>
+  </fieldset>
+
+<fieldset>
+    <legend>Lease Type</legend>
+    <input type="checkbox" id="CustomFieldsSearchFieldIn_entrydatalease_type_6" name="CustomFieldsSearchFieldLike" value="entrydatalease_type:6 Month Lease" /><label for="CustomFieldsSearchFieldIn_entrydatalease_type_6"> 6 Month</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldIn_entrydatalease_type_9" name="CustomFieldsSearchFieldLike" value="entrydatalease_type:9 Month Lease" /><label for="CustomFieldsSearchFieldIn_entrydatalease_type_9"> 9 Month</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldIn_entrydatalease_type_12" name="CustomFieldsSearchFieldLike" value="entrydatalease_type:12 Month Lease" /><label for="CustomFieldsSearchFieldIn_entrydatalease_type_12"> 12 Month</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldIn_entrydatalease_type_summer" name="CustomFieldsSearchFieldLike" value="entrydatalease_type:Semester Summer" /><label for="CustomFieldsSearchFieldIn_entrydatalease_type_summer"> Semester Summer</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Sublet Lease?</legend>
+    <select name="CustomFieldsSearchFieldEquals">
+      <option value="">--</option>
+      <option value="datasublet:Yes">Yes</option>
+      <option value="datasublet:No">No</option>
+    </select>
+  </fieldset>
+
+
+  <input type="hidden" name="limit" value="20" />
+  <input type="submit" accesskey="4" value="Search" />
+</form>
+

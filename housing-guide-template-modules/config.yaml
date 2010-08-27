@@ -1,0 +1,42 @@
+template_sets:
+  housing-guide-template-modules:
+    label: housing-guide-template-modules
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+      individual:
+      page:
+      archive:
+      custom:
+        apple_touch_icon:
+          label: Apple Touch Icon
+        custom_search:
+          label: Custom Search
+        embedded_html_for_asset:
+          label: Embedded html for asset
+        entry_detail_housing:
+          label: Entry Detail Housing
+        entry_metadata_lite:
+          label: Entry Metadata Lite
+        entry_summary_housing:
+          label: Entry Summary Housing
+        entry_summary_search:
+          label: Entry Summary Search
+        header_logo:
+          label: Header Logo
+        meta_author:
+          label: META Author
+        meta_email:
+          label: META Email
+        meta_keywords:
+          label: META Keywords
+        mobile_contact:
+          label: Mobile Contact
+        sidebar:
+          label: Sidebar
+        site_type_logo:
+          label: Site Type Logo
+      widget:
+      system:
+

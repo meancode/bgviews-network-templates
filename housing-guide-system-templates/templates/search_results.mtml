@@ -1,0 +1,196 @@
+<mt:SetVarBlock name="page_title">Search Results</mt:SetVarBlock>
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$>: <$mt:Var name="page_title"$></mt:SetVarBlock>
+
+<mt:Ignore><!-- Below Javascript adds ajax search capability --></mt:Ignore>
+<mt:SetVarBlock name="html_head" append="1">
+<script type="text/javascript">
+/* <![CDATA[ */
+var user = <$mt:UserSessionState$>;
+<mt:IfMoreResults>
+function getResults(page) {
+    page = parseInt(page);
+    if (timer) window.clearTimeout(timer);
+    var xh = mtGetXmlHttp();
+    if (!xh) return false;
+    var res = results[page];
+    if (!res) return;
+    var url = res['next_url'];
+    if (!url) return;
+
+    xh.open('GET', url + '&format=js', true);
+    xh.onreadystatechange = function() {
+        if ( xh.readyState == 4 ) {
+            if ( xh.status && ( xh.status != 200 ) ) {
+                // error - ignore
+            } else {
+                try {
+                    var page_results = eval("(" + xh.responseText + ")");
+                    if ( page_results['error'] == null )
+                        results[page + 1] = page_results['result'];
+                } catch (e) {
+                }
+            }
+        }
+    };
+    xh.send(null);
+}
+
+function swapContent(direction) {
+    if ( direction == undefined ) direction = 1;
+    var page_span = document.getElementById('current-page');
+    if (!page_span) return true;
+    var next_page = direction + parseInt(page_span.innerHTML);
+    var res = results[next_page];
+    if (!res) return true;
+    var content = res['content'];
+    if (!content) return true;
+    var div = document.getElementById('search-results');
+    if (!div) return true;
+    div.innerHTML = content;
+    timer = window.setTimeout("getResults(" + next_page + ")", 1*1000);
+    window.scroll(0, 0);
+    return false;
+}
+<mt:Else><mt:IfPreviousResults>
+function swapContent(direction) {
+	return true;
+}</mt:IfPreviousResults>
+</mt:IfMoreResults>
+/* ]]> */
+</script>
+</mt:SetVarBlock>
+
+<$mt:Include module="Header MTCS 1" body_class="mt-search-results"$>
+<$mt:Include module="Header MTCS 2 Search" body_class="mt-search-results"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-search-results"$>
+
+<style type="text/css">
+<!--
+.search-results-container {
+	margin-top: 20px;
+}
+
+#mt-community-forum .asset-header {
+    position: relative;
+    margin: 0 0 0px 0px;
+}
+#mt-community-forum .asset-content,
+#mt-community-forum.mt-entry-archive .entry-body {
+    margin: 0px 0 0 0px;
+    line-height: 1.5;
+}
+
+-->
+</style>
+
+
+<mt:SetVarTemplate id="search_results" name="search_results">  
+    <mt:SearchResults>
+        <mt:SearchResultsHeader>
+<div id="search-results">
+    <span id="current-page" class="hidden"><$mt:CurrentPage$></span>
+        <mt:IfStraightSearch>
+        <h1 id="page-title" class="search-results-header">Search Results</h1>
+
+<br><$mt:SearchString$>
+
+
+        </mt:IfStraightSearch>
+    <div class="search-results-container autopagerize_page_element">
+        </mt:SearchResultsHeader>
+    <$mt:Include module="Entry Summary Search" hide_counts="1"$>
+        <mt:SearchResultsFooter>
+    </div><div class="autopagerize_insert_before"></div>
+        <mt:Ignore>Used with the ajax search capability of the new search class</mt:Ignore>
+    <div class="content-nav">
+        <span class="results-previous-link"><mt:IfPreviousResults><a href="<$mt:PreviousLink$>" rel="prev" onclick="return swapContent(-1);">&laquo; Previous</a><mt:else>&laquo; Previous</mt:IfPreviousResults></span>&nbsp;&nbsp;<mt:PagerBlock><mt:IfCurrentPage><strong id="results-current-page"><$mt:Var name="__value__"$></strong><mt:Else><a href="<$mt:PagerLink$>"><$mt:Var name="__value__"$></a></mt:IfCurrentPage><mt:Unless name="__last__">&nbsp;</mt:Unless></mt:PagerBlock>&nbsp;&nbsp;<span class="results-previous-link"><mt:IfMoreResults><a href="<$mt:NextLink$>" rel="next" onclick="return swapContent();">Next &raquo;</a><mt:else>Next &raquo;</mt:IfMoreResults></span>
+    </div>
+</div>
+        </mt:SearchResultsFooter>
+    </mt:SearchResults>
+</mt:SetVarTemplate>
+<$mt:Var name="search_results"$>
+
+<mt:NoSearchResults>
+<h1 id="page-title" class="search-results-header">
+    <mt:IfStraightSearch>
+    Search Results
+    </mt:IfStraightSearch>
+    <mt:IfTagSearch>
+    Results tagged &ldquo;<$mt:SearchString$>&rdquo;
+    </mt:IfTagSearch>
+</h1>
+<p><br>No results found. Try <a href="http://bgviewsnetwork.com/housing/guide/search/">searching again</a>.</p>
+</mt:NoSearchResults>
+
+<mt:NoSearch>
+<h1 id="page-title" class="search-results-header">Instructions</h1>
+<p>By default, this search engine looks for all words in any order. To search for an exact phrase, enclose the phrase in quotes:</p>
+<blockquote>
+    <p><code>"movable type"</code></p>
+</blockquote>
+<p>The search engine also supports AND, OR, and NOT keywords to specify boolean expressions:</p>
+<blockquote>
+    <p><code>personal OR publishing</code></p>
+    <p><code>publishing NOT personal</code></p>
+</blockquote>
+</mt:NoSearch>
+
+<mt:Ignore>Used with the ajax search capability of the new search class</mt:Ignore>
+<mt:IfMoreResults>
+<script type="text/javascript">
+<!--
+var div = document.getElementById('search-results');
+var results = {
+    '<$mt:CurrentPage$>': {
+        'content': div.innerHTML,
+        'next_url': '<$mt:NextLink$>'
+    }
+};
+var timer = window.setTimeout("getResults(" + <$mt:CurrentPage$> + ")", 1*1000);
+//-->
+</script>
+</mt:IfMoreResults>
+
+<mt:SetVarBlock name="profile_widgets">
+
+<div class="openx-ad">
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.oncampusweb.com/delivery/ajs.php':'http://www.oncampusweb.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=267");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://www.oncampusweb.com/delivery/ck.php?n=a03e3d53&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://www.oncampusweb.com/delivery/avw.php?zoneid=267&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a03e3d53' border='0' alt='' /></a></noscript>
+</div>
+<div class="openx-ad2">
+<script type='text/javascript'><!--//<![CDATA[
+   var m3_u = (location.protocol=='https:'?'https://www.oncampusweb.com/delivery/ajs.php':'http://www.oncampusweb.com/delivery/ajs.php');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   if (!document.MAX_used) document.MAX_used = ',';
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("?zoneid=268");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location));
+   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'><\/scr"+"ipt>");
+//]]>--></script><noscript><a href='http://www.oncampusweb.com/delivery/ck.php?n=a3d30bcd&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://www.oncampusweb.com/delivery/avw.php?zoneid=268&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a3d30bcd' border='0' alt='' /></a></noscript>
+</div>
+
+
+
+</mt:SetVarBlock>
+<$mt:Include module="Footer MTCS Profile"$>
+

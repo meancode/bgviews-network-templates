@@ -1,0 +1,16 @@
+<mt:SetVarBlock name="page_title"><$mt:EntryTitle$></mt:SetVarBlock>
+<mt:SetVarBlock name="title"><$mt:Var name="page_title"$> (<MTIf tag="entrydatarental_type" like="Apartment">Apartment</MTIf><MTIf tag="entrydatarental_type" like="Condo">Condo</MTIf><MTIf tag="entrydatarental_type" like="Duplex">Duplex</MTIf><MTIf tag="entrydatarental_type" like="Efficiency">Efficiency</MTIf><MTIf tag="entrydatarental_type" like="House">House</MTIf><MTIf tag="entrydatarental_type" like="Loft">Loft</MTIf><MTIf tag="entrydatarental_type" like="Room">Room</MTIf><MTIf tag="entrydatarental_type" like="Suite">Suite</MTIf><MTIf tag="entrydatarental_type" like="Townhouse">Townhouse</MTIf>, <MTdatacity> <MTentrydatastate>) - <$mt:BlogName encode_html="1"$></mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" append="1">
+    <mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
+    <mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
+    <$mt:EntryTrackbackData$>
+</mt:SetVarBlock>
+<$mt:Include module="Header MTCS 1" body_class="mt-entry-archive"$>
+<$mt:Include module="Header MTCS 2" body_class="mt-entry-archive"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-entry-archive"$>
+<$mt:Include module="Entry Detail Housing"$>
+
+<$mt:Include module="TrackBacks Blogs"$>
+
+<$mt:Include module="Comments Blogs"$>
+<$mt:Include module="Footer MTCS"$>
