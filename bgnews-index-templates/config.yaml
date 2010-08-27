@@ -1,0 +1,142 @@
+template_sets:
+  bgnews-index-templates:
+    label: bgnews-index-templates
+    base_path: templates
+    order: 1000
+    templates:
+      index:
+        htaccess:
+          label: .htaccess
+          outfile: .htaccess
+          rebuild_me: 0
+        archive_index:
+          label: Archive
+          outfile: archives/index.php
+          rebuild_me: 1
+        archive_test:
+          label: Archive Test
+          outfile: archives/test.php
+          rebuild_me: 0
+        feed_recent:
+          label: Atom Feed
+          outfile: atom.xml
+          rebuild_me: 1
+        atom_feed_staff_blogs:
+          label: Atom Feed (Staff Blogs)
+          outfile: staffblogs.xml
+          rebuild_me: 1
+        carousel_stylesheet:
+          label: Carousel Stylesheet
+          outfile: carousel.css
+          rebuild_me: 0
+        falcon_screech_email_form:
+          label: Falcon Screech Email Form
+          outfile: rant/form.php
+          rebuild_me: 0
+        feature_photo_contest:
+          label: Feature Photo Contest
+          outfile: photo-context/index.php
+          rebuild_me: 1
+        google_sitemap_news:
+          label: Google Sitemap (News)
+          outfile: sitemap_news.xml
+          rebuild_me: 1
+        google_sitemap_web:
+          label: Google Sitemap (Web)
+          outfile: sitemap.xml
+          rebuild_me: 1
+        htaccess_staff_blogs:
+          label: htaccess Staff Blogs
+          outfile: /home/bgnews/public_html/blogs/.htaccess
+          rebuild_me: 1
+        iphone_index:
+          label: iPhone Index
+          outfile: m/index.html
+          rebuild_me: 1
+        iphone_index_2:
+          label: iPhone Index 2
+          outfile: m/index2.html
+          rebuild_me: 1
+        iphone_index_3:
+          label: iPhone Index 3
+          outfile: m/index3.html
+          rebuild_me: 1
+        javascript:
+          label: JavaScript
+          outfile: mt.js
+          rebuild_me: 1
+        letters_to_editor:
+          label: Letters to Editor
+          outfile: letters/index.php
+          rebuild_me: 1
+        main_index:
+          label: Main Index
+          outfile: index.php
+          rebuild_me: 1
+        main_index_test:
+          label: Main Index TEST
+          outfile: testing/index.php
+          rebuild_me: 0
+        mobile_css:
+          label: Mobile CSS
+          outfile: m/styles.css
+          rebuild_me: 1
+        motion_javascript:
+          label: Motion JavaScript
+          outfile: motion.js
+          rebuild_me: 1
+        motion_mt_javascript:
+          label: Motion MT JavaScript
+          outfile: motion_mt.js
+          rebuild_me: 1
+        poll_position:
+          label: Poll Position
+          outfile: poll.php
+          rebuild_me: 1
+        robotstxt:
+          label: robots.txt
+          outfile: robots.txt
+          rebuild_me: 0
+        robotstxt_staff_blogs:
+          label: robots.txt Staff Blogs
+          outfile: /home/bgnews/public_html/blogs/robots.txt
+          rebuild_me: 0
+        rsd:
+          label: RSD
+          outfile: rsd.xml
+          rebuild_me: 1
+        rss_20_feed:
+          label: RSS 2.0 Feed
+          outfile: rss.xml
+          rebuild_me: 1
+        styles:
+          label: Site Stylesheet
+          outfile: styles.css
+          rebuild_me: 0
+        staff_blogs_index:
+          label: Staff Blogs Index
+          outfile: /home/bgnews/public_html/blogs/index.php
+          rebuild_me: 1
+        staff_index_web:
+          label: Staff Index: Web
+          outfile: staff/web/index.php
+          rebuild_me: 1
+        video_teaser_campus:
+          label: Video Teaser Campus
+          outfile: video_teaser_campus.php
+          rebuild_me: 1
+        video_teaser_sports:
+          label: Video Teaser Sports
+          outfile: video_teaser_sports.php
+          rebuild_me: 1
+        visitor_stats:
+          label: Visitor Stats
+          outfile: stats.php
+          rebuild_me: 0
+      individual:
+      page:
+      archive:
+      custom:
+      widget:
+      system:
+

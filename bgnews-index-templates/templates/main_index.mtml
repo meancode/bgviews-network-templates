@@ -1,0 +1,21 @@
+<mt:SetVarBlock name="title"><$mt:BlogName encode_html="1"$> - Bowling Green State University</mt:SetVarBlock>
+<mt:SetVarBlock name="html_head" append="1">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="rsd"$>" />
+<link rel="stylesheet" href="http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/css/bgnews_home.css" type="text/css" media="screen"/>
+</mt:SetVarBlock>
+<$mt:Include module="Header MTCS 1" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 2" body_class="mt-main-index"$>
+<$mt:Include module="Header MTCS 3" body_class="mt-main-index"$>
+
+<$mt:Include module="Home Breaking News"$>
+<$mt:Include module="Home Page Carousel"$>
+<div class="content-nav">
+  <a href="http://bgnews.com/archives/">BG News Archives &raquo;</a>
+  </div>
+<$mt:Include module="Video Teaser"$>
+<$mt:Include module="Latest Screech"$>
+<$mt:Include module="Home Page Photos"$>
+<$mt:Include module="Home Page Lists"$>
+<$mt:Include module="Network Teaser"$>
+<$mt:Include module="Content Navigation"$>
+<$mt:Include module="Footer MTCS"$>

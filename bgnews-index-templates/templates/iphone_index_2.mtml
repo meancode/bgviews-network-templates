@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="<mt:PublishCharset>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=<mt:PublishCharset>" />
+<meta id="viewport" name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<title><$mt:BlogName encode_html="1"$></title>
+<link rel="stylesheet" href="<$mt:BlogURL$>m/styles.css" />
+<$mt:Include module="iPhone JavaScript"$>
+</head>
+<body>
+
+<div id="header">        
+<a class="button" href="mailto:<$mt:Include module="Mobile Contact"$>" title="Contact by email" target="_self">Contact</a>        
+</div>
+
+          <$mt:Include module="iPhone BG Views Header"$>
+    
+<div id="content">
+        <mt:Entries lastn="10" offset="10">
+        <mt:EntriesHeader>
+            <ul class="index">
+        </mt:EntriesHeader>
+                <li><a href="<$mt:BlogURL$>m/<$mt:EntryBasename$>.html"><$mt:EntryTitle$></a><abbr class="published" title="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></abbr></li>
+        <mt:EntriesFooter>
+            </ul>
+        </mt:EntriesFooter>
+        </mt:Entries>
+</div>
+        
+        
+
+    <div id="nav">
+          <$mt:Include module="iPhone Footer Nav2"$>
+ </div>
+
+<div id="footer" style="background-color:#243f8f;">
+          <$mt:Include module="iPhone Footer"$>
+</div>
+    </body>
+</html>
