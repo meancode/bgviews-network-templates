@@ -6,6 +6,7 @@
   <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryMore" />
   <input type="hidden" name="CustomFieldsSearchIgnore" value="EntryKeywords" />
   <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+  <input type="hidden" name="PreventEmptySearch" value="1" />
 
   <fieldset id="freeword_set">
     <legend>General Search</legend>
@@ -92,6 +93,37 @@
       <option value="datasublet:Yes">Yes</option>
       <option value="datasublet:No">No</option>
     </select>
+  </fieldset>
+
+<fieldset>
+    <legend>Occupants</legend>
+    <input type="checkbox" id="CustomFieldsSearchFieldentrydatahgoccupants1" name="CustomFieldsSearchFieldEquals" value="entrydatahgoccupants:1" /><label for="CustomFieldsSearchFieldentrydatahgoccupants1"> 1</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldentrydatahgoccupants2" name="CustomFieldsSearchFieldEquals" value="entrydatahgoccupants:2" /><label for="CustomFieldsSearchFieldentrydatahgoccupants2"> 2</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldentrydatahgoccupants3" name="CustomFieldsSearchFieldEquals" value="entrydatahgoccupants:3" /><label for="CustomFieldsSearchFieldentrydatahgoccupants3"> 3</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldentrydatahgoccupants4" name="CustomFieldsSearchFieldEquals" value="entrydatahgoccupants:4" /><label for="CustomFieldsSearchFieldentrydatahgoccupants4"> 4</label>
+    <input type="checkbox" id="CustomFieldsSearchFieldentrydatahgoccupants5" name="CustomFieldsSearchFieldRange" value="entrydatahgoccupants:&gt;=5" /><label for="CustomFieldsSearchFieldentrydatahgoccupants5"> 5 or more</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>City Location</legend>
+    <select name="CustomFieldsSearchFieldEquals">
+      <option value="">--</option>
+      <option value="entrydatacity_location:Downtown">Downtown</option>
+      <option value="entrydatacity_location:North Side">North Side</option>
+      <option value="entrydatacity_location:South Side">South Side</option>
+      <option value="entrydatacity_location:East Side">East Side</option>
+      <option value="entrydatacity_location:West Side">West Side</option>
+      <option value="entrydatacity_location:Rural">Rural</option>
+      <option value="entrydatacity_location:Toledo">Toledo</option>
+      <option value="entrydatacity_location:Toledo Suburbs">Toledo Suburbs</option>
+      <option value="entrydatacity_location:Other">Other</option>
+    </select>
+  </fieldset>
+
+<fieldset>
+    <legend>Monthly Rent</legend>
+    <input type="checkbox" id="CustomFieldsSearchFielddatamonthly_rent4" name="CustomFieldsSearchFieldRange" value="datamonthly_rent:&lt;=499" /><label for="CustomFieldsSearchFielddatamonthly_rent4"> $499 and below</label>
+    <input type="checkbox" id="CustomFieldsSearchFielddatamonthly_rent5" name="CustomFieldsSearchFieldRange" value="datamonthly_rent:&gt;=500" /><label for="CustomFieldsSearchFielddatamonthly_rent5"> $500 and up</label>
   </fieldset>
 
 

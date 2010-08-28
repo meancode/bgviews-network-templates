@@ -568,3 +568,7 @@ input.blue {
 .not-available {
 	color: #919191;
 }
+.subletbg {
+	background: url(http://bgviewsnetwork.com/mt/mt-static/themes/bgviews/images/subleasebg.gif) no-repeat left top;
+	padding-left: 20px;
+}

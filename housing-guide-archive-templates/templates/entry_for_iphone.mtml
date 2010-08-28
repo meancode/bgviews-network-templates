@@ -33,24 +33,24 @@
             <h1><$mt:EntryTitle$></h1>
 			
     <p>
-      <MTIfNonEmpty tag="entrydataaddress">
+      <mt:If tag="entrydataaddress">
         <MTentrydataaddress><br />
-      </MTIfNonEmpty>
-      <MTIfNonEmpty tag="datacity">
+      </mt:If>
+      <mt:If tag="datacity">
         <MTdatacity>
-      </MTIfNonEmpty>
-      <MTIfNonEmpty tag="entrydatastate">
+      </mt:If>
+      <mt:If tag="entrydatastate">
         <MTentrydatastate>
-      </MTIfNonEmpty>
-      <MTIfNonEmpty tag="entrydatazip">
+      </mt:If>
+      <mt:If tag="entrydatazip">
         <MTentrydatazip>
-      </MTIfNonEmpty><br>
-      <a href="http://maps.google.com/maps?q=<MTIfNonEmpty tag="entrydataaddress"><MTentrydataaddress> </MTIfNonEmpty><MTIfNonEmpty tag="datacity"><MTdatacity> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatastate"><MTentrydatastate> </MTIfNonEmpty><MTIfNonEmpty tag="entrydatazip"><MTentrydatazip></MTIfNonEmpty>" target="_self">View Google Map</a>
+      </mt:If><br>
+      <a href="http://maps.google.com/maps?q=<mt:If tag="entrydataaddress"><MTentrydataaddress> </mt:If><mt:If tag="datacity"><MTdatacity> </mt:If><mt:If tag="entrydatastate"><MTentrydatastate> </mt:If><mt:If tag="entrydatazip"><MTentrydatazip></mt:If>" target="_self">View Google Map</a>
     </p>
 
-<MTIfNonEmpty tag="EntryDataTop_photo">
+<mt:If tag="EntryDataTop_photo">
       <mt:EntryDataTop_photoAsset><a href="#photos"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:EntryDataTop_photoAsset>
-</MTIfNonEmpty>
+</mt:If>
 
 <div id="inside-content">
 
@@ -59,23 +59,41 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size: 90%;">
       <tr>
         <td width="50%" bgcolor="#ededed"><strong>Name</strong></td>
-        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="entrydatacontact_name"><MTentrydatacontact_name></MTIfNonEmpty></td>
+        <td width="50%" bgcolor="#ededed">
+				<mt:If tag="entrydatacontact_name">
+                <MTentrydatacontact_name><mt:Else><span class="not-available">n/a</span>
+              </mt:If>
+	</td>
       </tr>
       <tr>
         <td width="50%"><strong>Company</strong> </td>
-        <td width="50%"><MTIfNonEmpty tag="entrydataproperty_management_company"><MTentrydataproperty_management_company></MTIfNonEmpty></td>
+        <td width="50%">
+<mt:If tag="entrydataproperty_management_company" like="Not Applicable"><span class="not-available">n/a</span>
+					<mt:ElseIf tag="entrydataproperty_management_company"><MTentrydataproperty_management_company>
+              </mt:If>	</td>
       </tr>
       <tr>
         <td width="50%" bgcolor="#ededed"><strong>Phone</strong> </td>
-        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="datacontact_phone"><MTdatacontact_phone></MTIfNonEmpty></td>
+        <td width="50%" bgcolor="#ededed">
+				<mt:If tag="datacontact_phone"><MTdatacontact_phone><mt:Else><span class="not-available">n/a</span></mt:If>
+		</td>
       </tr>
       <tr>
         <td width="50%"><strong>Email</strong> </td>
-        <td width="50%"><MTIfNonEmpty tag="entrydatacontact_email"><a href="mailto:<MTentrydatacontact_email>"><MTentrydatacontact_email></a></MTIfNonEmpty></td>
+        <td width="50%">
+				<mt:If tag="entrydatacontact_email"><a href="mailto:<MTentrydatacontact_email>"><MTentrydatacontact_email></a>
+				<mt:Else><span class="not-available">n/a</span>
+				</mt:If>
+		
+		</td>
       </tr>
       <tr>
         <td width="50%" bgcolor="#ededed"><strong>Best Time</strong></td>
-        <td width="50%" bgcolor="#ededed"><MTIfNonEmpty tag="entrydatacontact_best_time"><MTentrydatacontact_best_time></MTIfNonEmpty></td>
+        <td width="50%" bgcolor="#ededed">
+				<mt:If tag="entrydatacontact_best_time">
+                <MTentrydatacontact_best_time><mt:Else><span class="not-available">n/a</span>
+              </mt:If>
+		</td>
       </tr>
       <tr>
         <td width="50%"><strong>Website</strong></td>
@@ -102,84 +120,110 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size:90%;">
         <tr bgcolor="#ededed">
           <td width="50%" valign="top"><strong>Rental Type</strong></td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatarental_type">
+          <td width="50%" valign="top"><mt:If tag="entrydatarental_type">
               <MTentrydatarental_type>
-          </MTIfNonEmpty></td>
+          </mt:If></td>
     </tr>
         <tr>
           <td valign="top"><strong>Lease Type</strong></td>
-          <td valign="top"><MTIfNonEmpty tag="entrydatalease_type">
-            <MTentrydatalease_type>
-          </MTIfNonEmpty></td>
+          <td valign="top">
+              <mt:If tag="entrydatalease_type" like="6 Month Lease">6 Month Lease<br />
+				<mt:ElseIf tag="entrydatalease_type" like="9 Month Lease">9 Month Lease<br />
+				<mt:ElseIf tag="entrydatalease_type" like="12 Month Lease">12 Month Lease<br />
+				<mt:ElseIf tag="entrydatalease_type" like="Semester Summer">Semester Summer<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+		</td>
         </tr>
-        <tr bgcolor="#ededed">
+        <tr bgcolor="<mt:If tag="datasublet" like="Yes">#CDDF90<mt:Else>#ededed</mt:If>">
           <td width="50%" valign="top"><strong>Sublet?</strong></td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="datasublet">
+          <td width="50%" valign="top"><mt:If tag="datasublet">
               <MTdatasublet>
-          </MTIfNonEmpty></td>
+          </mt:If></td>
         </tr>
         <tr>
           <td valign="top"><strong>Occupants</strong></td>
           <td valign="top"><mt:If tag="entrydatahgoccupants"><mt:entrydatahgoccupants><mt:Else><span class="not-available">n/a</span></mt:If></td>
         </tr>
         <tr bgcolor="#ededed">
-          <td width="50%" valign="top"><strong>Rent Per Person </strong> </td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="datamonthly_rent">
-              $<MTdatamonthly_rent></MTIfNonEmpty></td>
+          <td width="50%" valign="top"><strong>Monthly Rent </strong> </td>
+          <td width="50%" valign="top">
+				<mt:If tag="datamonthly_rent">$<MTdatamonthly_rent><mt:Else><span class="not-available">n/a</span>
+            </mt:If>
+	</td>
     </tr>
         <tr>
           <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Security Deposit </strong> </td>
-          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="datasecurity_deposit">
-              $<MTdatasecurity_deposit>
-          </a></MTIfNonEmpty></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF">
+				<mt:If tag="datasecurity_deposit">$<MTdatasecurity_deposit><mt:Else><span class="not-available">n/a</span>
+            </mt:If>
+		</td>
         </tr>
         <tr bgcolor="#ededed">
           <td width="50%" valign="top"><strong>Location</strong></td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="entrydatacity_location">
+          <td width="50%" valign="top"><mt:If tag="entrydatacity_location">
               <MTentrydatacity_location>
-          </MTIfNonEmpty></td>
+          </mt:If></td>
     </tr>
         <tr>
           <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Miles From Campus </strong></td>
-          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="datamiles_from_campus">
-              <MTdatamiles_from_campus> mi.
-          </MTIfNonEmpty></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF">
+				<mt:If tag="datamiles_from_campus">
+                <MTdatamiles_from_campus> mi.<mt:Else><span class="not-available">n/a</span></mt:If>
+		</td>
         </tr>
         <tr bgcolor="#ededed">
           <td width="50%" valign="top"><strong>Move In Date</strong></td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="datamove_in">
-              <MTdatamove_in>
-          </MTIfNonEmpty></td>
+          <td width="50%" valign="top">
+				<mt:If tag="datamove_in">
+                <MTdatamove_in><mt:Else><span class="not-available">n/a</span>
+              </mt:If>
+		</td>
     </tr>
         <tr>
           <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Bedrooms</strong> </td>
-          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="entrydatabedrooms">
-              <MTentrydatabedrooms>
-          </a></MTIfNonEmpty></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF">
+				<mt:If tag="entrydatabedrooms">
+                <MTentrydatabedrooms><mt:Else><span class="not-available">n/a</span>
+                </mt:If>
+		</td>
         </tr>
         <tr bgcolor="#ededed">
           <td width="50%" valign="top"><strong>Bathrooms </strong></td>
-          <td width="50%" valign="top"><MTIfNonEmpty tag="databathrooms">
-              <MTdatabathrooms>
-          </MTIfNonEmpty></td>
+          <td width="50%" valign="top">
+				<mt:If tag="databathrooms">
+                <MTdatabathrooms><mt:Else><span class="not-available">n/a</span>
+              </mt:If>
+		</td>
     </tr>
         <tr>
           <td width="50%" valign="top" bgcolor="#FFFFFF"><strong>Convenient For </strong></td>
-          <td width="50%" valign="top" bgcolor="#FFFFFF"><MTIfNonEmpty tag="dataconvenient_for">
-              <MTdataconvenient_for>
-          </MTIfNonEmpty></td>
+          <td width="50%" valign="top" bgcolor="#FFFFFF">
+              <mt:If tag="dataconvenient_for" like="Faculty/Professionals">Faculty/Professionals<br />
+				<mt:ElseIf tag="dataconvenient_for" like="Graduate Students">Graduate Students<br />
+				<mt:ElseIf tag="dataconvenient_for" like="Undergraduate Students">Undergraduate Students<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+		</td>
         </tr>
         <tr bgcolor="#ededed">
           <td valign="top"><strong>Parking</strong></td>
-          <td valign="top"><MTIfNonEmpty tag="entrydataparking">
-            <MTentrydataparking>
-          </MTIfNonEmpty></td>
+          <td valign="top">
+              <mt:If tag="entrydataparking" like="Off-Street">Off-Street<br />
+				<mt:ElseIf tag="entrydataparking" like="On-Street">On-Street<br />
+				<mt:ElseIf tag="entrydataparking" like="Visitor Parking">Visitor Parking<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+		</td>
         </tr>
         <tr>
           <td valign="top"><strong>Pet Policies</strong></td>
-          <td valign="top"><MTIfNonEmpty tag="datapet_policies">
-            <MTdatapet_policies>
-          </MTIfNonEmpty></td>
+          <td valign="top">
+	<mt:If tag="datapet_policies"><MTdatapet_policies><mt:Else><span class="not-available">n/a</span></mt:If>
+	</td>
         </tr>
   </table>
 
@@ -188,50 +232,89 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="2" style="font-size: 90%;">
       <tr bgcolor="#ededed">
         <td width="50%" valign="top"><strong>Community Features</strong></td>
-        <td width="50%" valign="top"><MTIfNonEmpty tag="datacommunity_features"><MTdatacommunity_features></MTIfNonEmpty></td>
+        <td width="50%" valign="top">
+              <mt:If tag="datacommunity_features" like="Near Bus Stop">Near Bus Stop<br />
+				<mt:ElseIf tag="datacommunity_features" like="Pool">Pool<br />
+				<mt:ElseIf tag="datacommunity_features" like="Transportation to Campus">Transportation to Campus<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+	</td>
       </tr>
       <tr>
         <td width="50%" valign="top"><strong>Washer/Dryer</strong> </td>
-        <td width="50%" valign="top"><MTIfNonEmpty tag="datawasherdryer"><MTdatawasherdryer></MTIfNonEmpty></td>
+        <td width="50%" valign="top">
+              <mt:If tag="datawasherdryer" like="Washer">Washer<br />
+				<mt:ElseIf tag="datawasherdryer" like="Dryer">Dryer<br />
+				<mt:ElseIf tag="datawasherdryer" like="Hookups In Unit">Hookups In Unit<br />
+				<mt:ElseIf tag="datawasherdryer" like="Washer/Dryer on Premises">Washer/Dryer on Premises<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+	</td>
       </tr>
       <tr bgcolor="#ededed">
         <td width="50%" valign="top"><strong>Unit Features</strong> </td>
-        <td width="50%" valign="top"><MTIfNonEmpty tag="dataunit_features"><MTdataunit_features></MTIfNonEmpty></td>
+        <td width="50%" valign="top">
+              <mt:If tag="dataunit_features" like="Air Conditioning">Air Conditioning<br />
+				<mt:ElseIf tag="dataunit_features" like="Dishwasher">Dishwasher<br />
+				<mt:ElseIf tag="dataunit_features" like="Carpet">Carpet<br />
+				<mt:ElseIf tag="dataunit_features" like="Furnished">Furnished<br />
+				<mt:ElseIf tag="dataunit_features" like="Microwave">Microwave<br />
+				<mt:ElseIf tag="dataunit_features" like="Patio">Patio<br />
+				<mt:ElseIf tag="dataunit_features" like="Balcony">Balcony<br />
+				<mt:ElseIf tag="dataunit_features" like="Porch">Porch<br />
+				<mt:ElseIf tag="dataunit_features" like="Deck">Deck<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+	</td>
       </tr>
       <tr>
         <td width="50%" valign="top"><strong>Utilities Included</strong> </td>
-        <td width="50%" valign="top"><MTIfNonEmpty tag="datautilities_included_in_rent"><MTdatautilities_included_in_rent></MTIfNonEmpty></td>
+        <td width="50%" valign="top">
+              <mt:If tag="datautilities_included_in_rent" like="Cable">Cable<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="Electricity">Electricity<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="Gas">Gas<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="Heat">Heat<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="High-Speed Internet">High-Speed Internet<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="Trash Removal">Trash Removal<br />
+				<mt:ElseIf tag="datautilities_included_in_rent" like="Water/Sewer">Water/Sewer<br />
+				<mt:Else>
+				<span class="not-available">n/a</span>
+              </mt:if>
+		</td>
       </tr>
   </table>
   <br />
   <a name="photos" id="photos"></a>
-<MTIfNonEmpty tag="entrydatafloor_plan">
+<mt:If tag="entrydatafloor_plan">
     <mt:entrydatafloor_planAsset><a href="#photos2"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydatafloor_planAsset>
-  </MTIfNonEmpty>
+  </mt:If>
 
 <br />
   <a name="photos" id="photos2"></a>
-<MTIfNonEmpty tag="entrydataimage_1">
+<mt:If tag="entrydataimage_1">
       <mt:entrydataimage_1Asset><a href="#photos3"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_1Asset>
-  </MTIfNonEmpty>
+  </mt:If>
 
 <br />
   <a name="photos" id="photos3"></a>
-<MTIfNonEmpty tag="entrydataimage_2">
+<mt:If tag="entrydataimage_2">
       <mt:entrydataimage_2Asset><a href="#photos4"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_2Asset>
-  </MTIfNonEmpty>
+  </mt:If>
 
 <br />
   <a name="photos" id="photos4"></a>
-<MTIfNonEmpty tag="entrydataimage_3">
+<mt:If tag="entrydataimage_3">
       <mt:entrydataimage_3Asset><a href="#photos5"><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></a></mt:entrydataimage_3Asset>
-  </MTIfNonEmpty>
+  </mt:If>
 
 <br />
   <a name="photos" id="photos5"></a>
-<MTIfNonEmpty tag="entrydataimage_4">
+<mt:If tag="entrydataimage_4">
       <mt:entrydataimage_4Asset><img src="<$mt:AssetThumbnailURL width="280" square="0"$>" alt="" width="280" border="0" /></mt:entrydataimage_4Asset>
-  </MTIfNonEmpty>
+  </mt:If>
 <br />
  <hr class="hrule" /> 
   <div class="asset-meta"> <span class="byline">
