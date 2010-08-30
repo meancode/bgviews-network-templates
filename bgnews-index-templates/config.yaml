@@ -9,6 +9,14 @@ template_sets:
           label: .htaccess
           outfile: .htaccess
           rebuild_me: 0
+        anythingslider_stylesheet:
+          label: AnythingSlider Stylesheet
+          outfile: anythingslider.css
+          rebuild_me: 1
+        anythingslider_stylesheet_test:
+          label: AnythingSlider Stylesheet (test)
+          outfile: anythingslider-test.css
+          rebuild_me: 1
         archive_index:
           label: Archive
           outfile: archives/index.php
@@ -25,18 +33,10 @@ template_sets:
           label: Atom Feed (Staff Blogs)
           outfile: staffblogs.xml
           rebuild_me: 1
-        carousel_stylesheet:
-          label: Carousel Stylesheet
-          outfile: carousel.css
-          rebuild_me: 0
         falcon_screech_email_form:
           label: Falcon Screech Email Form
           outfile: rant/form.php
           rebuild_me: 0
-        feature_photo_contest:
-          label: Feature Photo Contest
-          outfile: photo-context/index.php
-          rebuild_me: 1
         google_sitemap_news:
           label: Google Sitemap (News)
           outfile: sitemap_news.xml
@@ -73,6 +73,10 @@ template_sets:
           label: Main Index
           outfile: index.php
           rebuild_me: 1
+        main_index_backup_8-22-10:
+          label: Main Index (Backup 8-22-10)
+          outfile: index.php
+          rebuild_me: 0
         main_index_test:
           label: Main Index TEST
           outfile: testing/index.php
@@ -88,6 +92,10 @@ template_sets:
         motion_mt_javascript:
           label: Motion MT JavaScript
           outfile: motion_mt.js
+          rebuild_me: 1
+        photo_upload_form:
+          label: Photo Upload Form
+          outfile: captured/index.php
           rebuild_me: 1
         poll_position:
           label: Poll Position
