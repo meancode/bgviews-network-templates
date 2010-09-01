@@ -13,6 +13,8 @@ template_sets:
           label: About This Profile
         admob_publisher_code:
           label: AdMob Publisher Code
+        anythingslider_script:
+          label: AnythingSlider Script
         apple_touch_icon:
           label: Apple Touch Icon
         ag_slideshow:
@@ -231,6 +233,8 @@ template_sets:
           label: Userpic
         yourls:
           label: YOURLS
+        yourls_cut_off:
+          label: YOURLS Cut Off
         zone_bgnewscom_leaderboard_bottom_728x90:
           label: Zone bgnews.com Leaderboard Bottom 728x90
         zone_bgnewscom_leaderboard_top_728x90:

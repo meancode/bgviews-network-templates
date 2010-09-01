@@ -1,0 +1,8 @@
+<mt:SetVarBlock name="this_entrydate"><$mt:EntryDate format="%Y%m%d%H%M%S"$></mt:SetVarBlock>
+<mt:SetVarBlock name="cutoff_entrydate">20100829030101</mt:SetVarBlock>
+
+<mt:If name="this_entrydate" gt="$cutoff_entrydate">
+	New Twitter Code
+	<mt:Else>
+	Old Twitter Code
+</mt:If>
